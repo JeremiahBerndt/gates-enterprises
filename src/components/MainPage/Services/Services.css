@@ -1,0 +1,19 @@
+.Services {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.service-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.service-list {
+  list-style: inside;
+}
+
+.service-list > li {
+  font-weight: 300;
+}

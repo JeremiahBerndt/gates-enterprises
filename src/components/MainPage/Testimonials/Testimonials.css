@@ -1,0 +1,18 @@
+.Testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Testimonials > p {
+  min-width: auto;
+  margin-bottom: 1em;
+}
+
+.testimonial-list {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2em;
+}

@@ -1,0 +1,10 @@
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.testimonial > img {
+	margin-bottom: 2em;
+}
