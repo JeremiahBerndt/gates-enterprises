@@ -1,0 +1,36 @@
+button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-primary);
+  color: var(--text-primary);
+  font-size: 1em;
+  position: relative;
+}
+
+button > img {
+  width: 2em;
+  padding-right: 1em;
+}
+
+.low-button {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.high-button:after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid var(--text-primary);
+  width: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  transition: 0.2s ease-out;
+}
+
+.high-button:hover:after {
+  width: 100%;
+  transition: 0.2s ease-out;
+}

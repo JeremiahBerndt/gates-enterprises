@@ -1,0 +1,7 @@
+.logo > img {
+  border-radius: 50%;
+}
+
+.disable {
+	pointer-events: none;
+}

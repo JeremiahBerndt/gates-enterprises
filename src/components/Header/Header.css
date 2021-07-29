@@ -1,0 +1,51 @@
+header {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 0px 11px 1px #00000059;
+  min-width: 807px;
+}
+
+.logo {
+  width: 10em;
+  height: 10em;
+	margin-left: 1em;
+	z-index: 2;
+}
+
+.page-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 10em);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+	box-shadow: 0px 3px 2px -2px #00000059;
+}
+
+.contact-info-container {
+  width: calc(100% + 10em);
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(98deg, var(--color-primary) 5em, whitesmoke 19em);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.contact-info {
+  width: 33%;
+  min-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
