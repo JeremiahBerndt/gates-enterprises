@@ -12,8 +12,8 @@ header {
 }
 
 .logo {
-  width: 10em;
-  height: 10em;
+  width: 10rem;
+  height: 10rem;
   margin-left: 1em;
   z-index: 2;
 }

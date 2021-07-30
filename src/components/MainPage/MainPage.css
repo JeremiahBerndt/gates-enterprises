@@ -3,6 +3,7 @@ main > section {
   min-height: 10em;
   display: flex;
   min-width: 100%;
+  scroll-margin-top: 10rem;
 }
 
 main > section:nth-child(odd) {

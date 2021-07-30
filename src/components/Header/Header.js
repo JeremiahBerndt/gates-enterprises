@@ -9,16 +9,26 @@ export default function Header() {
     console.log('hi');
   };
 
+  const scrollToElement = (e) => {
+    const target = e.target.innerText.split(' ').join('');
+    const targetEl = document.querySelector(`.${target}`);
+    if (targetEl) {
+      targetEl.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <header>
       <Logo disabled={false} />
       <nav className='page-buttons'>
         <div className='page-buttons-list'>
           {/* <HeaderButton text='Home' /> */}
-          <HeaderButton text='Services' />
+          <HeaderButton text='Services' handleClick={scrollToElement} />
           <HeaderButton text='Contact' handleClick={displayContactForm} />
-          <HeaderButton text='Testimonials' />
-          <HeaderButton text='Who We Are' />
+          <HeaderButton text='Testimonials' handleClick={scrollToElement} />
+          <HeaderButton text='Who We Are' handleClick={scrollToElement} />
         </div>
       </nav>
       <div className='contact-info-container'>
