@@ -22,8 +22,8 @@ export default function Header({ displayContactForm, screenWidth }) {
         <nav className='page-buttons'>
           <div className='page-buttons-list'>
             {/* <HeaderButton text='Home' /> */}
-            <HeaderButton text='Services' handleClick={scrollToElement} />
             <HeaderButton text='Contact Us' handleClick={displayContactForm} />
+            <HeaderButton text='Services' handleClick={scrollToElement} />
             <HeaderButton text='Testimonials' handleClick={scrollToElement} />
             <HeaderButton text='Who We Are' handleClick={scrollToElement} />
           </div>

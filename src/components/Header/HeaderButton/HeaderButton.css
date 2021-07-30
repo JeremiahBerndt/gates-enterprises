@@ -6,6 +6,7 @@ button {
   color: var(--text-primary);
   font-size: 1em;
   position: relative;
+  padding: 20px 0
 }
 
 button > img {
@@ -33,4 +34,10 @@ button > img {
 .high-button:hover:after {
   width: 100%;
   transition: 0.2s ease-out;
+}
+
+@media  screen and (max-width: 480px) {
+  .low-button {
+    padding: 10px 0
+  }
 }

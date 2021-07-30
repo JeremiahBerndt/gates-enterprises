@@ -10,7 +10,7 @@ header {
   z-index: 1;
   box-shadow: 0px 0px 11px 1px #00000059;
   min-width: 807px;
-  padding: 1em 0
+  padding: 1em 0;
 }
 
 .logo {
@@ -37,7 +37,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 80%;
+  width: 75%;
 }
 
 .contact-info-container {
@@ -69,14 +69,14 @@ header {
 @media screen and (max-width: 480px) {
   header {
     min-width: auto;
-    height: 8rem;
+    height: 9rem;
     padding-top: 1rem;
-    font-size: 1.2em
+    font-size: 1.2em;
   }
 
   .logo {
     width: 7rem;
-    margin-left: .1em;
+    margin-left: 0.1em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +87,7 @@ header {
   }
   .page-buttons-list {
     margin-left: 10em;
-    width: 66%
+    width: 66%;
   }
 
   .contact-info {

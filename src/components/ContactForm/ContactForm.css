@@ -23,16 +23,23 @@
   border-radius: 5px;
   box-shadow: 0px 0px 9px 0px var(--color-primary);
   position: relative;
+  min-width: 376px;
 }
 
 .form-container > h1 {
   padding-bottom: 1em;
 }
 
+.contact-form-info {
+  width: 60%;
+  text-align: center;
+  margin-bottom: 2em
+}
+
 form {
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(1, 100%);
+  row-gap: 1em;
   color: var(--text-secondary);
   z-index: 4;
   align-items: center;
@@ -52,7 +59,7 @@ form {
   text-align: center;
   position: absolute;
   line-height: 0;
-  top: 1rem;
+  top: 2rem;
   right: 2rem;
   box-shadow: none;
   transition: 0.2s cubic-bezier(0, 1.05, 0.48, 0.9);
@@ -61,4 +68,24 @@ form {
 .form-close:hover {
   border: 3px solid var(--color-secondary);
   box-shadow: 0px 0px 2px 0px var(--color-primary);
+}
+
+@media screen and (max-width: 480px) {
+  .form-container {
+    width: 80%;
+  }
+
+  .form-container > h1 {
+    min-width: none;
+    margin-top: 1em;
+    padding-bottom: 2em;
+  }
+
+  .contact-form-info {
+    font-size: 1.8em
+  }
+
+  .form-close {
+    top: 1rem;
+  }
 }
