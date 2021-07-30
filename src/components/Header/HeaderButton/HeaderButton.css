@@ -38,6 +38,7 @@ button > img {
 
 @media  screen and (max-width: 480px) {
   .low-button {
-    padding: 10px 0
+    padding: 10px 0;
+    margin: 0
   }
 }
