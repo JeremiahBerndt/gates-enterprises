@@ -4,11 +4,7 @@ import EmailIcon from '../../assets/icons/email.svg';
 import HeaderButton from './HeaderButton/HeaderButton';
 import Logo from '../Logo/Logo';
 
-export default function Header() {
-  const displayContactForm = () => {
-    console.log('hi');
-  };
-
+export default function Header({ displayContactForm }) {
   const scrollToElement = (e) => {
     const target = e.target.innerText.split(' ').join('');
     const targetEl = document.querySelector(`.${target}`);
@@ -26,7 +22,7 @@ export default function Header() {
         <div className='page-buttons-list'>
           {/* <HeaderButton text='Home' /> */}
           <HeaderButton text='Services' handleClick={scrollToElement} />
-          <HeaderButton text='Contact' handleClick={displayContactForm} />
+          <HeaderButton text='Contact Us' handleClick={displayContactForm} />
           <HeaderButton text='Testimonials' handleClick={scrollToElement} />
           <HeaderButton text='Who We Are' handleClick={scrollToElement} />
         </div>

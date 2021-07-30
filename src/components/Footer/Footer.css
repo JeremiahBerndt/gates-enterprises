@@ -1,5 +1,8 @@
 footer {
   background: var(--color-primary);
-	bottom: 0;
-	height: 5em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 5em;
 }

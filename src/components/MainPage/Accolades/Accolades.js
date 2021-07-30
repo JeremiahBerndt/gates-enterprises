@@ -10,7 +10,7 @@ export default function Accolades({ name }) {
           Accolades
           <img className='icon' src={Medal} alt={name} />
         </p>
-        <div class='accolades-list'>
+        <div className='accolades-list'>
           <img className='accolade' src={BBBLogo} alt='accolade' />
           <img className='accolade' src={BBBLogo} alt='accolade' />
           <img className='accolade' src={BBBLogo} alt='accolade' />

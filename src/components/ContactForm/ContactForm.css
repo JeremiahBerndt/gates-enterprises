@@ -1,0 +1,41 @@
+.form-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.363);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  height: 10em;
+  padding: 3em;
+  background: var(--color-tertiary);
+  border-radius: 5px;
+  box-shadow: 0px 0px 9px 0px var(--color-primary);
+  color: var(--text-secondary);
+  position: relative;
+}
+
+.form-close {
+  background: var(--color-primary);
+  color: var(--color-tertiary);
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
