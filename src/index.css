@@ -1,5 +1,7 @@
 :root {
-  --color-primary: #08253d;
+  /* --color-primary: #08253d; */
+  /* matched color from logo 👇 */
+  --color-primary: #062841;
   --color-secondary: #c9a32c;
   --color-tertiary: whitesmoke;
   --text-primary: white;
