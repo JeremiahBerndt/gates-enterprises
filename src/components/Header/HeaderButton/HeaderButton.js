@@ -6,7 +6,7 @@ export default function HeaderButton({ text, icon, handleClick }) {
       className={icon ? 'low-button' : 'high-button'}
       onClick={handleClick}
     >
-      {icon && <img src={icon} alt={text} />}
+      {icon && <img className='icon' src={icon} alt={text} />}
       {text}
     </button>
   );

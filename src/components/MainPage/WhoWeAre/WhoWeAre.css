@@ -1,7 +1,29 @@
 .WhoWeAre {
-	justify-content: center;
+  justify-content: center;
 }
 
 .wwa-story {
-	width: 20em
+  width: 20em;
+}
+
+@media screen and (max-width: 480px) {
+  .WhoWeAre {
+    flex-direction: column;
+    align-items: center;
+  }
+
+	.WhoWeAre > p {
+		margin-bottom: 1em;
+	}
+
+	.WhoWeAre > div {
+		width: 75%;
+		display: flex;
+	justify-content: center;
+	padding: 3em 1em
+	}
+
+	.wwa-story {
+		width: 80%
+	}
 }

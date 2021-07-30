@@ -28,8 +28,16 @@ body {
     center 0 / cover no-repeat fixed url('./assets/images/rooftops.jpg');
 }
 
+body * {
+  box-sizing: border-box;
+}
+
 button {
   font-family: var(--font-family);
   cursor: pointer;
   border: none;
+}
+
+.hidden {
+  display: none !important;
 }

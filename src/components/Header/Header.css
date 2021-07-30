@@ -3,18 +3,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   z-index: 1;
   box-shadow: 0px 0px 11px 1px #00000059;
   min-width: 807px;
-  margin-bottom: 5em;
+  padding: 1em 0
 }
 
 .logo {
   width: 10rem;
   height: 10rem;
-  margin-left: 1em;
+  margin-left: 2em;
   z-index: 2;
 }
 
@@ -62,4 +64,35 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    min-width: auto;
+    height: 8rem;
+    padding-top: 1rem;
+    font-size: 1.2em
+  }
+
+  .logo {
+    width: 7rem;
+    margin-left: .1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-info-container {
+    /* height: 60%; */
+  }
+  .page-buttons-list {
+    margin-left: 10em;
+    width: 66%
+  }
+
+  .contact-info {
+    margin-left: 5rem;
+    flex-direction: column;
+    min-width: auto;
+  }
 }

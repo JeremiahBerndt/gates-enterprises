@@ -1,6 +1,12 @@
 main {
-  padding-bottom: 4em;
+  padding-bottom: 5em;
+  margin-top: 16rem;
 }
+
+/* main * {
+  box-sizing: border-box;
+} */
+
 main > section {
   padding: 3em 0;
   min-height: 10em;
@@ -61,4 +67,26 @@ main > section .icon {
 
 .column-title img {
   padding: 0.4em 0;
+}
+
+@media screen and (max-width: 480px) {
+
+  main {
+    margin-top: 12rem;
+  }
+
+  main > section {
+    min-width: 100vw;
+    max-width: 100vw;
+  }
+  .mp-title {
+    font-size: 3em;
+    min-width: auto;
+    max-width: 100%;
+    margin: 0 1.5em;
+  }
+
+  .mp-content-title {
+    font-size: 2em;
+  }
 }

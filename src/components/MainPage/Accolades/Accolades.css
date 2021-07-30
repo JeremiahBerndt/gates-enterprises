@@ -1,6 +1,6 @@
 .Accolades {
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .accolades-container {
@@ -19,4 +19,29 @@
 
 .accolade {
   width: 5em;
+}
+
+@media screen and (max-width: 480px) {
+  .Accolades {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .accolades-container {
+    max-width: none;
+    margin-top: 2em;
+    width: 75%
+  }
+
+  .column-title {
+    margin: 0;
+  }
+
+  .accolades-list {
+    margin-top: 2em
+  }
+
+  .Accolades > p {
+    width: 45%;
+    align-self: flex-start
+  }
 }

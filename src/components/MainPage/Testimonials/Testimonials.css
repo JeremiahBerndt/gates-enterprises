@@ -16,3 +16,12 @@
   grid-template-columns: repeat(3, 1fr);
   column-gap: 2em;
 }
+
+@media screen and (max-width: 480px) {
+  .testimonial-list {
+    grid-template-columns: none;
+    row-gap: 2em;
+    width: 75%
+  }
+  
+}

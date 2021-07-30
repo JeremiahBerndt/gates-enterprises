@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from '../Header/Header';
 import MainPage from '../MainPage/MainPage';
@@ -8,6 +8,13 @@ import ContactForm from '../ContactForm/ContactForm';
 
 function App() {
   const [openContact, setOpenContact] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const handleResize = () => setScreenWidth(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+  }, []);
 
   const displayContactForm = () => {
     setOpenContact(!openContact);
@@ -15,7 +22,10 @@ function App() {
 
   return (
     <div className='App'>
-      <Header displayContactForm={displayContactForm} />
+      <Header
+        displayContactForm={displayContactForm}
+        screenWidth={screenWidth}
+      />
       <Switch>
         <Route
           exact
@@ -23,9 +33,10 @@ function App() {
           render={() => (
             <>
               <MainPage />
-              {openContact && (
-                <ContactForm displayContactForm={displayContactForm} />
-              )}
+              <ContactForm
+                displayContactForm={displayContactForm}
+                openContact={openContact}
+              />
             </>
           )}
         />

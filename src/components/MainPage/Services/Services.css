@@ -17,3 +17,27 @@
 .service-list > li {
   font-weight: 300;
 }
+
+@media screen and (max-width: 480px) {
+  .Services {
+    flex-direction: column;
+  }
+
+  .service-list-container {
+    margin-top: 2em;
+    flex-direction: row;
+    width: 75%
+  }
+
+  .service-list {
+    margin-left: 2em;
+  }
+
+  .column-title {
+    margin-right: 2em
+  }
+
+  .Services > p {
+    width: 80%
+  }
+}

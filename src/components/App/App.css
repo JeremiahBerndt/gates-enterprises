@@ -1,3 +1,18 @@
 .App {
-	min-height: 100vh
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.icon {
+  width: 1.8em;
+}
+
+@media screen and (max-width: 480px) {
+  .icon {
+    width: 2em;
+  }
+  body {
+    font-size: 0.5em;
+  }
 }
