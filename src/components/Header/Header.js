@@ -13,11 +13,13 @@ export default function Header() {
     <header>
       <Logo disabled={false} />
       <nav className='page-buttons'>
-        {/* <HeaderButton text='Home' /> */}
-        <HeaderButton text='Services' />
-        <HeaderButton text='Contact' handleClick={displayContactForm} />
-        <HeaderButton text='Testimonials' />
-        <HeaderButton text='Who We Are' />
+        <div className='page-buttons-list'>
+          {/* <HeaderButton text='Home' /> */}
+          <HeaderButton text='Services' />
+          <HeaderButton text='Contact' handleClick={displayContactForm} />
+          <HeaderButton text='Testimonials' />
+          <HeaderButton text='Who We Are' />
+        </div>
       </nav>
       <div className='contact-info-container'>
         <div className='contact-info'>
