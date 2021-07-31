@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
 			width: '.6em',
 			padding: '30px 0'
 		}
+	},
+	icon: {
+		fontSize: '1.3em'
 	}
 }));
 

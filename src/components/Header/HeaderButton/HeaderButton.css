@@ -20,6 +20,19 @@ button > img {
   color: var(--text-secondary);
 }
 
+.low-button > p {
+  margin-left: .5em;
+  width: max-content;
+}
+
+/* .low-button > a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 .high-button:after {
   content: '';
   display: block;
@@ -39,7 +52,7 @@ button > img {
 
 @media  screen and (max-width: 480px) {
   .low-button {
-    padding: 10px 0;
+    padding: 10px 0 0 0;
     margin: 0
   }
 }
