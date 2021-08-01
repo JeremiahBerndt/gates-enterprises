@@ -1,0 +1,43 @@
+.Inspection {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.service-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.inspection-list {
+  list-style: inside;
+}
+
+.inspection-list > li {
+  font-weight: 300;
+}
+
+@media screen and (max-width: 480px) {
+  .Inspection {
+    flex-direction: column;
+  }
+
+  .inspection-list-container {
+    margin-top: 2em;
+    flex-direction: row;
+    width: 75%
+  }
+
+  .inspection-list {
+    margin-left: 2em;
+  }
+
+  .column-title {
+    margin-right: 2em
+  }
+
+  .Inspection > p {
+    width: 80%
+  }
+}
