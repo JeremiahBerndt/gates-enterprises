@@ -17,12 +17,20 @@ export default function HeaderButton({ name, text, icon, handleClick }) {
       {name === 'phone' && <PhoneIcon className={classes.icon} />}
       {name === 'email' && <Email className={classes.icon} />}
       {name === 'instagram' && (
-        <a href='https://www.instagram.com/gatesroofing/?hl=en' target='_blank'>
+        <a
+          href='https://www.instagram.com/gatesroofing/?hl=en'
+          target='_blank'
+          rel='noreferrer'
+        >
           <InstagramIcon className={classes.icon} />
         </a>
       )}
       {name === 'facebook' && (
-        <a href='https://www.facebook.com/gatesroofingcompany/' target='_blank'>
+        <a
+          href='https://www.facebook.com/gatesroofingcompany/'
+          target='_blank'
+          rel='noreferrer'
+        >
           <FacebookIcon className={classes.icon} />
         </a>
       )}
