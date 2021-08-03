@@ -21,7 +21,7 @@
   width: 5em;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 991px) {
   .Accolades {
     flex-direction: column-reverse;
     align-items: center;

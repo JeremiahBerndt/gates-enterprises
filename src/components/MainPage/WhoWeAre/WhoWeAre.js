@@ -2,7 +2,7 @@ import './WhoWeAre.css';
 
 export default function WhoWeAre({ name }) {
   return (
-    <section className='WhoWeAre'>
+    <section className='WhoWeAre page-content page-single'>
       <p className='mp-title'>{name}</p>
       <div className='mp-content-container'>
         <p className='mp-content-text wwa-story'>

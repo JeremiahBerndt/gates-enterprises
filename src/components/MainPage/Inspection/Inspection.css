@@ -1,14 +1,15 @@
 .Inspection {
   justify-content: space-around;
   align-items: center;
+  flex-direction: row-reverse;
 }
 
-.service-list-container {
+/* .service-list-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-}
+} */
 
 .inspection-list {
   list-style: inside;
@@ -18,7 +19,7 @@
   font-weight: 300;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 991px) {
   .Inspection {
     flex-direction: column;
   }

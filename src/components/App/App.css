@@ -8,7 +8,7 @@
   width: 2.1em;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 991px) {
   .icon {
     width: 2em;
   }

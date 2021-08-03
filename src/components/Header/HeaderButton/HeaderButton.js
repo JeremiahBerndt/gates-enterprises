@@ -10,7 +10,7 @@ export default function HeaderButton({ name, text, icon, handleClick }) {
 
   return (
     <button
-      tabIndex={icon ? -1 : 0}
+      tabIndex={icon && -1}
       className={icon ? 'low-button' : 'high-button'}
       onClick={handleClick}
     >

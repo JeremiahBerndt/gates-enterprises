@@ -3,7 +3,7 @@ import Fix from '../../../assets/icons/fix.svg';
 
 export default function Services({ name }) {
   return (
-    <section className={name}>
+    <section className={`page-content page-single ${name}`}>
       <p className='mp-title'>
         Locally Owned and Operated{' '}
         <span className='gold'>10+ Years Roofing Houses in Colorado</span>

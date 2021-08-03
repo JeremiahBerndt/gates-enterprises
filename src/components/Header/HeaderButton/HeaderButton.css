@@ -50,7 +50,7 @@ button > img {
   transition: 0.2s ease-out;
 }
 
-@media  screen and (max-width: 480px) {
+@media  screen and (max-width: 991px) {
   .low-button {
     padding: 10px 0 0 0;
     margin: 0
