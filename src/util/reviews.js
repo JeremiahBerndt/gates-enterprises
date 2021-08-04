@@ -19,5 +19,7 @@ export const reviewTwo = {
 
 export const reviewThree = {
   name: "Susan Berndt",
-  review: "Todo"
+  review: "Those boys did an excellent job! I would recommend Nate, and Andrew to anyone! " +
+  "I needed one small part of a gutter painted after everything was done and they were happy " +
+  "to come back and make sure I was 100% satisfied :)"
 }

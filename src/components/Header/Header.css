@@ -11,6 +11,8 @@ header {
   box-shadow: 0px 0px 11px 1px #00000059;
   min-width: 807px;
   padding: 1em 0;
+  min-height: 10rem;
+  max-height: 10rem;
 }
 
 .logo {
@@ -59,18 +61,28 @@ header {
 
 .contact-info {
   margin-left: 5em;
-  width: 33%;
-  min-width: 500px;
+  /* width: 33%; */
+  min-width: 540px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-@media screen and (max-width: 480px) {
+.social-media-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 4em;
+  /* position: absolute;
+  bottom: -50%;
+  right: 5%  */
+}
+
+@media screen and (max-width: 991px) {
   header {
     min-width: auto;
-    height: 9rem;
-    padding-top: 1rem;
+    /* height: 10rem; */
+    /* padding-top: 1rem; */
     font-size: 1.2em;
   }
 
@@ -82,10 +94,8 @@ header {
     align-items: center;
   }
 
-  .contact-info-container {
-    /* height: 60%; */
-  }
   .page-buttons-list {
+    margin-top: 2em;
     margin-left: 10em;
     width: 66%;
   }
@@ -94,5 +104,6 @@ header {
     margin-left: 5rem;
     flex-direction: column;
     min-width: auto;
+    margin-top: -0.6em;
   }
 }

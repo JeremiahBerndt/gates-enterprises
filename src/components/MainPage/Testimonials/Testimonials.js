@@ -6,7 +6,7 @@ import {reviewOne, reviewTwo, reviewThree} from '../../../util/reviews.js'
 export default function Testimonials({ name }) {
   return (
     <section className={name}>
-      <p className='mp-title'>Testimonials</p>
+      {/* <p className='mp-title'>Testimonials</p> */}
       <div className='testimonial-list'>
         <Testimonial text={reviewOne.review} reviewerName = {reviewOne.name}/>
         <Testimonial text={reviewTwo.review} reviewerName = {reviewTwo.name} />

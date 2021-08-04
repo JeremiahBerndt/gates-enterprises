@@ -7,19 +7,20 @@
   max-width: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: white;
 }
 
 .accolades-list {
   display: grid;
+  align-items: center;
 	grid-template-columns: repeat(4, 1fr);
 	row-gap: 1em;
 }
 
 .accolade {
-  width: 5em;
+  width: 6em;
 }
 
 .accolade-title {
@@ -30,7 +31,7 @@
   min-width: 582px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 991px) {
   .Accolades {
     flex-direction: column-reverse;
     align-items: center;

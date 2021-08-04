@@ -17,7 +17,7 @@
   column-gap: 2em;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 991px) {
   .testimonial-list {
     grid-template-columns: none;
     row-gap: 2em;

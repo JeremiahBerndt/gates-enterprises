@@ -17,10 +17,13 @@ const useStyles = makeStyles((theme) => ({
 		width: '.8em',
     alignSelf: 'center',
     height: 'auto',
-		'@media screen and (max-width: 480px)': {
+		'@media screen and (max-width: 991px)': {
 			width: '.6em',
 			padding: '30px 0'
 		}
+	},
+	icon: {
+		fontSize: '1.3em'
 	}
 }));
 

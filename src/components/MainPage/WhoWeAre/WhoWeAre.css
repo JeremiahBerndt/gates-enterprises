@@ -1,12 +1,12 @@
 .WhoWeAre {
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .wwa-story {
   width: 20em;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 991px) {
   .WhoWeAre {
     flex-direction: column;
     align-items: center;

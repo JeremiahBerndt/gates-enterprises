@@ -1,11 +1,6 @@
 main {
-  padding-bottom: 5em;
-  margin-top: 16rem;
+ min-width: 100vw 
 }
-
-/* main * {
-  box-sizing: border-box;
-} */
 
 main > section {
   padding: 3em 0;
@@ -32,7 +27,7 @@ main > section .icon {
   font-size: 4.5rem;
   margin: 0;
   max-width: 43%;
-  min-width: 582px;
+  /* min-width: 582px; */
 }
 
 .mp-title > span {
@@ -69,16 +64,17 @@ main > section .icon {
   padding: 0.4em 0;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 991px) {
 
-  main {
+  /* main {
     margin-top: 12rem;
-  }
+  } */
 
   main > section {
     min-width: 100vw;
     max-width: 100vw;
   }
+  
   .mp-title {
     font-size: 3em;
     min-width: auto;
