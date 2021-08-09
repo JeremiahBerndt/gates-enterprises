@@ -40,6 +40,7 @@ export default function ContactForm({ displayContactForm, openContact }) {
   const classes = useStyles();
 
   return (
+
     <div className={`form-bg ${!openContact ? 'hidden' : ''}`}>
       <div className={`form-container ${toaster}`}>
         <button className='form-close' onClick={displayContactForm}>
