@@ -5,14 +5,14 @@ export default function Services({ name }) {
   return (
     <section className={`page-content page-single ${name}`}>
       <div>
-        <h2 className='mp-content-title'>A Warranty You Can Count On{' '}</h2>
+        <h2 className='mp-content-title'>A Warranty You Can Count On</h2>
         <p>Gates Enterprises is proud to stand by our work and materials by offering our
           clients an industry leading 5-year workmanship warranty!
           As a reliable, established local company we are here for the long haul, so unlike
           storm chases who will leave town after the storm you’ll be able to count on us
-          to guarantee our workmanship warranty.
+          to guarantee our workmanship warranty.<br></br><br></br><br></br>
         </p>
-        <span className='gold mp-content-title'>We Know Colorado</span>
+        <h2 className='gold mp-content-title'>We Know Colorado</h2>
         <p>Our team lives, works and knows Colorado weather and this understanding of
           our unique climate allows our roofing professionals to help you select the
           products that will provide the best protection for your home.
@@ -22,10 +22,10 @@ export default function Services({ name }) {
         </p>
       </div>
       <div className='service-list-container mp-content-container'>
-        <p className='mp-content-title column-title'>
+        <h2 className='mp-content-title column-title'>
           Services
           <img className='icon' src={Fix} alt={name} />
-        </p>
+        </h2>
         <ul className='service-list mp-content-text'>
           <li>Commercial & Residential</li>
           <li>Impact resistant shingles</li>

@@ -14,7 +14,9 @@ export default function Header({ displayContactForm, screenWidth }) {
       <Logo disabled={false} />
       <nav className='page-buttons'>
         <div className='page-buttons-list'>
-          <HeaderButton text='Contact Us' handleClick={displayContactForm} />
+          <HeaderButton
+            text='Contact Us'
+            handleClick={displayContactForm} />
           <HeaderButton
             text='Services'
             handleClick={() => redirect('services')}
@@ -22,6 +24,14 @@ export default function Header({ displayContactForm, screenWidth }) {
           <HeaderButton
             text='Who We Are'
             handleClick={() => redirect('who-we-are')}
+          />
+          <HeaderButton
+            text='Financing'
+            handleClick={() => redirect('financing')}
+          />
+          <HeaderButton
+            text='Partners'
+            handleClick={() => redirect('partners')}
           />
         </div>
       </nav>

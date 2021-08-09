@@ -1,5 +1,5 @@
 main {
- min-width: 100vw 
+ min-width: 100vw
 }
 
 main > section {
@@ -74,7 +74,7 @@ main > section .icon {
     min-width: 100vw;
     max-width: 100vw;
   }
-  
+
   .mp-title {
     font-size: 3em;
     min-width: auto;

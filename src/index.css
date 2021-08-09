@@ -25,7 +25,7 @@ body {
   min-width: 100vw;
   color: var(--text-primary);
   font-feature-settings: 'lnum' 1;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     center 0 / cover no-repeat fixed url('./assets/images/rooftops.jpg');
 }
 

@@ -7,6 +7,8 @@ import Footer from '../Footer/Footer';
 import ContactForm from '../ContactForm/ContactForm';
 import Services from '../MainPage/Services/Services';
 import WhoWeAre from '../MainPage/WhoWeAre/WhoWeAre';
+import Financing from '../MainPage/Financing/Financing';
+import Partners from '../MainPage/Partners/Partners';
 
 function App() {
   const [openContact, setOpenContact] = useState(false);
@@ -32,8 +34,8 @@ function App() {
         <Route exact path='/' render={() => <MainPage />} />
         <Route exact path='/services' render={() => <Services name='Services'/>} />
         <Route exact path='/who-we-are' render={() => <WhoWeAre name='Who We Are'/>} />
-        {/* <Route exact path='/financing' render={() => <Services />} />
-        <Route exact path='/partners' render={() => <Services />} /> */}
+        <Route exact path='/financing' render={() => <Financing name='Financing'/>} />
+        <Route exact path='/partners' render={() => <Partners name='Partners'/>} />
       </Switch>
       <Footer />
       <ContactForm

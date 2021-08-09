@@ -1,7 +1,20 @@
 .Services {
   justify-content: space-around;
-  /* flex-direction: row; */
   align-items: center;
+  flex-direction: row-reverse;
+  padding-bottom: 10rem;
+}
+
+.Services > div:first-child {
+  background-color: var(--color-primary);
+  max-width: 50%;
+  padding: 1.5em;
+}
+
+.Services > div > p {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 1em;
 }
 
 .service-list-container {
