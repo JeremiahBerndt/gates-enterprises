@@ -37,7 +37,7 @@ function App() {
         <Route exact path='/financing' render={() => <Financing name='Financing'/>} />
         <Route exact path='/partners' render={() => <Partners name='Partners'/>} />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
       <ContactForm
         displayContactForm={displayContactForm}
         openContact={openContact}
