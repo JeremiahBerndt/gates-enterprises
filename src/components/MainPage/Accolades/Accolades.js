@@ -28,9 +28,9 @@ export default function Accolades({ name }) {
           <img className='accolade' src={homeadviseLogo} alt='accolade' />
         </div>
       </div>
-      <p className='accolade-title'>Our team has worked hard to achieve the highest credentials and awards from major
-        roofing manufacturers for adhering to strict standards of customer service, professionalism,
-        fiscal responsibility and training.<br/><br/>
+      <p className='accolade-title'>Our team has worked hard to achieve the highest credentials and
+        awards from major roofing manufacturers for adhering to strict standards of customer service,
+        professionalism, fiscal responsibility and training.<br/><br/>
         These certifications mean you can rely on Gates Enterprises to provide expert level
         installation, and when we are done you will receive the best extended warranty available
         from the manufacturer.</p>

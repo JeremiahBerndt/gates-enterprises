@@ -81,8 +81,8 @@ header {
 @media screen and (max-width: 991px) {
   header {
     min-width: auto;
-    /* height: 10rem; */
-    /* padding-top: 1rem; */
+    /* height: 10rem;
+    padding-top: 1rem; */
     font-size: 1.2em;
   }
 

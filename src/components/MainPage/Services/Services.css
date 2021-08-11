@@ -5,6 +5,11 @@
   padding-bottom: 10rem;
 }
 
+.Services > div {
+  min-width: 80vw;
+  border-radius: 5px;
+}
+
 .Services > div:first-child {
   background-color: var(--color-primary);
   max-width: 50%;
@@ -40,7 +45,7 @@
   .service-list-container {
     margin-top: 2em;
     flex-direction: row;
-    width: 75%
+    width: 85%
   }
 
   .service-list {

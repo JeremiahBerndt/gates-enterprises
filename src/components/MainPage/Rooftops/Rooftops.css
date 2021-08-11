@@ -8,3 +8,19 @@
 .drone-video {
   max-width: 600px;
 }
+
+@media screen and (max-width: 991px) {
+  .Rooftops {
+    flex-direction: column-reverse;
+    max-width: 60%;
+    margin-top: 0;
+  }
+  .drone-video {
+    max-width: 100%;
+  }
+  /* .inspection-list-container {
+    margin-top: 2em;
+    flex-direction: row;
+
+  } */
+}

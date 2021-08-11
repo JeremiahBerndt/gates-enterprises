@@ -24,6 +24,7 @@
 }
 
 .accolade-title {
+  display: flex;
   font-weight: 600;
   font-size: 1.5rem;
   margin-top: 2em;
@@ -36,11 +37,16 @@
     flex-direction: column-reverse;
     align-items: center;
   }
+
   .accolades-container {
     max-width: none;
     margin-top: 2em;
-    width: 75%
+    width: 75%;
   }
+
+  /* .accolade-title {
+    max-width: 50%;
+  } */
 
   .column-title {
     margin: 0;
@@ -51,7 +57,9 @@
   }
 
   .Accolades > p {
-    width: 45%;
-    align-self: flex-start
+    padding: 0 1em;
+    min-width: 90vw;
+    font-size: 1.2rem;
+    align-self: flex-start;
   }
 }

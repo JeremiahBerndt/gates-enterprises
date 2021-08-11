@@ -16,8 +16,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
-  height: 70%;
+  width: 75%;
+  height: 75%;
   padding: 1.2em;
   border-radius: 5px;
   position: relative;
@@ -85,9 +85,9 @@ form {
 }
 
 @media screen and (max-width: 991px) {
-  .form-container {
+  /* .form-container {
     width: 80%;
-  }
+  } */
 
   .form-container > h1 {
     min-width: none;
