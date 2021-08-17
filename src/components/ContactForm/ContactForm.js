@@ -12,106 +12,14 @@ import './ContactForm.css';
 import { toaster } from '../../util/animations';
 
 export default function ContactForm({ displayContactForm, openContact }) {
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [phone, setPhone] = useState('');
-
-  // const submitForm = () => {
-  //   const contactInfo = { name, email, phone };
-  //   console.log(contactInfo);
-  //   setName('');
-  //   setEmail('');
-  //   setPhone('');
-  //   displayContactForm();
-  // };
-
-  // const handleChange = (e) => {
-  //   if (e.target.id === 'name') {
-  //     setName(e.target.value);
-  //   }
-  //   if (e.target.id === 'email') {
-  //     setEmail(e.target.value);
-  //   }
-  //   if (e.target.id === 'phone') {
-  //     setPhone(e.target.value);
-  //   }
-  // };
-
-  // const classes = useStyles();
 
   return (
     <div className={`form-bg ${!openContact ? 'hidden' : ''}`}>
-      <div className='connect-form-and-close'>
+      <div className={`connect-form-and-close ${toaster}`}>
         <button className='form-close' onClick={displayContactForm}>X</button>
-        <iframe className={`form-container ${toaster}`} title="emailForm"
+        <iframe className='form-container' title="emailForm"
           src='https://forms.zohopublic.com/nstovall/form/EmailContact/formperma/-rFYspqYwcc9i7PEtVrDNxgPQF4bqIBmeSILkVCo96c'></iframe>
       </div>
     </div>
-    //   <div className={`form-container ${toaster}`}>
-    //       <CloseIcon className={classes.close} />
-    //     <h1 className='mp-content-title'>Contact Us!</h1>
-    //     <p className='contact-form-info'>
-    //       Provide us with your contact info, and we'll get in touch with you
-    //       ASAP
-    //     </p>
-    //     <form onSubmit={(e) => e.preventDefault()}>
-    //       <TextField
-    //         className={classes.root}
-    //         id='name'
-    //         label='Name'
-    //         variant='filled'
-    //         InputProps={{
-    //           startAdornment: (
-    //             <InputAdornment position='start'>
-    //               <PersonIcon />
-    //             </InputAdornment>
-    //           ),
-    //         }}
-    //         value={name}
-    //         onChange={handleChange}
-    //       />
-    //       <TextField
-    //         className={`${classes.root} ${classes.textarea}`}
-    //         id='email'
-    //         label='Email'
-    //         variant='filled'
-    //         InputProps={{
-    //           startAdornment: (
-    //             <InputAdornment position='start'>
-    //               <Email />
-    //             </InputAdornment>
-    //           ),
-    //         }}
-    //         value={email}
-    //         onChange={handleChange}
-    //       />
-    //       <TextField
-    //         className={classes.root}
-    //         id='phone'
-    //         label='Phone (optional)'
-    //         variant='filled'
-    //         InputProps={{
-    //           startAdornment: (
-    //             <InputAdornment position='start'>
-    //               <PhoneIcon />
-    //             </InputAdornment>
-    //           ),
-    //         }}
-    //         value={phone}
-    //         onChange={handleChange}
-    //       />
-    //       <Button
-    //         className={classes.submit}
-    //         variant='contained'
-    //         onClick={submitForm}
-    //         size='large'
-    //         color='primary'
-    //         disabled={!name || !email ? true : false}
-    //       >
-    //         Submit
-    //       </Button>
-    //     </form>
-    //   </div>
-    // </div>
   );
 }
