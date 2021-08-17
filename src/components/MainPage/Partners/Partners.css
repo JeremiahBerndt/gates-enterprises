@@ -1,0 +1,7 @@
+.Partners {
+  justify-content: center;
+}
+
+.Partners > img{
+  max-width: 80vw;
+}
