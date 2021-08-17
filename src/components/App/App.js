@@ -24,7 +24,7 @@ function App() {
   };
 
   return (
-    <div className='App'>
+    <div className='App' styles={{}}>
       <Header
         displayContactForm={displayContactForm}
         screenWidth={screenWidth}

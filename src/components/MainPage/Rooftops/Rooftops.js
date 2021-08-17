@@ -9,7 +9,7 @@ export default function Rooftops({ name }) {
         <span className='gold'>10+ Years Roofing Houses in Colorado</span>
       </p>
       <div className='video-container mp-content-container'>
-        <video className='drone-video' autoPlay loop>
+        <video className='drone-video' autoPlay loop muted preload='auto'>
           <source src={droneshot} type="video/mp4"/>
             Your browser does not support the video tag.
         </video>
