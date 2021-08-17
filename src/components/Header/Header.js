@@ -39,7 +39,7 @@ export default function Header({ displayContactForm, screenWidth }) {
         <div className='contact-info'>
           {screenWidth > 991 && (
             <>
-              <a href='tel:17207758369'>
+              <a href='tel:17203804763'>
                 <HeaderButton name='phone' text='(720) 380-4763' icon={true} />
               </a>
               <a
