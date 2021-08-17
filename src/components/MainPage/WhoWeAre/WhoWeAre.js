@@ -1,9 +1,13 @@
 import './WhoWeAre.css';
+import houseImage from '../../../assets/images/WhoWeAre.png';
 
 export default function WhoWeAre({ name }) {
   return (
     <section className='WhoWeAre page-content page-single'>
-      <p className='mp-title'>{name}</p>
+      <div>
+        <p className='mp-title'>{name}</p>
+        <img src={houseImage} alt="Who We Are"></img>
+      </div>
       <div className='mp-content-container'>
         <p className='mp-content-text wwa-story'>
           Gates Enterprises LLC is committed to providing our customers with an

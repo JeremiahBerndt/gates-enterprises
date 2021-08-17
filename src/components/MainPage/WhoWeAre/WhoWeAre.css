@@ -1,5 +1,15 @@
 .WhoWeAre {
   justify-content: space-around;
+	background-color: var(--color-primary);
+	margin: 10em 5em 5em;
+}
+
+.WhoWeAre > div >img {
+	max-width: 80%;
+}
+
+.WhoWeAre > div:first-child > p{
+	min-width: 12ch;
 }
 
 .wwa-story {
@@ -19,8 +29,8 @@
 	.WhoWeAre > div {
 		width: 75%;
 		display: flex;
-	justify-content: center;
-	padding: 3em 1em
+		justify-content: center;
+		padding: 3em 1em
 	}
 
 	.wwa-story {
