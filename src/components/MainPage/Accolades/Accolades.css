@@ -37,28 +37,23 @@
     align-items: center;
   }
 
+  .accolade-title {
+    margin-top: 1em;
+  }
+
   .accolades-container {
     max-width: none;
     margin-top: 2em;
     width: 75%;
   }
 
-  /* .accolade-title {
-    max-width: 50%;
-  } */
-
-  .column-title {
-    margin: 0;
-  }
-
   .accolades-list {
-    margin-top: 2em
+    margin-top: 1em
   }
 
   .Accolades > p {
     padding: 0 1em;
     min-width: 90vw;
     font-size: 1.2rem;
-    align-self: flex-start;
   }
 }

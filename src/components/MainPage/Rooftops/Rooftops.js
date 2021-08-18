@@ -6,7 +6,7 @@ export default function Rooftops({ name }) {
     <section className={`page-content page-single ${name}`}>
       <p className='mp-title'>
         Locally Owned and Operated{' '}
-        <span className='gold'>10+ Years Roofing Houses in Colorado</span>
+        <span className='gold'>10+ Years Roofing Homes in Colorado</span>
       </p>
       <div className='video-container mp-content-container'>
         <video className='drone-video' autoPlay loop muted preload='auto'>

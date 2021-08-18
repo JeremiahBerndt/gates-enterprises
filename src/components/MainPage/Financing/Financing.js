@@ -1,9 +1,10 @@
 import './Financing.css';
+import financeImg from '../../../assets/images/Financing.png'
 
 export default function Financing({ name }) {
   return (
     <section className={`page-content page-single ${name}`}>
-      <h1 className='.mp-content-title'>Under Construction</h1>
+      <img src={financeImg} alt="Financing"></img>
     </section>
   );
 }

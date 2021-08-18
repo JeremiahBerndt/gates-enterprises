@@ -31,7 +31,7 @@ export default function Services({ name }) {
           <li>Impact resistant shingles</li>
           <li>Luxury asphalt shingles</li>
           <li>Tile roofing</li>
-          <li>Solar powered roof ventilation</li>
+          <li>Solar powered ventilation</li>
           <li>Wood Shake</li>
           <li>Rolled roofing</li>
           <li>Modified bitumen</li>

@@ -1,7 +1,8 @@
 .WhoWeAre {
   justify-content: space-around;
 	background-color: var(--color-primary);
-	margin: 10em 5em 5em;
+	margin: 12em 5em 5em;
+	border-radius: 5px;
 }
 
 .WhoWeAre > div >img {
@@ -10,27 +11,39 @@
 
 .WhoWeAre > div:first-child > p{
 	min-width: 12ch;
+	margin-bottom: 2rem;
 }
 
 .wwa-story {
-  width: 20em;
+  width: auto;
 }
 
 @media screen and (max-width: 991px) {
   .WhoWeAre {
     flex-direction: column;
     align-items: center;
+		margin-top: 22em;
+		padding: 2.4em;
   }
 
 	.WhoWeAre > p {
 		margin-bottom: 1em;
 	}
 
+	.WhoWeAre > div:first-child > p{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.WhoWeAre > div >img {
+		max-width: 100%;
+		margin-bottom: 2em;
+	}
+
 	.WhoWeAre > div {
-		width: 75%;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
-		padding: 3em 1em
 	}
 
 	.wwa-story {

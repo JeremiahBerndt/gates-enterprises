@@ -4,4 +4,17 @@
 
 .Partners > img{
   max-width: 80vw;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 991px) {
+
+  .Partners {
+    margin-top: 18em;
+  }
+
+  .Partners > img{
+    max-width: 90vw;
+  }
+
 }
