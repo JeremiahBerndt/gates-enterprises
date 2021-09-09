@@ -5,6 +5,7 @@
 .Partners > img{
   max-width: 80vw;
   border-radius: 5px;
+  margin-bottom: 5em;
 }
 
 @media screen and (max-width: 991px) {

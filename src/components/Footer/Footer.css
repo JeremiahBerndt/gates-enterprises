@@ -1,0 +1,12 @@
+footer {
+  background: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0.5em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 5em;
+}

@@ -8,6 +8,7 @@ import Services from '../MainPage/Services/Services';
 import WhoWeAre from '../MainPage/WhoWeAre/WhoWeAre';
 import Financing from '../MainPage/Financing/Financing';
 import Partners from '../MainPage/Partners/Partners';
+import Footer from '../Footer/Footer';
 
 function App() {
   const [openContact, setOpenContact] = useState(false);
@@ -36,6 +37,7 @@ function App() {
         <Route exact path='/financing' render={() => <Financing name='Financing'/>} />
         <Route exact path='/partners' render={() => <Partners name='Partners'/>} />
       </Switch>
+      < Footer className='footer'/>
       <ContactForm
         displayContactForm={displayContactForm}
         openContact={openContact}
