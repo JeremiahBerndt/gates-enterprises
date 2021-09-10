@@ -66,7 +66,7 @@ export default function Header({ displayContactForm, screenWidth }) {
                   icon={true}
                 />
               </a>
-              <a href='tel:17207758369'>
+              <a href='tel:17203804763'>
                 <HeaderButton name='phone' text='(720) 380-4763' icon={true} />
               </a>
               <div className='social-media-container'>

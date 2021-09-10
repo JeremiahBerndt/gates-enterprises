@@ -9,7 +9,6 @@ export default function Logo({ disabled }) {
         src={GatesLogo}
         alt='Gates Enterprises logo'
         width={'100%'}
-        // height={width}
       />
     </Link>
   );

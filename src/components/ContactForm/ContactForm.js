@@ -1,13 +1,4 @@
 import './ContactForm.css';
-// import { useState } from 'react';
-// import TextField from '@material-ui/core/TextField';
-// import Button from '@material-ui/core/Button';
-// import InputAdornment from '@material-ui/core/InputAdornment';
-// import PersonIcon from '@material-ui/icons/Person';
-// import Email from '@material-ui/icons/Email';
-// import PhoneIcon from '@material-ui/icons/Phone';
-// import CloseIcon from '@material-ui/icons/Close';
-// import useStyles from '../../util/materialuistyles';
 
 import { toaster } from '../../util/animations';
 

@@ -25,14 +25,6 @@ button > img {
   width: max-content;
 }
 
-/* .low-button > a {
-  text-decoration: none;
-  color: var(--text-secondary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .high-button:after {
   content: '';
   display: block;
