@@ -4,7 +4,6 @@
 
 [gatesenterprisesllc.com](http://www.gatesenterprisesllc.com)
 ---
-![SiteScreenShot](https://github.com/JeremiahBerndt/gates-enterprises/public/ScreenshotGE.png?raw=true)
 
 This was a freelance project made in collaboration with Chris Anderson https://github.com/mistercanderson
 
