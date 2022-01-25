@@ -8,7 +8,8 @@
 This was a freelance project made in collaboration with Chris Anderson https://github.com/mistercanderson
 
 Created using: HTML, CSS, SCSS, React, React-router, Animate.css, Material-UI
-Hosted on Netlify
+
+Continuous Deployment and hosting on Netlify
 
 # Getting Started with Create React App
 
