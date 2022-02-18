@@ -2,20 +2,18 @@
   justify-content: center;
 }
 
-.Partners > img{
-  max-width: 80vw;
+.Partners > img {
+  max-width: 70vw;
   border-radius: 5px;
   margin-bottom: 5em;
 }
 
 @media screen and (max-width: 991px) {
-
   .Partners {
     margin-top: 18em;
   }
 
-  .Partners > img{
+  .Partners > img {
     max-width: 90vw;
   }
-
 }

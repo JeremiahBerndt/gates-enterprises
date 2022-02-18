@@ -6,18 +6,16 @@
   padding: 2em;
   border-radius: 5px;
   background-color: var(--color-primary);
-  max-width: 80vw;
+  max-width: 70vw;
   margin-bottom: 5em;
 }
 
 @media screen and (max-width: 991px) {
-
   .Financing {
     margin-top: 18em;
   }
 
-  .Financing > img{
+  .Financing > img {
     max-width: 90vw;
   }
-
 }
