@@ -9,6 +9,11 @@
   max-width: 600px;
 }
 
+.Rooftops {
+  justify-content: space-around;
+  padding-bottom: 8em;
+}
+
 @media screen and (max-width: 991px) {
   .Rooftops {
     flex-direction: column-reverse;

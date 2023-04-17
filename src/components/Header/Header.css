@@ -81,8 +81,6 @@ header {
 @media screen and (max-width: 991px) {
   header {
     min-width: auto;
-    /* height: 10rem;
-    padding-top: 1rem; */
     font-size: 1.2em;
   }
 
@@ -98,6 +96,12 @@ header {
     margin-top: 2em;
     margin-left: 10em;
     width: 66%;
+    flex-wrap: wrap;
+  }
+
+  .page-buttons-list > button {
+    padding: 0;
+    margin-right: 1rem;
   }
 
   .contact-info {

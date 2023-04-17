@@ -6,11 +6,12 @@
   --color-tertiary: whitesmoke;
   --text-primary: white;
   --text-secondary: black;
-  --font-family: 'Raleway', sans-serif;
+  --font-family: 'Poppins', sans-serif;
 }
 
 .gold {
   color: var(--color-secondary);
+  background-color: var(--color-primary);
 }
 
 body {
@@ -25,8 +26,7 @@ body {
   min-width: 100vw;
   color: var(--text-primary);
   font-feature-settings: 'lnum' 1;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    center 0 / cover no-repeat fixed url('./assets/images/rooftops.jpg');
+  background: var(--color-primary);
 }
 
 body * {
@@ -53,10 +53,11 @@ a {
 
 .page-content {
   margin-top: 10rem;
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
 }
 
 .page-single {
   display: flex;
-  padding: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }

@@ -12,7 +12,8 @@
 
 @media screen and (max-width: 991px) {
   .Financing {
-    margin-top: 18em;
+    margin-top: 20em;
+    padding-bottom: 0;
   }
 
   .Financing > img {

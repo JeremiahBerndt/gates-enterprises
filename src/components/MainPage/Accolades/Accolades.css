@@ -1,25 +1,7 @@
-.Accolades {
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
-.accolades-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-color: white;
-}
-
-.accolades-list {
-  display: grid;
-  align-items: center;
-	grid-template-columns: repeat(4, 1fr);
-	row-gap: 1em;
-}
-
 .accolade {
-  width: 6em;
+  width: 50%;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .accolade-title {
@@ -33,27 +15,11 @@
 
 @media screen and (max-width: 991px) {
   .Accolades {
-    flex-direction: column-reverse;
-    align-items: center;
+    flex-direction: column;
   }
 
-  .accolade-title {
-    margin-top: 1em;
-  }
-
-  .accolades-container {
-    max-width: none;
-    margin-top: 2em;
-    width: 75%;
-  }
-
-  .accolades-list {
-    margin-top: 1em
-  }
-
-  .Accolades > p {
-    padding: 0 1em;
-    min-width: 90vw;
-    font-size: 1.2rem;
+  .accolade {
+    width: 100%;
+    padding: 1em
   }
 }

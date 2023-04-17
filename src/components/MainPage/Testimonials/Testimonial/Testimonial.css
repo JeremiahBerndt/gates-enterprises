@@ -1,5 +1,3 @@
-
-
 .testimonial > p {
   margin-top: 2em;
 }
@@ -7,13 +5,15 @@
 .testimonial-title {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.testimonial-title > img {
-  margin-bottom: 2em;
-  /* color: var(--color-secondary); */
+.testimonial-title > div {
+  padding-top: 1em;
+}
+
+.testimonial-title > div > svg {
+  color: var(--color-secondary);
 }
 
 .testimonial-title > h3 {

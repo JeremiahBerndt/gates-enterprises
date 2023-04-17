@@ -11,7 +11,8 @@
 }
 
 .testimonial-list {
-  width: 80%;
+  padding-left: 3em;
+  padding-right: 3em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 2em;
@@ -21,7 +22,6 @@
   .testimonial-list {
     grid-template-columns: none;
     row-gap: 2em;
-    width: 75%
   }
   
 }
