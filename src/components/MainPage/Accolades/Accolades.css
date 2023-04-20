@@ -4,15 +4,6 @@
   padding-right: 2em;
 }
 
-.accolade-title {
-  display: flex;
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-top: 2em;
-  max-width: 43%;
-  min-width: 582px;
-}
-
 @media screen and (max-width: 991px) {
   .Accolades {
     flex-direction: column;

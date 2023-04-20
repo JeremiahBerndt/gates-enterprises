@@ -33,6 +33,18 @@
 
 @media screen and (max-width: 991px) {
 
+  .Commercial {
+    padding: 0px;
+  }
+
+  .Commercial > div:nth-child(2) {
+    padding-bottom: 8em;
+  }
+
+  .commercial-section:first-child img:first-child {
+    padding: 3em!important;
+  }
+
   .commercial-section {
     width: 100%;
     display: flex;
@@ -41,6 +53,11 @@
   }
 
   .Commercial > div:first-child img {
-    width: 100%
+    width: 100%;
+    padding: 0 0 3em 0;
+  }
+
+  .slides {
+    width: auto;
   }
 }

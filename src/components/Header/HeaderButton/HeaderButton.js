@@ -27,7 +27,7 @@ export default function HeaderButton({ name, text, icon, handleClick }) {
       )}
       {name === 'facebook' && (
         <a
-          href='https://www.facebook.com/gatesroofingcompany/'
+          href='https://www.facebook.com/profile.php?id=100087607205221'
           target='_blank'
           rel='noreferrer'
         >

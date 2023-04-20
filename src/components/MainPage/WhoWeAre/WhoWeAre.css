@@ -6,17 +6,31 @@
 .wwa-container {
 	display: flex;
 	justify-content: space-evenly;
-	background-color: var(--color-primary);
 	padding: 0 6em 3em 6em;
 }
 
-.wwa-container > * {
-	width: 45%;
+.wwa-container > div:first-child > img {
+	width: 100%;
+	height: auto;
+}
+
+.wwa-container > div:nth-child(2) {
+	padding: 3em;
+}
+
+.wwa-container > div:first-child {
+	min-width: 50%;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .wwa-title {
   font-weight: 600;
   font-size: 4.5rem;
+	padding: 3rem 0 3rem 0;
 }
 
 .collage {

@@ -61,7 +61,6 @@ header {
 
 .contact-info {
   margin-left: 5em;
-  /* width: 33%; */
   min-width: 540px;
   display: flex;
   justify-content: space-between;
@@ -73,9 +72,6 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 4em;
-  /* position: absolute;
-  bottom: -50%;
-  right: 5%  */
 }
 
 @media screen and (max-width: 991px) {

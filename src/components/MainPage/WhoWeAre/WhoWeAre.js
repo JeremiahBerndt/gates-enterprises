@@ -8,7 +8,6 @@ import house5 from '../../../assets/images/house5.png';
 import house6 from '../../../assets/images/house6.png';
 import house7 from '../../../assets/images/house7.png';
 import house8 from '../../../assets/images/house8.png';
-import house9 from '../../../assets/images/house9.png';
 import house11 from '../../../assets/images/house11.png';
 
 export default function WhoWeAre({ name }) {
@@ -44,7 +43,6 @@ export default function WhoWeAre({ name }) {
         <img src={house8}></img>
         <img src={house1}></img>
         <img src={house7}></img>
-        {/* <img src={house9} style={{objectFit: 'none'}}></img> */}
       </div>
     </section>
   );
