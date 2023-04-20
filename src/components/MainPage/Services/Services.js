@@ -9,7 +9,7 @@ export default function Services({ name }) {
     <>
       <section className={`page-content page-single ${name}`}>
         <div className='service-section'>
-          <img src={services}></img>
+          <img src={services} alt="Services"></img>
           <div>
             <h2 className='mp-content-title'>A Warranty You Can Count On</h2>
             <p>Gates Enterprises is proud to stand by our work and materials by offering our
@@ -47,8 +47,8 @@ export default function Services({ name }) {
           </ul>
         </div>
         <div className='service-section'>
-          <img src={system}></img>
-          <img src={ventilation}></img>
+          <img src={system} alt="System"></img>
+          <img src={ventilation} alt="Ventilation"></img>
         </div>
       </section>
     </>

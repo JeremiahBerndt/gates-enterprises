@@ -34,15 +34,15 @@ export default function WhoWeAre({ name }) {
         </div>
       </div>
       <div className='collage'>
-        <img src={house6}></img>
-        <img src={house2}></img>
-        <img src={house11} style={{margin: 1}}></img>
-        <img src={house3}></img>
-        <img src={house4}></img>
-        <img src={house5} style={{objectFit: 'none'}}></img>
-        <img src={house8}></img>
-        <img src={house1}></img>
-        <img src={house7}></img>
+        <img src={house6} alt={"Photos of our work 1"}></img>
+        <img src={house2} alt={"Photos of our work 2"}></img>
+        <img src={house11} alt={"Photos of our work 3"} style={{margin: 1}}></img>
+        <img src={house3} alt={"Photos of our work 4"}></img>
+        <img src={house4} alt={"Photos of our work 5"}></img>
+        <img src={house5} alt={"Photos of our work 6"} style={{objectFit: 'none'}}></img>
+        <img src={house8} alt={"Photos of our work 7"}></img>
+        <img src={house1} alt={"Photos of our work 8"}></img>
+        <img src={house7} alt={"Photos of our work 9"}></img>
       </div>
     </section>
   );

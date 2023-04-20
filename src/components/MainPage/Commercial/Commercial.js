@@ -9,12 +9,12 @@ export default function Commercial({ name }) {
     <>
       <section className={`page-content page-single ${name}`}>
         <div className='commercial-section'>
-          <img src={commercialroof}></img>
-          <img src={commercial}></img>
+          <img src={commercialroof} alt="Commercial roof"></img>
+          <img src={commercial} alt="Commercial roof writeup"></img>
         </div>
         <div className='commercial-section'>
-          <img className='slides' src={commercialslides}></img>
-          <img className='slides' src={clientsatisfaction}></img>
+          <img className='slides' src={commercialslides} alt="Commercial roof 1"></img>
+          <img className='slides' src={clientsatisfaction} alt="Commercial roof 2"></img>
         </div>
       </section>
     </>
