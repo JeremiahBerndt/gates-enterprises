@@ -16,8 +16,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 75%;
-  height: 75%;
+  width: 50%;
+  height: 100%;
   padding: 1.2em;
   border-radius: 5px;
   position: relative;
@@ -52,8 +52,8 @@ form {
 }
 
 .form-close {
-  background: var(--color-primary);
-  color: var(--color-tertiary);
+  background: var(--color-tertiary);
+  color: var(--color-primary);
   width: 2em;
   height: 2em;
   padding: 1.1em;
@@ -65,7 +65,7 @@ form {
   text-align: center;
   position: absolute;
   top: 2em;
-  right: 1em;
+  right: 2em;
   box-shadow: none;
   transition: 0.2s cubic-bezier(0, 1.05, 0.48, 0.9);
   z-index: 2;
@@ -85,7 +85,7 @@ form {
   }
 
   .connect-form-and-close {
-    width: 85%;
+    width: 98%;
     height: 85%;
     padding: 0.5em;
   }
@@ -96,5 +96,9 @@ form {
 
   .form-close {
     top: 1rem;
+  }
+
+  .frmTitle {
+    size: 10px;
   }
 }

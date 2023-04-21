@@ -6,7 +6,7 @@ import Rooftops from './Rooftops/Rooftops';
 
 export default function MainPage() {
   return (
-    <main className='page-content'>
+    <main>
       <Inspection name='Inspection' />
       <Accolades name='Accolades' />
       <Testimonials name='Testimonials' />

@@ -8,6 +8,7 @@ import Services from '../MainPage/Services/Services';
 import WhoWeAre from '../MainPage/WhoWeAre/WhoWeAre';
 import Financing from '../MainPage/Financing/Financing';
 import Partners from '../MainPage/Partners/Partners';
+import Commercial from '../MainPage/Commercial/Commercial';
 import Footer from '../Footer/Footer';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route exact path='/who-we-are' render={() => <WhoWeAre name='Who We Are'/>} />
         <Route exact path='/financing' render={() => <Financing name='Financing'/>} />
         <Route exact path='/partners' render={() => <Partners name='Partners'/>} />
+        <Route exact path='/commercial' render={() => <Commercial name='Commercial'/>} />
       </Switch>
       < Footer className='footer'/>
       <ContactForm

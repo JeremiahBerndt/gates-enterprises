@@ -1,5 +1,5 @@
 .Inspection {
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row-reverse;
 }
@@ -9,7 +9,7 @@
 }
 
 .inspection-list > li {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 991px) {
@@ -28,6 +28,7 @@
   }
 
   .Inspection > p {
-    width: 80%
+    width: 80%;
+    font-size: 5em;
   }
 }

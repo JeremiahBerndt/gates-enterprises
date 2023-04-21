@@ -13,7 +13,7 @@ export default function Inspection() {
             <li>24 Hour Service & Repair Response Team</li>
         </ul>
       </div>
-      <p className='gold mp-title'>Call Today for a Free Inspection</p>
+      <p className='mp-title'>Call Today for a Free Inspection</p>
     </section>
   )
 }

@@ -3,7 +3,7 @@ import droneshot from '../../../assets/images/droneshot.mp4';
 
 export default function Rooftops({ name }) {
   return (
-    <section className={`page-content page-single ${name}`}>
+    <section className={`page-single ${name}`}>
       <p className='mp-title'>
         Locally Owned and Operated{' '}
         <span className='gold'>10+ Years Roofing Homes in Colorado</span>
