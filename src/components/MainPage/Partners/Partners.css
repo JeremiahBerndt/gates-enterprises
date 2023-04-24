@@ -9,6 +9,15 @@
 }
 
 @media screen and (max-width: 991px) {
+
+  body {
+    min-height: calc(100vh - 10rem);
+  }
+
+  .App {
+    min-height: unset;
+  }
+
   .Partners {
     margin-top: 20em;
   }

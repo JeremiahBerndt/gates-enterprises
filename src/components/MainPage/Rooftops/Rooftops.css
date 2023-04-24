@@ -20,8 +20,15 @@
     max-width: 60%;
     margin-top: 0;
   }
+
   .drone-video {
     max-width: 100%;
+  }
+
+  .Rooftops > p {
+    font-size: 5em;
+    padding: 2em 0 2em 0;
+    margin: 0;
   }
 
 }
