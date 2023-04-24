@@ -9,6 +9,7 @@ import WhoWeAre from '../MainPage/WhoWeAre/WhoWeAre';
 import Financing from '../MainPage/Financing/Financing';
 import Partners from '../MainPage/Partners/Partners';
 import Commercial from '../MainPage/Commercial/Commercial';
+import GutterColors from '../MainPage/Gutters/Gutters';
 import Footer from '../Footer/Footer';
 
 function App() {
@@ -33,13 +34,14 @@ function App() {
       />
       <Switch>
         <Route exact path='/' render={() => <MainPage />} />
-        <Route exact path='/services' render={() => <Services name='Services'/>} />
-        <Route exact path='/who-we-are' render={() => <WhoWeAre name='Who We Are'/>} />
-        <Route exact path='/financing' render={() => <Financing name='Financing'/>} />
-        <Route exact path='/partners' render={() => <Partners name='Partners'/>} />
+        <Route exact path='/services' render={() => <Services name='Services' />} />
+        <Route exact path='/who-we-are' render={() => <WhoWeAre name='Who We Are' />} />
+        <Route exact path='/financing' render={() => <Financing name='Financing' />} />
+        <Route exact path='/partners' render={() => <Partners name='Partners' />} />
         <Route exact path='/commercial' render={() => <Commercial name='Commercial'/>} />
+        <Route exact path='/guttercolors.pdf' render={() => <GutterColors name='Gutter Colors' />} />
       </Switch>
-      < Footer className='footer'/>
+      < Footer className='footer' />
       <ContactForm
         displayContactForm={displayContactForm}
         openContact={openContact}
