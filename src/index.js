@@ -7,13 +7,31 @@ import './index.css';
 import App from '../src/components/App/App';
 import reportWebVitals from './reportWebVitals';
 import ScrollToTop from "./ScrollToTop";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "Poppins,sans-serif"
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        "@font-face": {
+          fontFamily: "Poppins"
+        }
+      }
+    }
+  }
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />
-      <App />
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <ScrollToTop />
+        <App />
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

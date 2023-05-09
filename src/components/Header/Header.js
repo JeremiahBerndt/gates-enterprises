@@ -15,7 +15,7 @@ export default function Header({ displayContactForm, screenWidth }) {
       <nav className='page-buttons'>
         <div className='page-buttons-list'>
           <HeaderButton
-            text='Schedule Inpsection'
+            text='Schedule Inspection'
             handleClick={displayContactForm} />
           <HeaderButton
             text='Services'
@@ -39,7 +39,7 @@ export default function Header({ displayContactForm, screenWidth }) {
           />
         </div>
       </nav>
-      <div className='contact-info-container'>
+      {/* <div className='contact-info-container'>
         <div className='contact-info'>
           {screenWidth > 991 && (
             <>
@@ -80,7 +80,7 @@ export default function Header({ displayContactForm, screenWidth }) {
             </>
           )}
         </div>
-      </div>
+      </div> */}
     </header>
   );
 }

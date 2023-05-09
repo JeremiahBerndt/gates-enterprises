@@ -1,9 +1,9 @@
 header {
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   right: 0;
   left: 0;
@@ -23,7 +23,7 @@ header {
 }
 
 .page-buttons {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   right: 0;
   width: 100%;
@@ -35,7 +35,7 @@ header {
 }
 
 .page-buttons-list {
-  margin-left: 5em;
+  /* margin-left: 5em; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -60,7 +60,7 @@ header {
 }
 
 .contact-info {
-  margin-left: 5em;
+  /* margin-left: 5em; */
   min-width: 540px;
   display: flex;
   justify-content: space-between;
