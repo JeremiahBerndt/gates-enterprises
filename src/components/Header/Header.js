@@ -15,7 +15,7 @@ export default function Header({ displayContactForm, screenWidth }) {
       <nav className='page-buttons'>
         <div className='page-buttons-list'>
           <HeaderButton
-            text='Schedule Inpsection'
+            text='Schedule Inspection'
             handleClick={displayContactForm} />
           <HeaderButton
             text='Services'
