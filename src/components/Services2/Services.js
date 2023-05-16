@@ -4,7 +4,7 @@ import system from '../../../assets/images/system.png';
 import ventilation from '../../../assets/images/ventilation.png';
 import Fix from '../../../assets/icons/fix.svg';
 
-export default function Services({ name }) {
+export default function Services2({ name }) {
   return (
     <>
       <section className={`page-content page-single ${name}`}>

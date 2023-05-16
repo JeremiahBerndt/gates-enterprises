@@ -1,13 +1,16 @@
 
 import Image from 'mui-image';
-import Accolades from './Accolades/Accolades';
-import Testimonials from './Testimonials/Testimonials';
-import Inspection from './Inspection/Inspection';
-import Rooftops from './Rooftops/Rooftops';
+// import Accolades from '../Accolades/Accolades';
+// import Testimonials from './Testimonials/Testimonials';
+// import Inspection from '../Inspection/Inspection';
+// import Rooftops from '../Rooftops/Rooftops';
 import skyline from '../../assets/images/skyline.jpg'
+import pickroof from '../../assets/images/PickRoof.png'
+import threeDHouse from '../../assets/images/3dhouse.jpg'
+import handshake from '../../assets/images/handshake.jpg'
 import homeReport from '../../assets/icons/contract.json'
 import materials from '../../assets/icons/website.json'
-import handshake from '../../assets/icons/deal.json'
+// import handshake from '../../assets/icons/deal.json'
 // import { Grid } from '@material-ui/core';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
@@ -19,7 +22,10 @@ import House from '@mui/icons-material/House';
 import Card from '@mui/material/Card';
 import './MainPage.css';
 import { CardContent } from '@material-ui/core';
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import { Player } from '@lottiefiles/react-lottie-player';
+import Comparison from './Comparison/Comparison';
+import HouseCarousel from './Carousel/Carousel';
+import stockroofvid from '../../assets/images/stockroofvid.mp4'
 
 export default function MainPage() {
   return (
@@ -34,7 +40,7 @@ export default function MainPage() {
           }}>
             <Image
               src={skyline}
-              height="100%"
+              height="70%"
               width="100%"
               fit="cover"
               duration={3000}
@@ -48,12 +54,12 @@ export default function MainPage() {
 
           <div style={{
             position: 'absolute',
-            top: '20%',
+            top: '15%',
             height: 200,
-            padding: '2em'
+            padding: '5em'
           }}>
             <Typography variant="h2" padding="1rem">
-              Home improvement is easier than ever. <br />Get an instant quote.
+              Getting a new roof is easier than ever. <br />Get an estimate in &lt; 24 hrs.
             </Typography>
             <TextField
               InputProps={{
@@ -68,103 +74,93 @@ export default function MainPage() {
               placeholder="Enter your address"
             />
             <Typography variant="h5" padding="1em">
-              Get a quote in less than 1 day. We're diamond certified. See our reviews on Google
+              Tell us what you want. We guarantee a quote at 95% accuracy.
             </Typography>
           </div>
         </Grid>
-        <Grid height='800px' sx={{ backgroundColor: 'white' }}>
+        <Grid height='60rem' padding={8} sx={{ backgroundColor: 'white' }}>
           <Stack>
-            <Typography variant="h2" color="#062841" align="center" padding="1em">
-              Three steps start to finish
+            <Typography variant="h2" color="#062841" align="center" padding="1rem">
+              How it works
             </Typography>
             <Grid container width="100%" spacing={5} margin={0}>
               <Grid xs={4}>
-                <Card raised sx={{ height: "32rem", border: "solid 10px #062841", borderRadius: 5 }}>
+                <Card raised sx={{ height: "40rem", border: "solid 2px #062841", borderRadius: 5 }}>
                   <CardContent>
-                    <Typography variant="h5" color="#062841" padding="2rem">
-                      We pull data for dimensions, measurements, and a report on your home
+                    <Typography variant="h4" fontWeight="900" color="#062841" padding="2rem" align="center">
+                      Choose your roof
                     </Typography>
-                    <Player
+                    <Typography variant="h5" color="#062841" align="center">
+                      You choose your design, shingle, gutters, and color
+                    </Typography>
+                    {/* <Player
                       autoplay
                       loop
                       src={homeReport}
                       style={{ height: '300px', width: '300px' }}
                       speed={0.25}
                     >
-                    </Player>
+                    </Player> */}
+                    <Image
+                      src={pickroof}
+                      height="70%"
+                      width="100%"
+                      fit="cover"
+                      shift="top"
+                    />
                   </CardContent>
                 </Card>
               </Grid>
               <Grid xs={4} >
-                <Card raised sx={{ height: "32rem", border: "solid 10px #062841", borderRadius: 5 }}>
+                <Card raised sx={{ height: "40rem", border: "solid 2px #062841", borderRadius: 5 }}>
                   <CardContent>
-                    <Typography variant="h5" color="#062841" padding="2rem">
-                      Material selection and financing
+                    <Typography variant="h4" fontWeight="900" color="#062841" padding="2rem" align="center">
+                      We collect data
                     </Typography>
-                    <Player
-                      autoplay
-                      loop
-                      src={materials}
-                      style={{ height: '300px', width: '300px' }}
-                      speed={0.25}
-                    >
-                    </Player>
+                    <Typography variant="h5" color="#062841" align="center" paddingBottom="1rem">
+                      We use your address to pull a report on your home
+                    </Typography>
+                    <Image
+                      style={{ padding: "3rem 2rem 2rem" }}
+                      src={threeDHouse}
+                      height="70%"
+                      width="100%"
+                      fit="cover"
+                      shift="top"
+                    />
                   </CardContent>
                 </Card>
               </Grid>
               <Grid xs={4}>
-                <Card raised sx={{ height: "32rem", border: "solid 10px #062841", borderRadius: 5 }}>
+                <Card raised sx={{ height: "40rem", border: "solid 2px #062841", borderRadius: 5 }}>
                   <CardContent>
-                    <Typography variant="h5" color="#062841" padding="2rem">
-                      Final contract and work begins
+                    <Typography variant="h4" fontWeight="900" color="#062841" padding="2rem" align="center">
+                      Final approval
                     </Typography>
-                    <Player
-                      autoplay
-                      loop
+                    <Typography variant="h5" color="#062841" align="center" paddingBottom="1rem">
+                      Onsite visit, final contract, and work begins
+                    </Typography>
+                    <Image
+                      style={{ padding: "3rem 2rem 2rem" }}
                       src={handshake}
-                      style={{ height: '300px', width: '300px' }}
-                      speed={0.25}
-                    >
-                    </Player>
+                      height="70%"
+                      width="100%"
+                      fit="cover"
+                      shift="top"
+                    />
                   </CardContent>
                 </Card>
               </Grid>
             </Grid>
-
           </Stack>
         </Grid>
-        <Grid height='800px'>
-          <Paper>
-            <Grid container>
-            <Grid container xs={6} spacing={2} sx={{padding: '5rem', '& > div': { border: 'solid black 5px'} }}>
-              <Grid xs={6}>
-                <Typography>
-                  Gates
-                </Typography>
-              </Grid>
-              <Grid xs={6}>
-                <Typography>
-                  Other guys
-                </Typography>
-              </Grid>
-              <Grid xs={6}>
-                <Typography>
-                  Cool
-                </Typography>
-              </Grid>
-              <Grid xs={6}>
-                <Typography>
-                  Gay
-                </Typography>
-              </Grid>
-            </Grid>
-
-            <Grid xs={6}>
-
-            </Grid>
-
-            </Grid>
-          </Paper>
+        <Grid
+          // sx={{ backgroundImage: `src(${stockroofvid})` }}
+        >
+          <Comparison></Comparison>
+        </Grid>
+        <Grid>
+          {/* <HouseCarousel></HouseCarousel> */}
         </Grid>
       </Grid>
       {/* <Inspection name='Inspection' />

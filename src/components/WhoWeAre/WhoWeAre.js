@@ -1,14 +1,14 @@
 import './WhoWeAre.css';
-import houseImage from '../../../assets/images/WhoWeAre.png';
-import house1 from '../../../assets/images/house1.png';
-import house2 from '../../../assets/images/house2.png';
-import house3 from '../../../assets/images/house3.png';
-import house4 from '../../../assets/images/house4.png';
-import house5 from '../../../assets/images/house5.png';
-import house6 from '../../../assets/images/house6.png';
-import house7 from '../../../assets/images/house7.png';
-import house8 from '../../../assets/images/house8.png';
-import house11 from '../../../assets/images/house11.png';
+import houseImage from '../../assets/images/WhoWeAre.png';
+import house1 from '../../assets/images/house1.png';
+import house2 from '../../assets/images/house2.png';
+import house3 from '../../assets/images/house3.png';
+import house4 from '../../assets/images/house4.png';
+import house5 from '../../assets/images/house5.png';
+import house6 from '../../assets/images/house6.png';
+import house7 from '../../assets/images/house7.png';
+import house8 from '../../assets/images/house8.png';
+import house11 from '../../assets/images/house11.png';
 
 export default function WhoWeAre({ name }) {
   return (
@@ -36,10 +36,10 @@ export default function WhoWeAre({ name }) {
       <div className='collage'>
         <img src={house6} alt={"Photos of our work 1"}></img>
         <img src={house2} alt={"Photos of our work 2"}></img>
-        <img src={house11} alt={"Photos of our work 3"} style={{margin: 1}}></img>
+        <img src={house11} alt={"Photos of our work 3"} style={{ margin: 1 }}></img>
         <img src={house3} alt={"Photos of our work 4"}></img>
         <img src={house4} alt={"Photos of our work 5"}></img>
-        <img src={house5} alt={"Photos of our work 6"} style={{objectFit: 'none'}}></img>
+        <img src={house5} alt={"Photos of our work 6"} style={{ objectFit: 'none' }}></img>
         <img src={house8} alt={"Photos of our work 7"}></img>
         <img src={house1} alt={"Photos of our work 8"}></img>
         <img src={house7} alt={"Photos of our work 9"}></img>

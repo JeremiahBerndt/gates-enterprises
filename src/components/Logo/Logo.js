@@ -8,7 +8,7 @@ export default function Logo({ disabled }) {
       <img
         src={GatesLogo}
         alt='Gates Enterprises logo'
-        width={'100%'}
+        width={'50%'}
       />
     </Link>
   );

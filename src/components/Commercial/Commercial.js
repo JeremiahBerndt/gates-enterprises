@@ -1,8 +1,8 @@
 import './Commercial.css';
-import commercial from '../../../assets/images/commercial.png';
-import commercialroof from '../../../assets/images/commercialroof.png';
-import clientsatisfaction from '../../../assets/images/clientsatisfaction.png';
-import commercialslides from '../../../assets/images/commercialslides.png';
+import commercial from '../../assets/images/commercial.png';
+import commercialroof from '../../assets/images/commercialroof.png';
+import clientsatisfaction from '../../assets/images/clientsatisfaction.png';
+import commercialslides from '../../assets/images/commercialslides.png';
 
 export default function Commercial({ name }) {
   return (

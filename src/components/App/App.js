@@ -4,12 +4,13 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from '../Header/Header';
 import MainPage from '../MainPage/MainPage';
 import ContactForm from '../ContactForm/ContactForm';
-import Services from '../MainPage/Services/Services';
-import WhoWeAre from '../MainPage/WhoWeAre/WhoWeAre';
-import Financing from '../MainPage/Financing/Financing';
-import Partners from '../MainPage/Partners/Partners';
-import Commercial from '../MainPage/Commercial/Commercial';
-import GutterColors from '../MainPage/Gutters/Gutters';
+import Builder from '../BuilderIO/BuilderTest';
+import Services from '../Services/Services';
+import WhoWeAre from '../WhoWeAre/WhoWeAre';
+import Financing from '../Financing/Financing';
+import Partners from '../Partners/Partners';
+import Commercial from '../Commercial/Commercial';
+import GutterColors from '../Gutters/Gutters';
 import Footer from '../Footer/Footer';
 
 function App() {
@@ -36,12 +37,12 @@ function App() {
         <Route exact path='/' render={() => <MainPage />} />
         <Route exact path='/services' render={() => <Services name='Services' />} />
         <Route exact path='/who-we-are' render={() => <WhoWeAre name='Who We Are' />} />
-        <Route exact path='/financing' render={() => <Financing name='Financing' />} />
-        <Route exact path='/partners' render={() => <Partners name='Partners' />} />
-        <Route exact path='/commercial' render={() => <Commercial name='Commercial'/>} />
+        <Route exact path='/financing' render={() => <Builder name='Financing' />} />
+        {/* <Route exact path='/partners' render={() => <Partners name='Partners' />} /> */}
+        {/* <Route exact path='/commercial' render={() => <Commercial name='Commercial'/>} /> */}
         <Route exact path='/guttercolors.pdf' render={() => <GutterColors name='Gutter Colors' />} />
       </Switch>
-      < Footer className='footer' />
+      {/* < Footer className='footer' /> */}
       <ContactForm
         displayContactForm={displayContactForm}
         openContact={openContact}

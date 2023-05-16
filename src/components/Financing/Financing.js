@@ -1,5 +1,5 @@
 import './Financing.css';
-import financeImg from '../../../assets/images/Financing.png'
+import financeImg from '../../assets/images/Financing.png'
 
 export default function Financing({ name }) {
   return (

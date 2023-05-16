@@ -1,5 +1,5 @@
 import './Gutters.css';
-import Gutters from '../../../assets/images/guttercolors-1.png'
+import Gutters from '../../assets/images/guttercolors-1.png'
 
 export default function GutterColors() {
   return (

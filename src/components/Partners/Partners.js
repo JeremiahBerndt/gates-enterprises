@@ -1,5 +1,5 @@
 import './Partners.css';
-import OurPartners from '../../../assets/images/OurPartners.png'
+import OurPartners from '../../assets/images/OurPartners.png'
 
 export default function Partners({ name }) {
   return (
