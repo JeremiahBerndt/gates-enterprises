@@ -10,7 +10,7 @@ import Financing from '../Financing/Financing';
 import Partners from '../Partners/Partners';
 import Commercial from '../Commercial/Commercial';
 import GutterColors from '../Gutters/Gutters';
-import Footer from '../Footer/Footer';
+// import Footer from '../Footer/Footer';
 
 function App() {
   const [openContact, setOpenContact] = useState(false);

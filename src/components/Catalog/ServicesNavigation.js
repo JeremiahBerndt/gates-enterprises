@@ -83,7 +83,7 @@ const ServicesNavigation = () => {
         <ListItemIcon>
           <LayersIcon />
         </ListItemIcon>
-        <ListItemText primary="Integrations" />
+        <ListItemText primary="Ligma" />
       </ListItemButton>
     </List>
   )

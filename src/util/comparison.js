@@ -1,6 +1,6 @@
 export const quoteCompare = [
   {
-    name: 'Timeliene',
+    name: 'Timeline',
     gates: '<24 hours',
     others: 'Days or weeks'
   },

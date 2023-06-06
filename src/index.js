@@ -8,11 +8,9 @@ import App from '../src/components/App/App';
 import reportWebVitals from './reportWebVitals';
 import ScrollToTop from "./ScrollToTop";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+require('dotenv').config();
 
 const theme = createTheme({
-  typography: {
-    fontFamily: "Poppins,sans-serif"
-  },
   components: {
     MuiCssBaseline: {
       styleOverrides: {
@@ -21,6 +19,40 @@ const theme = createTheme({
         }
       }
     }
+  },
+  typography: {
+    fontFamily: "Poppins,sans-serif",
+    // subtitle1: {},
+    // body1: {},
+    h2: {
+      padding: '1rem',
+      fontWeight: 600
+    },
+    button: {
+      fontWeight: 800
+    }
+    // h3: {
+    //   fontSize: '1.2rem',
+    //   '@media (min-width:600px)': {
+    //     fontSize: '1.5rem',
+    //   },
+    // }
+  },
+  palette: {
+    primary: {
+      // darkblue
+      main: '#062841',
+    },
+    secondary: {
+      // gold
+      main: '#c9a32c'
+    },
+    tertiary: {
+      main: 'whitesmoke'
+    }
+  },
+  pageSection: {
+    height: '60rem'
   }
 });
 

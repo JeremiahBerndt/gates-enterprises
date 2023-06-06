@@ -1,4 +1,4 @@
-.Testimonials {
+/* .Testimonials {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,7 +16,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 2em;
-}
+} */
 
 @media screen and (max-width: 991px) {
   .testimonial-list {
