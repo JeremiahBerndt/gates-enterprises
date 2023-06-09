@@ -1,12 +1,12 @@
 import './Testimonials.css';
 import Testimonial from './Testimonial/Testimonial';
-import { reviewOne, reviewTwo, reviewThree } from '../../util/reviews.js'
+import { reviewOne, reviewTwo, reviewThree } from '../../../util/reviews.js'
 import Grid from '@mui/material/Unstable_Grid2';
 
 
-export default function Testimonials({ name }) {
+export default function Testimonials() {
   return (
-    <Grid container spacing={5} padding={8}>
+    <Grid container spacing={5} padding={8} margin={0}>
       <Grid xs={4}>
         <Testimonial text={reviewOne.review} reviewerName={reviewOne.name} />
       </Grid>

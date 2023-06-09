@@ -10,7 +10,7 @@ import Financing from '../Financing/Financing';
 import Partners from '../Partners/Partners';
 import Commercial from '../Commercial/Commercial';
 import GutterColors from '../Gutters/Gutters';
-// import Footer from '../Footer/Footer';
+import Footer from '../Footer/Footer';
 
 function App() {
   const [openContact, setOpenContact] = useState(false);
@@ -41,7 +41,7 @@ function App() {
         {/* <Route exact path='/commercial' render={() => <Commercial name='Commercial'/>} /> */}
         <Route exact path='/guttercolors.pdf' render={() => <GutterColors name='Gutter Colors' />} />
       </Switch>
-      {/* < Footer className='footer' /> */}
+      < Footer className='footer' />
       <ContactForm
         displayContactForm={displayContactForm}
         openContact={openContact}

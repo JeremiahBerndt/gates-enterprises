@@ -21,12 +21,11 @@ const theme = createTheme({
     }
   },
   typography: {
-    fontFamily: "Poppins,sans-serif",
-    // subtitle1: {},
-    // body1: {},
+    fontFamily: "Poppins, sans-serif",
     h2: {
       padding: '1rem',
-      fontWeight: 600
+      fontWeight: 'bold',
+      fontSize: '64px'
     },
     button: {
       fontWeight: 800
@@ -40,19 +39,23 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      // darkblue
-      main: '#062841',
+      main: '#062841', //darkblue
     },
     secondary: {
-      // gold
-      main: '#c9a32c'
+      main: '#c9a32c' //gold
     },
     tertiary: {
       main: 'whitesmoke'
     }
   },
   pageSection: {
-    height: '60rem'
+    height: '56rem'
+  },
+  twoRow: {
+    '> div': {
+      padding: '96px',
+    },
+    margin: 0,
   }
 });
 
