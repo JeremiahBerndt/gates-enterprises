@@ -17,8 +17,6 @@ header {
 
 .logo {
   width: 10rem;
-  /* height: 10rem; */
-  /* margin-left: 2em; */
   z-index: 2;
 }
 
@@ -90,8 +88,8 @@ header {
 
   .page-buttons-list {
     margin-top: 2em;
-    margin-left: 10em;
-    width: 66%;
+    margin-left: 1em;
+    width: 80%;
     flex-wrap: wrap;
   }
 

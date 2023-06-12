@@ -16,14 +16,21 @@ import AddressInput from './AddressInput/AddressInput';
 import HowItWorks from './HowItWorks/HowItWorks';
 import InsuranceOrFinancing from './InsuranceOrFinancing/InsuranceOrFinancing.jsx';
 
-export default function MainPage() {
+export default function MainPage({ address, setAddress }) {
   const theme = useTheme();
-  const [address, setAddress] = useState('')
 
   return (
     <main>
       <Grid container direction="column">
-        <Grid height="50rem" sx={{ position: 'relative' }}>
+        <Grid 
+        sx={{ 
+          height:"38rem",
+          position: 'relative',
+          [theme.breakpoints.up('md')]: {
+            height: '50rem'
+          }
+        }}
+        >
           <AddressInput
             address={address}
             setAddress={setAddress}
@@ -41,14 +48,14 @@ export default function MainPage() {
           <Comparison></Comparison>
         </Grid>
         <Grid sx={{ backgroundColor: "white", padding: theme.spacing(8) }}>
-          {/*REVIEWS*/}
+
           <div className="elfsight-app-311f80b0-1119-4605-9f97-ef9b44c14721"></div>
         </Grid>
         <Grid height={theme.pageSection.height}>
           <InsuranceOrFinancing />
         </Grid>
         <Grid sx={{ backgroundColor: 'white', paddingY: '4rem' }}>
-          {/*COUNTER*/}
+
           <div className="elfsight-app-7eea6c14-0475-4b7c-bf9d-d722ba87642b"></div>
         </Grid>
       </Grid>

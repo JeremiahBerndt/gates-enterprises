@@ -1,10 +1,7 @@
 import { Button, Paper, Typography, Grid, TextField, Divider, List, ListItem } from "@mui/material";
-import PriceCalculator from './PriceCalculator';
 import { useTheme } from "@mui/material";
 
-
-
-const GetQuote = () => {
+const GetQuote = ({ address }) => {
   const theme = useTheme();
 
   return (
@@ -30,8 +27,7 @@ const GetQuote = () => {
           </Typography>
           <Divider />
           <Typography variant="body1" paddingY={theme.spacing(2)}>
-            2175 s Grapevine rd <br />
-            Golden CO, 80401
+            {address}
           </Typography>
         </Grid>
         <Grid xs={12}>

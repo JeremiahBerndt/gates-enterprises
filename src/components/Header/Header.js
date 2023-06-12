@@ -1,6 +1,6 @@
 import './Header.css';
 import HeaderButton from './HeaderButton/HeaderButton';
-import Logo from '../Logo/Logo';
+import Logo from '../Logo/Logo.jsx';
 import { email } from '../../util/email';
 import { useHistory } from 'react-router-dom';
 
@@ -11,12 +11,16 @@ export default function Header({ displayContactForm, screenWidth }) {
   };
   return (
     <header>
-      <Logo disabled={false} />
+      <Logo />
       <nav className='page-buttons'>
         <div className='page-buttons-list'>
           <HeaderButton
             text='Schedule Inspection'
             handleClick={displayContactForm} />
+          <HeaderButton
+            text='Roof Quote'
+            handleClick={() => redirect('roof-quote')}
+          />
           <HeaderButton
             text='Services'
             handleClick={() => redirect('services')}
@@ -29,10 +33,7 @@ export default function Header({ displayContactForm, screenWidth }) {
             text='Financing'
             handleClick={() => redirect('financing')}
           />
-          <HeaderButton
-            text='Partners'
-            handleClick={() => redirect('partners')}
-          />
+
           <HeaderButton
             text='Commercial'
             handleClick={() => redirect('commercial')}

@@ -1,6 +1,6 @@
 import './Footer.css';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
-import Logo from '../Logo/Logo';
+import Logo from '../Logo/Logo.jsx';
 
 export default function Footer() {
   return (

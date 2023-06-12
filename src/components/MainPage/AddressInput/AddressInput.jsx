@@ -8,10 +8,19 @@ import House from '@mui/icons-material/House';
 import Button from '@mui/material/Button';
 import FormControl from '@mui/material/FormControl';
 import Input from '@mui/material/Input';
+import Box from '@mui/material/Box';
 import { AddressAutofill } from '@mapbox/search-js-react';
 import { slideFromLeft } from '../../../util/animations';
+import { useTheme } from '@mui/material';
+import { useHistory } from 'react-router-dom';
 
 const AddressInput = ({ address, setAddress }) => {
+  const theme = useTheme();
+  const history = useHistory();
+  const redirect = (path) => {
+    history.push(`/${path}`);
+  };
+
   return (
     <>
       <div style={{
@@ -29,31 +38,48 @@ const AddressInput = ({ address, setAddress }) => {
           style={{ zIndex: '-1', opacity: '0.3' }}
         />
       </div>
-      <div
+      <Box
         className={slideFromLeft}
-        style={{
+        sx={{
           position: 'absolute',
-          top: '15%',
-          height: 200,
-          padding: '5em'
+          top: 0,
+          [theme.breakpoints.up('sm')]: {
+            top: '15%',
+          },
+          // height: 200,
+          p: '1rem',
+          [theme.breakpoints.up('md')]: {
+            p: '5rem',
+          },
         }}>
-        <Typography variant="h2">
-          Getting a new roof is easier than ever. <br />Get an estimate in &lt;24 hrs.
+        <Typography
+          variant="h2"
+          sx={{
+            pb: 2,
+            [theme.breakpoints.up('md')]: {
+              pb: 0,
+            },
+          }}
+        >
+          Getting a new roof is easier than ever. <br />
+        </Typography>
+        <Typography variant="h2" paddingTop="0">
+          Get an estimate in &lt;24 hrs.
         </Typography>
         <FormControl
           sx={{
             backgroundColor: 'white',
             borderRadius: 10,
             marginRight: 2,
-            width: '80%'
+            width: '60%',
+            [theme.breakpoints.up('md')]: {
+              width: '80%'
+            }
           }}
         >
           <AddressAutofill
             accessToken={process.env.REACT_APP_MAPBOX_API_KEY}
-            options={{
-              language: 'en',
-              country: 'US',
-            }}
+            options={{ language: 'en', country: 'US' }}
             onRetrieve={({ features }) => setAddress(features[0].properties.place_name)}
           >
             <Input
@@ -66,31 +92,42 @@ const AddressInput = ({ address, setAddress }) => {
               sx={{ borderRadius: 10, padding: '1rem', width: '100%' }}
               value={address}
               onChange={(e) => setAddress(e.target.value)}
-
             />
           </AddressAutofill>
         </FormControl>
-
         <Button
           variant="contained"
-          sx={{ borderRadius: 10, height: 56, backgroundColor: 'secondary.main', ':hover': { backgroundColor: '#062841' } }}
+          sx={theme.yellowButton}
+          onClick={() => redirect('roof-quote')}
         >
           Get Quote
         </Button>
-        <Typography variant="h4" padding="1em" fontWeight={600}>
-          <span style={{ color: "#c9a32c" }}>
-            Provide an address &nbsp;
-            <span style={{ color: 'white' }}>
-              &gt; &nbsp;
-            </span>
-            Select a roof &nbsp;
-            <span style={{ color: 'white' }}>
-              &gt; &nbsp;
-            </span>
+        <Typography
+          variant="h4"
+          sx={{
+            p: '1rem',
+            '> span': {
+              color: 'secondary.main',
+              display: 'block',
+              [theme.breakpoints.up('sm')]: {
+                display: 'inline',
+              },
+            }
+          }}
+        >
+          <span>
+            Provide an address
+            <span style={{ color: 'white' }}>&nbsp;&gt;&nbsp;</span>
+          </span>
+          <span>
+            Select a roof
+            <span style={{ color: 'white' }}>&nbsp;&gt;&nbsp;</span>
+          </span>
+          <span>
             Get a price
           </span>
         </Typography>
-      </div>
+      </Box>
     </>
   );
 }

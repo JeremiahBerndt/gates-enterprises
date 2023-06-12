@@ -1,5 +1,4 @@
 :root {
-  /* --color-primary: #08253d; */
   /* matched color from logo 👇 */
   --color-primary: #062841;
   --color-secondary: #c9a32c;
@@ -7,11 +6,6 @@
   --text-primary: white;
   --text-secondary: black;
   --font-family: 'Poppins', sans-serif;
-}
-
-.gold {
-  color: var(--color-secondary);
-  background-color: var(--color-primary);
 }
 
 body {

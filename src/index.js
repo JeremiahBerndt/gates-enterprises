@@ -8,7 +8,10 @@ import App from '../src/components/App/App';
 import reportWebVitals from './reportWebVitals';
 import ScrollToTop from "./ScrollToTop";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints'
 require('dotenv').config();
+
+const breakpoints = createBreakpoints({})
 
 const theme = createTheme({
   components: {
@@ -18,31 +21,28 @@ const theme = createTheme({
           fontFamily: "Poppins"
         }
       }
-    }
+    },
   },
   typography: {
     fontFamily: "Poppins, sans-serif",
     h2: {
       padding: '1rem',
       fontWeight: 'bold',
-      fontSize: '64px'
+      fontSize: '64px',
+      [breakpoints.down("md")]: {
+        fontSize: "40px"
+      },
+    },
+    h4: {
+      fontWeight: '600'
     },
     h5: {
       fontWeight: 'bold'
-    },
-    button: {
-      fontWeight: 800
     },
     checkoutTitle: {
       backgroundColor: '#062841',
       color: 'white'
     }
-    // h3: {
-    //   fontSize: '1.2rem',
-    //   '@media (min-width:600px)': {
-    //     fontSize: '1.5rem',
-    //   },
-    // }
   },
   palette: {
     primary: {
@@ -52,7 +52,7 @@ const theme = createTheme({
       main: '#c9a32c' //gold
     },
     tertiary: {
-      main: 'whitesmoke'
+      main: 'whitesmoke' //lightgray
     }
   },
   pageSection: {
@@ -63,10 +63,15 @@ const theme = createTheme({
       padding: '96px',
     },
     margin: 0,
+  },
+  yellowButton: {
+    fontWeight: 800,
+    borderRadius: '40px', 
+    height: 56, 
+    backgroundColor: '#c9a32c', 
+    ':hover': { backgroundColor: '#062841' }
   }
 });
-
-
 
 ReactDOM.render(
   <React.StrictMode>

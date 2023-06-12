@@ -2,7 +2,6 @@
 import Image from 'mui-image';
 import threeDHouse from '../../../assets/images/3dhouse.jpg'
 import handshake from '../../../assets/images/handshake.jpg'
-import typeAddress from '../../../assets/images/type-address.mp4'
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
@@ -25,16 +24,7 @@ const HowItWorks = () => (
             <Typography variant="h5" color="#062841" align="center">
               We use your address to collect data on your home
             </Typography>
-            <video
-              src={typeAddress}
-              autoPlay
-              loop
-              muted
-              preload='auto'
-              height="70%"
-              width="100%"
-            >
-            </video>
+            {/* add icon */}
           </CardContent>
         </Card>
       </Grid>

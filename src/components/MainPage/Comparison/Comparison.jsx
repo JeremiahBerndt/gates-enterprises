@@ -49,7 +49,7 @@ function Comparison() {
           </Typography>
         </Grid>
 
-        {quoteCompare.map((option) => (
+        {quoteCompare.map((option, i) => (
           <>
             <Grid xs={4}>
               <Typography align='center'>

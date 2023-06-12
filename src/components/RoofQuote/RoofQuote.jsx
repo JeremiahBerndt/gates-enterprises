@@ -11,7 +11,6 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import Deposits from './Deposits';
 import Image from 'mui-image';
 import ServicesNavigation from './ServicesNavigation';
 import Button from '@mui/material/Button';
@@ -44,7 +43,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-function DashboardContent() {
+const RoofQuote = ({ address }) => {
   const theme = useTheme();
   const [open, setOpen] = useState(true);
   const [selectedHouse, setSelectedHouse] = useState(ocHouseColors[0])
@@ -97,7 +96,7 @@ function DashboardContent() {
                     <img src={ocLogo} height="48px" style={{ paddingRight: theme.spacing(2) }}></img>
                     <Typography
                       color="black"
-                      fontFamily="Roboto"
+                      // fontFamily="Roboto"
                       fontWeight="700"
                       fontSize="16px"
                     >
@@ -110,9 +109,9 @@ function DashboardContent() {
                       {selectedHouse.name}
                     </Typography>
                   </Grid>
-                    <Typography variant="h5" align="right">
-                      $20/sq ft
-                    </Typography>
+                  <Typography variant="h5" align="right">
+                    $20/sq ft
+                  </Typography>
                 </Grid>
                 <div style={{ width: 'inherit', overflow: 'hidden', padding: '8px 0 1rem 1rem', marginRight: '1rem' }}>
                   <img
@@ -122,10 +121,14 @@ function DashboardContent() {
                     }}
                   />
                 </div>
-                <Grid container columns='16' sx={{ width: 'auto', ml: '-8px', mr: '-24px'}}>
+                <Grid container columns='16' sx={{ width: 'auto', ml: '-8px', mr: '-24px' }}>
                   {ocSelectColors.map((color) => {
                     return (
-                      <Grid xs={2} sx={{ display: 'flex', height: '6.5em', justifyContent: 'center', paddingX: '1rem' }}>
+                      <Grid
+                        key={color.id}
+                        xs={2}
+                        sx={{ display: 'flex', height: '6.5em', justifyContent: 'center', paddingX: '1rem' }}
+                      >
                         <Button
                           onClick={() => setSelectedHouse(ocHouseColors.find((h) => h.name === color.name))}
                           sx={{
@@ -149,7 +152,7 @@ function DashboardContent() {
               </Box>
             </Grid>
             <Grid item xs={12} lg={3}>
-              <GetQuote />
+              <GetQuote address={address}/>
             </Grid>
           </Grid>
         </Container>
@@ -158,6 +161,4 @@ function DashboardContent() {
   );
 }
 
-export default function Dashboard() {
-  return <DashboardContent />;
-}
+export default RoofQuote;
