@@ -65,7 +65,7 @@ const HowItWorks = () => (
               Get a price
             </Typography>
             <Typography variant="h5" color="primary" align="center" paddingBottom="1rem">
-              Onsite visit, final contract, and work begins
+              We provide a price-not-to-exceed and a final price after inspection
             </Typography>
             <Image
               style={{ padding: "3rem 2rem 2rem" }}

@@ -19,6 +19,7 @@ import Typography from '@mui/material/Typography';
 import { ocHouseColors, ocSelectColors } from '../../util/ocColors';
 import ocLogo from '../../assets/images/oc-logo.svg'
 import { useTheme } from '@mui/material/styles';
+import GetQuote from './GetQuote';
 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
@@ -73,10 +74,7 @@ function DashboardContent() {
       <Box
         component="section"
         sx={{
-          backgroundColor: (theme) =>
-            theme.palette.mode === 'light'
-              ? theme.palette.grey[100]
-              : theme.palette.grey[900],
+          backgroundColor: 'white',
           flexGrow: 1,
           height: '100vh',
           overflow: 'auto',
@@ -85,7 +83,7 @@ function DashboardContent() {
         <Container fixed maxWidth="xl" sx={{ margin: 0, height: '100%' }}>
           <Grid container spacing={3} sx={{ height: '100%' }}>
             <Grid item xs={12} lg={9} sx={{ height: '100%' }}>
-              <Paper
+              <Box
                 sx={{
                   p: 2,
                   display: 'flex',
@@ -95,71 +93,63 @@ function DashboardContent() {
                 }}
               >
                 <Grid sx={{ display: 'flex' }}>
-                  <Grid container paddingX={theme.spacing(2)} sx={{ display: 'flex' }} xs={6}>
-                    <img src={ocLogo} height="64px" style={{ paddingRight: theme.spacing(2) }}></img>
+                  <Grid paddingX={theme.spacing(2)} sx={{ display: 'flex' }}>
+                    <img src={ocLogo} height="48px" style={{ paddingRight: theme.spacing(2) }}></img>
                     <Typography
+                      color="black"
                       fontFamily="Roboto"
                       fontWeight="700"
-                      fontSize="24px"
+                      fontSize="16px"
                     >
                       Owens Corning <br />
                       TruDefinition® Duration®
                     </Typography>
                   </Grid>
-                  <Grid container xs={6}>
-                    <Grid xs={12}>
-                      <Typography variant="h5">
-                        Chateau Green
-                      </Typography>
-                    </Grid>
-                    <Grid xs={6}>
-                      <Typography variant="h5">
-                        $20/sq ft
-                      </Typography>
-                    </Grid>
+                  <Grid sx={{ display: 'flex' }}>
+                    <Typography variant="h4" fontWeight="800" color="primary" lineHeight="initial">
+                      {selectedHouse.name}
+                    </Typography>
                   </Grid>
+                    <Typography variant="h5" align="right">
+                      $20/sq ft
+                    </Typography>
                 </Grid>
-                <div style={{ maxWidth: '60em', width: 'inherit', overflow: 'hidden', padding: '1rem' }}>
-                  <img src={selectedHouse.image} style={{ width: '120em', height: 'auto', objectPosition: '-30em 0' }}></img>
+                <div style={{ width: 'inherit', overflow: 'hidden', padding: '8px 0 1rem 1rem', marginRight: '1rem' }}>
+                  <img
+                    src={selectedHouse.image}
+                    style={{
+                      height: '100%', width: 'calc(100% + 1px)', borderRadius: '25px', objectFit: 'cover'
+                    }}
+                  />
                 </div>
-                <Grid container columns='16'>
+                <Grid container columns='16' sx={{ width: 'auto', ml: '-8px', mr: '-24px'}}>
                   {ocSelectColors.map((color) => {
                     return (
-                      <Grid xs={2} style={{ display: 'flex', justifyContent: 'center', height: '6em' }}>
-                        <Button sx={{
-                          padding: 0,
-                          '&:hover': {
+                      <Grid xs={2} sx={{ display: 'flex', height: '6.5em', justifyContent: 'center', paddingX: '1rem' }}>
+                        <Button
+                          onClick={() => setSelectedHouse(ocHouseColors.find((h) => h.name === color.name))}
+                          sx={{
+                            padding: 0,
                             '> img': {
-                              border: 'solid 3px #c9a32c'
+                              borderRadius: '10px'
                             },
-                          }
-                        }}>
-                          <img src={color.image} style={{ width: '4em', height: '4em' }}></img>
+                            '&:hover': {
+                              '> img': {
+                                border: 'solid 3px #c9a32c',
+                                boxSizing: 'unset',
+                              },
+                            }
+                          }}>
+                          <img src={color.image} style={{ width: '5.5rem', height: '5.5rem' }}></img>
                         </Button>
                       </Grid>
                     )
                   })}
                 </Grid>
-              </Paper>
+              </Box>
             </Grid>
             <Grid item xs={12} lg={3}>
-              <Paper
-                sx={{
-                  p: 2,
-                  display: 'flex',
-                  // position: 'fixed',
-                  flexDirection: 'column',
-                  height: '20%',
-                  right: '20px'
-                }}
-              >
-                {/* <Deposits /> */}
-                <Button variant="contained" sx={{ borderRadius: 10, height: 56, backgroundColor: "#c9a32c" }}>
-                  <Typography fontWeight={600}>
-                    Get Quote
-                  </Typography>
-                </Button>
-              </Paper>
+              <GetQuote />
             </Grid>
           </Grid>
         </Container>

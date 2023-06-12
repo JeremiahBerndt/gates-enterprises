@@ -23,7 +23,7 @@ export default function MainPage() {
   return (
     <main>
       <Grid container direction="column">
-        <Grid height="50rem" style={{ position: 'relative' }}>
+        <Grid height="50rem" sx={{ position: 'relative' }}>
           <AddressInput
             address={address}
             setAddress={setAddress}

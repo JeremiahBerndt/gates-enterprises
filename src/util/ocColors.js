@@ -1,5 +1,17 @@
 import chateauGreen from '../assets/images/oc-model/houseColors/chateauGreen.jpg'
-import brownwood from '../assets/images/oc-model/houseColors/brownwood.jpg'
+import brownwood from '../assets/images/oc-model/houseColors/brownWood.jpg'
+import desertRose from '../assets/images/oc-model/houseColors/desertRose.jpg'
+import driftwood from '../assets/images/oc-model/houseColors/driftWood.jpg'
+import midnightPlum from '../assets/images/oc-model/houseColors/midnightPlum.jpg'
+import onyxBlack from '../assets/images/oc-model/houseColors/onyxBlack.jpg'
+import peppercorn from '../assets/images/oc-model/houseColors/peppercorn.jpg'
+import sandCastle from '../assets/images/oc-model/houseColors/sandCastle.jpg'
+import sierraGray from '../assets/images/oc-model/houseColors/sierraGray.jpg'
+import slatestoneGray from '../assets/images/oc-model/houseColors/slateStoneGray.jpg'
+import teak from '../assets/images/oc-model/houseColors/teak.jpg'
+import terracotta from '../assets/images/oc-model/houseColors/terraCotta.jpg'
+import williamsburgGray from '../assets/images/oc-model/houseColors/williamsburgGray.jpg'
+
 import brownwoodSelect from '../assets/images/oc-model/selectColors/TruDef-brownwood.jpg'
 import chateauGreenSelect from '../assets/images/oc-model/selectColors/TruDef-chateauGreen.jpg'
 import desertRoseSelect from '../assets/images/oc-model/selectColors/TruDef-desertRose.jpg'
@@ -14,17 +26,71 @@ import teakSelect from '../assets/images/oc-model/selectColors/TruDef-teak.jpg'
 import terracottaSelect from '../assets/images/oc-model/selectColors/TruDef-terracotta.jpg'
 import williamsburgGraySelect from '../assets/images/oc-model/selectColors/TruDef-williamsburgGray.jpg'
 
-
 export const ocHouseColors = [
   {
     index: 1,
+    image: brownwood,
+    name: 'Brownwood'
+  },
+  {
+    index: 2,
     image: chateauGreen,
     name: 'Chateau Green'
   },
   {
-    index: 2,
-    image: brownwood,
-    name: 'Brown Wood'
+    index: 3,
+    image: desertRose,
+    name: 'Desert Rose'
+  },
+  {
+    index: 4,
+    image: driftwood,
+    name: 'Driftwood'
+  },
+  {
+    index: 5,
+    image: midnightPlum,
+    name: 'Midnight Plum'
+  },
+  {
+    index: 6,
+    image: onyxBlack,
+    name: 'Onyx Black'
+  },
+  {
+    index: 7,
+    image: peppercorn,
+    name: 'Peppercorn'
+  },
+  {
+    index: 8,
+    image: sandCastle,
+    name: 'Sand Castle'
+  },
+  {
+    index: 9,
+    image: sierraGray,
+    name: 'Sierra Gray'
+  },
+  {
+    index: 10,
+    image: slatestoneGray,
+    name: 'Slatestone Gray'
+  },
+  {
+    index: 11,
+    image: teak,
+    name: 'Teak'
+  },
+  {
+    index: 12,
+    image: terracotta,
+    name: 'Terra Cotta'
+  },
+  {
+    index: 13,
+    image: williamsburgGray,
+    name: 'Williamsburg Gray'
   },
 ]
 
@@ -32,13 +98,13 @@ export const ocHouseColors = [
 export const ocSelectColors = [
   {
     index: 1,
-    image: chateauGreenSelect,
-    name: 'Chateau Green'
+    image: brownwoodSelect,
+    name: 'Brownwood'
   },
   {
     index: 2,
-    image: brownwoodSelect,
-    name: 'Brownwood'
+    image: chateauGreenSelect,
+    name: 'Chateau Green'
   },
   {
     index: 3,
@@ -88,7 +154,7 @@ export const ocSelectColors = [
   {
     index: 13,
     image: terracottaSelect,
-    name: 'Terracotta'
+    name: 'Terra Cotta'
   },
   {
     index: 14,

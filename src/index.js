@@ -27,8 +27,15 @@ const theme = createTheme({
       fontWeight: 'bold',
       fontSize: '64px'
     },
+    h5: {
+      fontWeight: 'bold'
+    },
     button: {
       fontWeight: 800
+    },
+    checkoutTitle: {
+      backgroundColor: '#062841',
+      color: 'white'
     }
     // h3: {
     //   fontSize: '1.2rem',
