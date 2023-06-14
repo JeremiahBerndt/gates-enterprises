@@ -3,12 +3,19 @@ import services from '../../assets/images/services.png';
 import system from '../../assets/images/system.png';
 import ventilation from '../../assets/images/ventilation.png';
 import Fix from '../../assets/icons/fix.svg';
+import { Grid, Stack, Typography } from '@mui/material';
 
 export default function Services2({ name }) {
   return (
     <>
-      <section className={`page-content page-single ${name}`}>
-        <div className='service-section'>
+      <Stack>
+        <Typography variant="h4">
+          Services
+        </Typography>
+      </Stack>
+      {/* <section className={`page-content page-single ${name}`}> */}
+        
+        {/* <div className='service-section'>
           <img src={services} alt="Services"></img>
           <div>
             <h2 className='mp-content-title'>A Warranty You Can Count On</h2>
@@ -49,8 +56,8 @@ export default function Services2({ name }) {
         <div className='service-section'>
           <img src={system} alt="System"></img>
           <img src={ventilation} alt="Ventilation"></img>
-        </div>
-      </section>
+        </div> */}
+      {/* </section> */}
     </>
 
   );

@@ -4,7 +4,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from '../Header/Header';
 import MainPage from '../MainPage/MainPage';
 import ContactForm from '../ContactForm/ContactForm';
-import Services from '../Services/Services';
+import Services from '../Services/Services.jsx';
 import WhoWeAre from '../WhoWeAre/WhoWeAre';
 import Financing from '../Financing/Financing';
 import Commercial from '../Commercial/Commercial';

@@ -11,7 +11,7 @@ const InsuranceOrQuote = () => {
         autoPlay
         loop
         muted
-        style={{ position: "absolute", filter: 'brightness(50%)', height: 'inherit', width: '100%', objectFit: 'cover', zIndex: -1 }}>
+        style={{ position: "absolute", filter: 'brightness(60%) opacity(0.7)', height: 'inherit', width: '100%', objectFit: 'cover', zIndex: -1 }}>
         <source src={rooferwork} type='video/mp4' />
       </video>
       <Grid container sx={{ margin: 0, ...theme.twoRow }}>
