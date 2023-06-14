@@ -27,7 +27,7 @@ const ServicesNavigation = () => {
   const manufacturers = ['Owens Corning', 'GAF', 'Malarky'];
 
   const [openNav, setOpenNav] = useState({
-    roof: false,
+    roof: true,
   })
 
   const [manuSelected, setManuSelected] = useState('Owens Corning');
@@ -41,12 +41,10 @@ const ServicesNavigation = () => {
         <ListItemText primary="Roofing" />
         {openNav.roof ? <ExpandLessIcon /> : <ExpandMoreIcon />}
       </ListItemButton>
-
       <Collapse in={openNav.roof} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-
           {manufacturers.map((manu, i) => (
-            <>
+            <div key={manu}>
               <ListItemButton
                 sx={{ pl: '74px'  }}
                 onClick={() => setManuSelected(manu)}
@@ -55,7 +53,7 @@ const ServicesNavigation = () => {
                 <ListItemText primary={manu} />
               </ListItemButton>
               <Divider />
-            </>
+            </div>
           ))}
         </List>
       </Collapse>

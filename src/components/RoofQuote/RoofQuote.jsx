@@ -15,6 +15,8 @@ import Image from 'mui-image';
 import ServicesNavigation from './ServicesNavigation';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import { InputAdornment } from '@mui/material';
 import { ocHouseColors, ocSelectColors } from '../../util/ocColors';
 import ocLogo from '../../assets/images/oc-logo.svg'
 import { useTheme } from '@mui/material/styles';
@@ -46,6 +48,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const RoofQuote = ({ address }) => {
   const theme = useTheme();
   const [open, setOpen] = useState(true);
+  const [totalPrice, setTotalPrice] = useState(1500);
   const [selectedHouse, setSelectedHouse] = useState(ocHouseColors[0])
 
   const toggleDrawer = () => {
@@ -84,36 +87,113 @@ const RoofQuote = ({ address }) => {
             <Grid item xs={12} lg={9} sx={{ height: '100%' }}>
               <Box
                 sx={{
-                  p: 2,
+                  p: 1,
+                  [theme.breakpoints.up('md')]: {
+                    p: 2
+                  },
                   display: 'flex',
                   flexDirection: 'column',
                   height: '100%',
                   width: '100%'
                 }}
               >
-                <Grid sx={{ display: 'flex' }}>
-                  <Grid paddingX={theme.spacing(2)} sx={{ display: 'flex' }}>
-                    <img src={ocLogo} height="48px" style={{ paddingRight: theme.spacing(2) }}></img>
-                    <Typography
-                      color="black"
-                      // fontFamily="Roboto"
-                      fontWeight="700"
-                      fontSize="16px"
-                    >
-                      Owens Corning <br />
-                      TruDefinition® Duration®
-                    </Typography>
+                <Grid container>
+                  <Grid container xs={4} paddingLeft={theme.spacing(2)}>
+                    <Grid xs={12} s={12}>
+                      <img src={ocLogo} height="48px" style={{ float: 'left', paddingRight: '8px' }}></img>
+                      <Typography
+                        color="black"
+                        fontWeight="800"
+                        fontSize="16px"
+                      >
+                        Owens Corning <br />
+                        TruDefinition® Duration®
+                      </Typography>
+                    </Grid>
+                    <Grid xs={12}>
+                      <Typography variant="h4" fontWeight="800" color="primary" fontSize="40px">
+                        {selectedHouse.name.toUpperCase()}
+                      </Typography>
+                    </Grid>
                   </Grid>
-                  <Grid sx={{ display: 'flex' }}>
-                    <Typography variant="h4" fontWeight="800" color="primary" lineHeight="initial">
-                      {selectedHouse.name}
-                    </Typography>
+                  <Grid
+                    container
+                    md={8} lg={8} xl={8}
+                    sx={{
+                      '> div': {
+                        display: 'flex',
+                        justifyContent: 'center',
+                        flexDirection: 'column'
+                      },
+                      '> div > p': {
+                        color: 'gray',
+                      }
+                    }}
+                  >
+                    <Grid xs={3}>
+                      <Typography variant="body2" align="center">
+                        $/sq ft
+                      </Typography>
+                    </Grid>
+                    <Grid xs={3}>
+                      <Typography variant="body2" align="center">
+                        sq ft area
+                      </Typography>
+                    </Grid>
+                    <Grid xs={3}>
+                      <Typography variant="body2" align="center">
+                        Total
+                      </Typography>
+                    </Grid>
+                    <Grid xs={3}>
+                      <Typography variant="body2" align="center">
+                        $/month
+                      </Typography>
+                    </Grid>
+                    <Grid xs={3}>
+                      <Typography variant="h5" color="black" align='center'>
+                        $7.50
+                      </Typography>
+                    </Grid>
+                    <Grid xs={3}
+                      sx={{
+                        pt: '22px',
+                        height: '32px'
+                      }}>
+                      <TextField
+                        variant="outlined"
+                        type="number"
+                        defaultValue={totalPrice}
+                        sx={{
+                          '> div > input': {
+                            ...(theme.typography.h5),
+                            py: '4px',
+                          }
+                        }}
+                        InputProps={{
+                          startAdornment: <InputAdornment position="start">
+                            <Typography variant="h5">
+                              x
+                            </Typography>
+                          </InputAdornment>,
+                          endAdornment: <InputAdornment position="end">sqft</InputAdornment>
+                        }}
+                        onChange={(e) => { setTotalPrice(e.target.value) }}
+                      />
+                    </Grid>
+                    <Grid xs={3}>
+                      <Typography variant="h5" color='gray' align="center">
+                        ${(totalPrice * 7.50)}
+                      </Typography>
+                    </Grid>
+                    <Grid xs={3}>
+                      <Typography variant="h5" color='black' align="center">
+                        ${(totalPrice * 7.50 / 120)}
+                      </Typography>
+                    </Grid>
                   </Grid>
-                  <Typography variant="h5" align="right">
-                    $20/sq ft
-                  </Typography>
                 </Grid>
-                <div style={{ width: 'inherit', overflow: 'hidden', padding: '8px 0 1rem 1rem', marginRight: '1rem' }}>
+                <div style={{ width: 'inherit', overflow: 'hidden', padding: '8px 0 8px 1rem', marginRight: '1rem' }}>
                   <img
                     src={selectedHouse.image}
                     style={{
@@ -121,6 +201,18 @@ const RoofQuote = ({ address }) => {
                     }}
                   />
                 </div>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    backgroundColor: '#062841',
+                    color: 'white',
+                    marginLeft: '16px',
+                    paddingX: '16px'
+                  }}
+                >
+                  Shingle Colors
+                </Typography>
+
                 <Grid container columns='16' sx={{ width: 'auto', ml: '-8px', mr: '-24px' }}>
                   {ocSelectColors.map((color) => {
                     return (
@@ -152,7 +244,7 @@ const RoofQuote = ({ address }) => {
               </Box>
             </Grid>
             <Grid item xs={12} lg={3}>
-              <GetQuote address={address}/>
+              <GetQuote address={address} selectedHouse={selectedHouse} />
             </Grid>
           </Grid>
         </Container>

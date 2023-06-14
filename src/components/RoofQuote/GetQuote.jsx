@@ -1,7 +1,7 @@
 import { Button, Paper, Typography, Grid, TextField, Divider, List, ListItem } from "@mui/material";
 import { useTheme } from "@mui/material";
 
-const GetQuote = ({ address }) => {
+const GetQuote = ({ address, selectedHouse }) => {
   const theme = useTheme();
 
   return (
@@ -22,6 +22,7 @@ const GetQuote = ({ address }) => {
         }
       }}>
         <Grid xs={12}>
+          {/* TODO add address input if none provided earlier */}
           <Typography variant="h5">
             Your Address:
           </Typography>
@@ -37,7 +38,7 @@ const GetQuote = ({ address }) => {
           <Divider />
           <Typography variant="body1" paddingY={theme.spacing(2)}>
             TruDefinition® Duration® <br />
-            Chateau Green
+            {selectedHouse.name}
           </Typography>
         </Grid>
         <Grid xs={12}>
@@ -71,35 +72,6 @@ const GetQuote = ({ address }) => {
               Get Quote
             </Typography>
           </Button>
-        <Grid>
-          <Grid container>
-            <Grid xs={12}>
-              <Typography variant="h5" paddingTop={theme.spacing(8)}>
-                Roof Calculator
-              </Typography>
-            </Grid>
-            <Grid xs={12}>
-              <Typography variant="body1" align="right" paddingX={theme.spacing(4)}>
-                $20/sq ft
-              </Typography>
-            </Grid>
-            <Grid xs={12} align="right" padding="16px 32px 32px 32px"
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'end',
-              }}>
-              <Typography variant="h5">
-                X
-              </Typography>
-              <TextField
-                variant="filled"
-                type="number"
-                label="Roof sq ft"
-              />
-            </Grid>
-          </Grid>
-        </Grid>
       </Grid>
     </Paper>
   );
