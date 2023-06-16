@@ -2,13 +2,14 @@ import './Header.css';
 import HeaderButton from './HeaderButton/HeaderButton';
 import Logo from '../Logo/Logo.jsx';
 import { email } from '../../util/email';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header({ displayContactForm, screenWidth }) {
-  const history = useHistory();
+  const navigate = useNavigate();
   const redirect = (path) => {
-    history.push(`/${path}`);
+    navigate(`/${path}`);
   };
+  
   return (
     <header>
       <Logo />

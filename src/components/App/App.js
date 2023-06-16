@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, Routes } from 'react-router-dom';
 import Header from '../Header/Header';
 import MainPage from '../MainPage/MainPage';
 import ContactForm from '../ContactForm/ContactForm';
@@ -33,21 +33,21 @@ function App() {
         displayContactForm={displayContactForm}
         screenWidth={screenWidth}
       />
-      <Switch>
-        <Route exact path='/' render={() => <MainPage setAddress={setAddress} address={address}/>} />
-        <Route exact path='/roof-quote' render={() => <RoofQuote name='Roof Quote' address={address}/>} />
-        <Route exact path='/services' render={() => <Services name='Services' />} />
-        <Route exact path='/who-we-are' render={() => <WhoWeAre name='Who We Are' />} />
-        <Route exact path='/financing' render={() => <Financing name='Financing' />} />
-        <Route exact path='/commercial' render={() => <Commercial name='Commercial'/>} />
-        <Route exact path='/guttercolors.pdf' render={() => <GutterColors name='Gutter Colors' />} />
-      </Switch>
+      <Routes>
+        <Route exact path='/' element={<MainPage setAddress={setAddress} address={address}/>} />
+        <Route exact path='/roof-quote' element={<RoofQuote name='Roof Quote' address={address}/>} />
+        <Route exact path='/services' element={<Services name='Services' />} />
+        <Route exact path='/who-we-are' element={<WhoWeAre name='Who We Are' />} />
+        <Route exact path='/financing' element={<Financing name='Financing' />} />
+        <Route exact path='/commercial' element={<Commercial name='Commercial'/>} />
+        <Route exact path='/guttercolors.pdf' element={<GutterColors name='Gutter Colors' />} />
+      </Routes>
       < Footer className='footer' />
       <ContactForm
         displayContactForm={displayContactForm}
         openContact={openContact}
       />
-      <Redirect to='/' />
+      {/* <Redirect to='/' /> */}
     </div>
   );
 }

@@ -34,7 +34,9 @@ const theme = createTheme({
       },
     },
     h4: {
-      fontWeight: '600'
+      fontWeight: '600',
+      paddingTop: '16px',
+      paddingBottom: '16px'
     },
     h5: {
       fontWeight: 'bold'
@@ -63,6 +65,13 @@ const theme = createTheme({
       padding: '96px',
     },
     margin: 0,
+  },
+  heroImage: {
+    opacity: '0.5',
+    filter: 'brightness(60%) opacity(0.7)', 
+    width: '100%', 
+    objectFit: 'cover', 
+    zIndex: -1
   },
   yellowButton: {
     fontWeight: 800,

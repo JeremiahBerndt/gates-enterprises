@@ -12,14 +12,11 @@ import Box from '@mui/material/Box';
 import { AddressAutofill } from '@mapbox/search-js-react';
 import { slideFromLeft } from '../../../util/animations';
 import { useTheme } from '@mui/material';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AddressInput = ({ address, setAddress }) => {
+  const navigate = useNavigate();
   const theme = useTheme();
-  const history = useHistory();
-  const redirect = (path) => {
-    history.push(`/${path}`);
-  };
 
   return (
     <>
@@ -98,7 +95,7 @@ const AddressInput = ({ address, setAddress }) => {
         <Button
           variant="contained"
           sx={theme.yellowButton}
-          onClick={() => redirect('roof-quote')}
+          onClick={() => navigate('roof-quote')}
         >
           Get Quote
         </Button>
