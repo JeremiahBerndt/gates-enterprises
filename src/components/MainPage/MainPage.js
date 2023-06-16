@@ -29,7 +29,7 @@ import stockroofvid from '../../assets/images/stockroofvid.mp4'
 
 export default function MainPage() {
   return (
-    <main>
+    <main width={"100%"}>
       <Grid container direction="column">
         <Grid style={{
           position: 'relative',
@@ -78,13 +78,13 @@ export default function MainPage() {
             </Typography>
           </div>
         </Grid>
-        <Grid height='60rem' padding={8} sx={{ backgroundColor: 'white' }}>
+        <Grid padding={8} sx={{ backgroundColor: 'white', width: "100%"}}>
           <Stack>
             <Typography variant="h2" color="#062841" align="center" padding="1rem">
               How it works
             </Typography>
             <Grid container width="100%" spacing={5} margin={0}>
-              <Grid xs={4}>
+              <Grid xs={12} md={4}>
                 <Card raised sx={{ height: "40rem", border: "solid 2px #062841", borderRadius: 5 }}>
                   <CardContent>
                     <Typography variant="h4" fontWeight="900" color="#062841" padding="2rem" align="center">
@@ -111,7 +111,7 @@ export default function MainPage() {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid xs={4} >
+              <Grid xs={12} md={4} >
                 <Card raised sx={{ height: "40rem", border: "solid 2px #062841", borderRadius: 5 }}>
                   <CardContent>
                     <Typography variant="h4" fontWeight="900" color="#062841" padding="2rem" align="center">
@@ -131,7 +131,7 @@ export default function MainPage() {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid xs={4}>
+              <Grid xs={12} md={4}>
                 <Card raised sx={{ height: "40rem", border: "solid 2px #062841", borderRadius: 5 }}>
                   <CardContent>
                     <Typography variant="h4" fontWeight="900" color="#062841" padding="2rem" align="center">

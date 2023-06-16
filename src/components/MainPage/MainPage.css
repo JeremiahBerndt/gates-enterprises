@@ -32,9 +32,9 @@ main > section .icon {
   /* max-width: 43%; */
 }
 
-.mp-title > span {
+/* .mp-title > span {
   display: inline-block;
-}
+} */
 
 .mp-content-title {
   font-weight: 400;
