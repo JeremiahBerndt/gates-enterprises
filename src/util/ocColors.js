@@ -1,5 +1,5 @@
 import chateauGreen from '../assets/images/oc-model/houseColors/chateauGreen.jpg'
-import brownwood from '../assets/images/oc-model/houseColors/brownWood.jpg'
+import brownwood from '../assets/images/oc-model/houseColors/brownwood.jpg'
 import desertRose from '../assets/images/oc-model/houseColors/desertRose.jpg'
 import driftwood from '../assets/images/oc-model/houseColors/driftWood.jpg'
 import midnightPlum from '../assets/images/oc-model/houseColors/midnightPlum.jpg'

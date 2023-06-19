@@ -15,9 +15,6 @@ export default function Logo() {
         width="50%"
         sx={{
           borderRadius: '50%',
-          [theme.breakpoints.down('sm')]: {
-            width: '100%'
-          }
         }}
         src={GatesLogo}
         alt='Gates Enterprises logo'

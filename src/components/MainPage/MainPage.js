@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'mui-image';
 // import Accolades from '../Accolades/Accolades';
-import Testimonials from './Testimonials/Testimonials';
 // import handshake from '../../assets/icons/deal.json'
 // import { Grid } from '@material-ui/core';
 import Stack from '@mui/material/Stack';

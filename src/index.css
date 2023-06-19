@@ -8,6 +8,10 @@
   --font-family: 'Poppins', sans-serif;
 }
 
+.eapps-widget-toolbar {
+  display: none!important;
+}
+
 body {
   margin: 0;
   width: 100%;

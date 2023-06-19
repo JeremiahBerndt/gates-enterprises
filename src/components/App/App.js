@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import MainPage from '../MainPage/MainPage';
 import ContactForm from '../ContactForm/ContactForm';
 import Services from '../Services/Services.jsx';
-import WhoWeAre from '../WhoWeAre/WhoWeAre';
+import WhoWeAre from '../WhoWeAre/WhoWeAre.jsx';
 import Financing from '../Financing/Financing';
 import Commercial from '../Commercial/Commercial';
 import GutterColors from '../Gutters/Gutters';

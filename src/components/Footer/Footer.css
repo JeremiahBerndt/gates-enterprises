@@ -1,7 +1,0 @@
-footer {
-  /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-  center 0 / cover no-repeat fixed url('../../assets/images/rooftops.jpg'); */
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
