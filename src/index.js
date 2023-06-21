@@ -58,20 +58,7 @@ const theme = createTheme({
     }
   },
   pageSection: {
-    height: '56rem'
-  },
-  twoRow: {
-    '> div': {
-      padding: '96px',
-    },
-    margin: 0,
-  },
-  heroImage: {
-    opacity: '0.5',
-    filter: 'brightness(60%) opacity(0.7)', 
-    width: '100%', 
-    objectFit: 'cover', 
-    zIndex: -1
+    height: '52rem'
   },
   yellowButton: {
     fontWeight: 800,

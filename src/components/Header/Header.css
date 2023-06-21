@@ -1,27 +1,21 @@
 header {
-  /* background-color: var(--color-primary); */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: fixed; */
   top: 0;
   right: 0;
   left: 0;
   z-index: 1;
   box-shadow: 0px 0px 11px 1px #00000059;
-  /* min-width: 807px; */
-  /* padding: 1em 0; */
-  /* min-height: 10rem; */
   max-height: 10rem;
 }
 
-.logo {
+/* .logo {
   width: 10rem;
   z-index: 2;
-}
+} */
 
 .page-buttons {
-  /* position: absolute; */
   top: 0;
   right: 0;
   width: 100%;
@@ -33,7 +27,6 @@ header {
 }
 
 .page-buttons-list {
-  /* margin-left: 5em; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -58,7 +51,6 @@ header {
 }
 
 .contact-info {
-  /* margin-left: 5em; */
   min-width: 540px;
   display: flex;
   justify-content: space-between;
@@ -78,13 +70,13 @@ header {
     font-size: 1.2em;
   }
 
-  .logo {
+  /* .logo {
     width: 7rem;
     margin-left: 0.1em;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 
   .page-buttons-list {
     margin-top: 2em;

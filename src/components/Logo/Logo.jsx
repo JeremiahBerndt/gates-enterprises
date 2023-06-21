@@ -6,14 +6,11 @@ import { Box } from '@mui/material';
 export default function Logo() {
   const theme = useTheme();
   return (
-    <Link
-      className={`logo`}
-      to='/'
-    >
+    <Link to='/'>
       <Box
         component="img"
-        width="50%"
         sx={{
+          width:"8rem",
           borderRadius: '50%',
         }}
         src={GatesLogo}

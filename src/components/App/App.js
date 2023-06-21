@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Switch, Route, Redirect, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Header from '../Header/Header';
 import MainPage from '../MainPage/MainPage';
 import ContactForm from '../ContactForm/ContactForm';

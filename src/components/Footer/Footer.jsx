@@ -10,21 +10,25 @@ export default function Footer() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      height: '6rem',
+      height: '8rem',
       // [theme.breakpoints.up('lg')]: {
       //   height: '6rem'
       // }
     }}>
       <Logo />
-      <Grid container direction="column" spacing={1}>
+      <Grid container direction="column" spacing={1} sx={{
+        '> div > div': {
+          fontSize: '12px'
+        }
+      }}>
         <Grid>
-        <div>Gates Enterprises LLC</div>
+          <div>Gates Enterprises LLC</div>
         </Grid>
         <Grid>
-        <div>1445 Holland St. Lakewood CO, 80215</div>
+          <div>1445 Holland St. Lakewood CO, 80215</div>
         </Grid>
         <Grid>
-        <div>(720) 380-4763</div>
+          <div>(720) 380-4763</div>
         </Grid>
       </Grid>
     </footer>

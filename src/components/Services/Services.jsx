@@ -1,16 +1,20 @@
+import { useRef } from 'react';
 import services from '../../assets/images/services.png';
-import system from '../../assets/images/system.png';
-import diagramDrawing from '../../assets/images/diagramDrawing.jpg';
 import roofersonroof from '../../assets/images/roofersonroof.jpg';
-import goldRoof from '../../assets/images/goldRoof.png';
+import blueprint from '../../assets/images/blueprint.jpg';
+import topRoof from '../../assets/images/topRoof.jpg';
 import wholeRoof from '../../assets/images/wholeRoof.png';
 import Image from 'mui-image';
 import { Grid, Stack, Typography } from '@mui/material';
 import { useTheme } from '@material-ui/core';
 import TheBuildProcess from './TheBuildProcess';
+import { slideFromLeft, slideFromRight, useIsVisible } from '../../util/animations';
 
-export default function Services2({ name }) {
+export default function Services({ name }) {
   const theme = useTheme();
+  const refOptimized = useRef();
+  const refDecking = useRef();
+  const refUnderlayment = useRef();
 
   return (
     <>
@@ -49,7 +53,9 @@ export default function Services2({ name }) {
           </Typography>
         </div>
         <Grid container backgroundColor='white'>
-          <Grid xs={12} lg={6} sx={{
+          <Grid item xs={12} lg={6} sx={{
+            display: 'flex',
+            alignItems: 'center',
             padding: '2rem',
             [theme.breakpoints.up('lg')]: {
               p: '8rem 4rem 8rem 8rem',
@@ -57,7 +63,11 @@ export default function Services2({ name }) {
           }}>
             <img src={services} alt="Services" />
           </Grid>
-          <Grid xs={12} lg={6} sx={{ p: '2rem', pt: 0, [theme.breakpoints.up('lg')]: { padding: '8rem' } }}>
+          <Grid item xs={12} lg={6} className={slideFromRight} sx={{
+            p: '2rem',
+            pt: 0,
+            [theme.breakpoints.up('lg')]: { p: '8rem 8rem 8rem 4rem' }
+          }}>
             <Typography variant="h4" color="primary.main">
               A Warranty You Can Count On
             </Typography>
@@ -81,22 +91,27 @@ export default function Services2({ name }) {
             </Typography>
           </Grid>
         </Grid>
-        <TheBuildProcess/>
-        <Grid container sx={{ [theme.breakpoints.down('md')]: { flexDirection: 'column-reverse' } }}>
-          <Grid xs={12} lg={6} sx={{
+        <TheBuildProcess />
+        <Grid
+          container
+          sx={{
+            backgroundColor: 'white',
+            [theme.breakpoints.down('md')]: { flexDirection: 'column-reverse' }
+          }}>
+          <Grid item xs={12} lg={6} sx={{
             display: 'flex',
             alignItems: 'center',
             p: '2rem',
             pt: 0,
             [theme.breakpoints.up('lg')]: {
-              padding: '0 4rem 4rem 4rem'
+              padding: '8rem 4rem 8rem 8rem'
             }
           }}>
-            <div>
-              <Typography variant="h4" color="white">
+            <div ref={refOptimized} className={useIsVisible(refOptimized) ? slideFromLeft : null}>
+              <Typography variant="h4" color="primary.main">
                 Roofing systems optimized
               </Typography>
-              <Typography variant="body1" color="white">
+              <Typography variant="body1" color="primary.main">
                 The Gates Team is here to help you
                 select the best roofing components to
                 build a complete roof system which will
@@ -106,41 +121,46 @@ export default function Services2({ name }) {
               </Typography>
             </div>
           </Grid>
-          <Grid xs={12} lg={6} sx={{
+          <Grid item xs={12} lg={6} sx={{
             padding: '2rem',
             [theme.breakpoints.up('lg')]: {
-              padding: '8rem 4rem 4rem 4rem'
+              padding: '8rem 8rem 8rem 4rem'
             }
           }}>
-            <img src={diagramDrawing} alt="Roofing optimized" />
+            <img src={blueprint} alt="Roofing optimized" />
           </Grid>
         </Grid>
-        <Grid container sx={{ backgroundColor: 'white' }}>
-          <Grid xs={12} lg={6}>
+        <Grid container sx={{ backgroundColor: 'primary.main' }}>
+          <Grid item xs={12} lg={6} sx={{
+            padding: '2rem',
+            [theme.breakpoints.up('lg')]: {
+              padding: '8rem 4rem 8rem 8rem'
+            }
+          }}>
             <img src={wholeRoof} alt="Ventilation" style={{ padding: '2rem' }}></img>
           </Grid>
-          <Grid xs={12} lg={6} sx={{
-            display: 'grid',
+          <Grid item xs={12} lg={6} sx={{
+            display: 'flex',
             alignItems: 'center',
             p: '2rem',
             pt: 0,
             [theme.breakpoints.up('lg')]: {
-              padding: '0 4rem 4rem 4rem'
+              padding: '8rem 8rem 8rem 4rem'
             }
           }}>
-            <div>
-              <Typography variant="h4" color="primary.main">
+            <div ref={refDecking} className={useIsVisible(refDecking) ? slideFromRight :  null}>
+              <Typography variant="h4" color="white">
                 Roof Decking
               </Typography>
-              <Typography variant="body1" color="primary.main">
+              <Typography variant="body1" color="white">
                 Once our crews remove all existing shingle layers
                 we evaluate your roof deck and all rotten or
                 cracked decking is replaced.
               </Typography>
-              <Typography variant="h4" color="primary.main">
+              <Typography variant="h4" color="white">
                 Ice & Water Shield
               </Typography>
-              <Typography variant="body1" color="primary.main">
+              <Typography variant="body1" color="white">
                 Designed to provide an additional layer of protection in
                 areas such as valleys, eaves, chimneys and skylights
                 where water has a tendency to collect and flow.
@@ -148,30 +168,30 @@ export default function Services2({ name }) {
             </div>
           </Grid>
         </Grid>
-        <Grid container sx={{ backgroundColor: 'primary.main' }}>
-          <Grid xs={12} lg={6} sx={{
+        <Grid container sx={{ backgroundColor: 'white' }}>
+          <Grid item xs={12} lg={6} sx={{
             p: '2rem',
             pt: 0,
             [theme.breakpoints.up('lg')]: {
-              padding: '0 4rem 4rem 4rem'
+              padding: '8rem 4rem 8rem 8rem'
             },
             display: 'flex',
             alignItems: 'center'
           }}>
-            <div>
-              <Typography variant="h4" color="white">
+            <div ref={refUnderlayment} className={useIsVisible(refUnderlayment) ? slideFromLeft : null}>
+              <Typography variant="h4" color="primary.main">
                 Underlayment
               </Typography>
-              <Typography variant="body1" color="white">
+              <Typography variant="body1" color="primary.main">
                 High performance synthetic roof underlayments
                 work with shingles to shield your home from moisture
                 infiltration and are the last line of defense against
                 leaks due to harsh Colorado weather.
               </Typography>
-              <Typography variant="h4" color="white">
+              <Typography variant="h4" color="primary.main">
                 Ventilation
               </Typography>
-              <Typography variant="body1" color="white">
+              <Typography variant="body1" color="primary.main">
                 Managing attic temperature with proper ventilation
                 can increase the longevity and performance of your
                 roof. Our team is here to help you select the best vents
@@ -179,8 +199,13 @@ export default function Services2({ name }) {
               </Typography>
             </div>
           </Grid>
-          <Grid xs={12} lg={6}>
-            <img src={wholeRoof} alt="Ventilation" style={{ padding: '2rem' }}></img>
+          <Grid item xs={12} lg={6} sx={{
+            padding: '2rem',
+            [theme.breakpoints.up('lg')]: {
+              padding: '8rem 8rem 8rem 4rem'
+            }
+          }}>
+            <img src={topRoof} alt="Ventilation" style={{ padding: '2rem' }}></img>
           </Grid>
         </Grid>
       </Stack>

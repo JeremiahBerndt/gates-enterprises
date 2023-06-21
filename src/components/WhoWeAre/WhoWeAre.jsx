@@ -35,7 +35,7 @@ export default function WhoWeAre({ name }) {
         </Typography>
       </div>
       <Grid container backgroundColor='white'>
-        <Grid xs={12} lg={6}
+        <Grid item xs={12} lg={6}
           sx={{
             padding: '2rem',
             [theme.breakpoints.up('lg')]: {
@@ -44,7 +44,7 @@ export default function WhoWeAre({ name }) {
           }}>
           <img src={houseImage} alt="Services" style={{ width: '100%', objectFit: 'cover' }} />
         </Grid>
-        <Grid xs={12} lg={6}
+        <Grid item xs={12} lg={6}
           sx={{
             padding: '0 2rem 2rem 2rem',
             [theme.breakpoints.up('lg')]: {
@@ -74,7 +74,6 @@ export default function WhoWeAre({ name }) {
       </Grid>
       <Grid
         container
-        xs={12}
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -89,7 +88,7 @@ export default function WhoWeAre({ name }) {
             },
           }
         }}>
-        <Grid xs={12} lg={4}>
+        <Grid item xs={12} lg={4}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Roof fill={"#c9a32c"} width="64px" height="64px" />
           </div>
@@ -102,7 +101,7 @@ export default function WhoWeAre({ name }) {
             <div>Top performing roof systems</div><br />
           </Typography>
         </Grid>
-        <Grid xs={12} lg={4} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+        <Grid item xs={12} lg={4} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Medal fill={"#c9a32c"} width="64px" height="64px" />
           </div>
@@ -115,7 +114,7 @@ export default function WhoWeAre({ name }) {
             <div>Perfecting the roofing process</div><br />
           </Typography>
         </Grid>
-        <Grid xs={12} lg={4}>
+        <Grid item xs={12} lg={4}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Snowing fill={"#c9a32c"} width="64px" height="64px" />
           </div>
@@ -132,13 +131,13 @@ export default function WhoWeAre({ name }) {
       <Grid sx={{
         padding: '2rem',
         backgroundColor: 'white',
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('lg')]: {
           p: '8rem',
           py: '4rem'
         }
       }}>
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-bf7eac58-17cc-49e4-98d4-e5d64ba64e4b"></div>
+        <div className="elfsight-app-bf7eac58-17cc-49e4-98d4-e5d64ba64e4b"></div>
       </Grid>
     </Stack>
   );

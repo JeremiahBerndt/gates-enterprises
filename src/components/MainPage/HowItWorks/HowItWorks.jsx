@@ -11,7 +11,7 @@ import { fadeUp } from '../../../util/animations';
 
 const HowItWorks = () => (
   <Stack>
-    <Typography variant="h2" color="#062841" align="center" padding={8}>
+    <Typography variant="h2" color="#062841" align="center" pb={8}>
       How it works
     </Typography>
     <Grid container width="100%" spacing={5} margin={0} className={fadeUp}>
