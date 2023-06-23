@@ -38,10 +38,10 @@ export default function Header({ displayContactForm, screenWidth }) {
             text='Commercial'
             handleClick={() => redirect('commercial')}
           />
-          {/* <HeaderButton
+          <HeaderButton
             text='Insurance'
             handleClick={() => redirect('insurance')}
-          /> */}
+          />
         </div>
       </nav>
       {/* <div className='contact-info-container'>

@@ -11,6 +11,7 @@ import Commercial from '../Commercial/Commercial';
 import GutterColors from '../Gutters/Gutters';
 import Footer from '../Footer/Footer';
 import RoofQuote from '../RoofQuote/RoofQuote.jsx';
+import Insurance from '../Insurance/Insurance';
 
 function App() {
   const [openContact, setOpenContact] = useState(false);
@@ -40,6 +41,7 @@ function App() {
         <Route exact path='/who-we-are' element={<WhoWeAre name='Who We Are' />} />
         <Route exact path='/financing' element={<Financing name='Financing' />} />
         <Route exact path='/commercial' element={<Commercial name='Commercial'/>} />
+        <Route exact path='/insurance' element={<Insurance name='Insurance'/>} />
         <Route exact path='/guttercolors.pdf' element={<GutterColors name='Gutter Colors' />} />
       </Routes>
       < Footer className='footer' />

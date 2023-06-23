@@ -10,11 +10,6 @@ header {
   max-height: 10rem;
 }
 
-/* .logo {
-  width: 10rem;
-  z-index: 2;
-} */
-
 .page-buttons {
   top: 0;
   right: 0;
@@ -33,7 +28,7 @@ header {
   width: 75%;
 }
 
-.contact-info-container {
+/* .contact-info-container {
   width: 100%;
   height: 50%;
   display: flex;
@@ -55,7 +50,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
 .social-media-container {
   display: flex;

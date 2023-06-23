@@ -63,6 +63,9 @@ export default function MainPage({ address, setAddress }) {
         }}>
           <InsuranceOrFinancing />
         </Grid>
+        <Grid>
+          <img />
+        </Grid>
         <Grid sx={{ backgroundColor: 'white', paddingY: '4rem' }}>
           <div className="elfsight-app-7eea6c14-0475-4b7c-bf9d-d722ba87642b"></div>
         </Grid>

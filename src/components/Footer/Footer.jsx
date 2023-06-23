@@ -18,7 +18,7 @@ export default function Footer() {
       <Logo />
       <Grid container direction="column" spacing={1} sx={{
         '> div > div': {
-          fontSize: '12px'
+          fontSize: '1rem'
         }
       }}>
         <Grid>
