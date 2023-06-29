@@ -1,8 +1,8 @@
-import goldRoof from '../../assets/images/goldRoof.png';
 import { Grid, Typography } from '@mui/material';
 import { useTheme } from '@material-ui/core';
-import { buildSteps } from '../../util/thebuildprocess';
+import goldRoof from '../../assets/images/goldRoof.png';
 import BuildProcessStep from './BuildProcessStep';
+import { buildSteps } from '../../util/thebuildprocess';
 
 const TheBuildProcess = () => {
   const theme = useTheme();

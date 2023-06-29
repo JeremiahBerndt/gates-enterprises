@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { Grid, Stack, Typography } from '@mui/material';
 import Image from 'mui-image';
 import { useTheme } from '@material-ui/core';
@@ -6,11 +7,14 @@ import { ReactComponent as Medal } from '../../assets/icons/medal.svg';
 import { ReactComponent as Roof } from '../../assets/icons/roof.svg';
 import { ReactComponent as Snowing } from '../../assets/icons/snowing.svg';
 import house6 from '../../assets/images/house6.png';
+import { slideFromRight, fadeDown, useIsVisible } from '../../util/animations';
 import './WhoWeAre.css';
 
 
 export default function WhoWeAre({ name }) {
   const theme = useTheme();
+  const refQuality = useRef(null);
+  const refEquipped = useRef(null);
 
   return (
     <Stack>
@@ -44,7 +48,7 @@ export default function WhoWeAre({ name }) {
           }}>
           <img src={houseImage} alt="Services" style={{ width: '100%', objectFit: 'cover' }} />
         </Grid>
-        <Grid item xs={12} lg={6}
+        <Grid item xs={12} lg={6} ref={refEquipped} className={slideFromRight}
           sx={{
             padding: '0 2rem 2rem 2rem',
             [theme.breakpoints.up('lg')]: {
@@ -74,6 +78,8 @@ export default function WhoWeAre({ name }) {
       </Grid>
       <Grid
         container
+        ref={refQuality}
+        // className={useIsVisible(refQuality) ? fadeDown : ''}
         sx={{
           display: 'flex',
           alignItems: 'center',

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
-import { quoteCompare } from '../../../util/comparison';
-import stockroofvid from '../../../assets/images/stockroofvid.mp4'
 import { useTheme } from '@material-ui/core';
+import { quoteCompare } from '../../../util/comparison';
+import rooferwork from '../../../assets/images/rooferwork.mp4'
 
 const Comparison = () => {
   const theme = useTheme();
@@ -20,7 +20,7 @@ const Comparison = () => {
         objectFit: 'cover',
         zIndex: -1
       }}>
-        <source src={stockroofvid} type='video/mp4' />
+        <source src={rooferwork} type='video/mp4' />
       </video>
       <Typography variant="h2" align="center" pb={8}>
         Gates is built different
@@ -50,7 +50,7 @@ const Comparison = () => {
         </Grid>
         <Grid xs={4} sx={{ border: 'solid white 4px', borderTop: 'none', backgroundColor: 'rgb(6, 40, 65, 0.7)' }}>
           <Typography align='center' fontWeight='bold'>
-            Gates Quote
+            Gates Enterprises
           </Typography>
         </Grid>
         <Grid xs={4} sx={{ borderRight: 'transparent' }}>

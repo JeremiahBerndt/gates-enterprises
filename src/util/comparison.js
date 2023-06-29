@@ -1,12 +1,12 @@
 export const quoteCompare = [
   {
     name: 'Timeline',
-    gates: '<24 hours',
+    gates: 'Instant quote or instant hail inspection',
     others: 'Days or weeks'
   },
   {
     name: 'Convenience',
-    gates: 'Streamlined with proprietary quote system',
+    gates: 'Online estimate and flexible site visit',
     others: 'Multiple site visits and correspondence'
   },
   {

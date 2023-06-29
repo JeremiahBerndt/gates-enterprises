@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
-import rooferwork from '../../../assets/images/rooferwork.mp4'
 import { useTheme } from '@mui/material';
+import stockroofvid from '../../../assets/images/stockroofvid.mp4'
 import { useIsVisible, slideFromLeft, slideFromRight } from '../../../util/animations';
 
 const InsuranceOrQuote = () => {
@@ -16,14 +16,11 @@ const InsuranceOrQuote = () => {
         position: "absolute",
         filter: 'brightness(50%) opacity(0.5)',
         height: '100%',
-        // [theme.breakpoints.up('lg')]: {
-        //   height: '100%'
-        // },
         width: '100%',
         objectFit: 'cover',
         zIndex: -1
       }}>
-        <source src={rooferwork} type='video/mp4' />
+        <source src={stockroofvid} type='video/mp4' />
       </video>
       <Grid container sx={{
         py: '5rem',
@@ -37,7 +34,7 @@ const InsuranceOrQuote = () => {
       }}>
         <Grid xs={12} lg={6}>
           <Typography variant="h2" align="center">
-            Insurance
+            Hail Damage
           </Typography>
           <Typography
             ref={refInsurance}

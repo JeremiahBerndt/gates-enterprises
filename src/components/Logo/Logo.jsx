@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import GatesLogo from '../../assets/images/GatesLogo.jpg';
 import { useTheme } from '@material-ui/core';
 import { Box } from '@mui/material';
+import { Link } from 'react-router-dom';
+import GatesLogo from '../../assets/images/GatesLogo.jpg';
 
 export default function Logo() {
   const theme = useTheme();

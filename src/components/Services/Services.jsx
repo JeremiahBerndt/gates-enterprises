@@ -1,12 +1,12 @@
 import { useRef } from 'react';
+import Image from 'mui-image';
+import { Grid, Stack, Typography } from '@mui/material';
+import { useTheme } from '@material-ui/core';
 import services from '../../assets/images/services.png';
 import roofersonroof from '../../assets/images/roofersonroof.jpg';
 import blueprint from '../../assets/images/blueprint.jpg';
 import topRoof from '../../assets/images/topRoof.jpg';
 import wholeRoof from '../../assets/images/wholeRoof.png';
-import Image from 'mui-image';
-import { Grid, Stack, Typography } from '@mui/material';
-import { useTheme } from '@material-ui/core';
 import TheBuildProcess from './TheBuildProcess';
 import { slideFromLeft, slideFromRight, useIsVisible } from '../../util/animations';
 

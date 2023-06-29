@@ -1,6 +1,6 @@
-import Grid from '@mui/material/Unstable_Grid2/Grid2';
-import Logo from '../Logo/Logo.jsx';
+import Grid from '@mui/material/Unstable_Grid2';
 import { useTheme } from '@mui/material';
+import Logo from '../Logo/Logo.jsx';
 
 export default function Footer() {
   const theme = useTheme();

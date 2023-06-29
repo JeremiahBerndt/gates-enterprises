@@ -1,12 +1,12 @@
 import { useRef } from 'react';
+import { useTheme } from '@material-ui/core';
+import Image from 'mui-image';
+import { Grid, Stack, Typography } from '@mui/material';
 import services from '../../assets/images/services.png';
-import roofersonroof from '../../assets/images/roofersonroof.jpg';
+import hailroof from '../../assets/images/hailroof.png';
 import blueprint from '../../assets/images/blueprint.jpg';
 import topRoof from '../../assets/images/topRoof.jpg';
 import wholeRoof from '../../assets/images/wholeRoof.png';
-import Image from 'mui-image';
-import { Grid, Stack, Typography } from '@mui/material';
-import { useTheme } from '@material-ui/core';
 import InsuranceSteps from './InsuranceSteps';
 import { slideFromLeft, slideFromRight, useIsVisible } from '../../util/animations';
 
@@ -34,7 +34,7 @@ export default function Insurance({ name }) {
         }}>
           <Image
             top='0'
-            src={roofersonroof}
+            src={hailroof}
             height="100%"
             width="100%"
             fit="cover"
@@ -49,7 +49,7 @@ export default function Insurance({ name }) {
                 fontSize: '6rem'
               }
             }}>
-            Insurance
+            Hail Damage
           </Typography>
         </div>
         <Grid container backgroundColor='white'>

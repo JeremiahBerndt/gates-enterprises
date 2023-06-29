@@ -47,10 +47,9 @@ a {
 
 .hidden {
   display: none !important;
-}
+} 
 
-.page-content {
-  /* margin-top: 10rem; */
+/* .page-content {
   padding-bottom: 5rem;
 }
 
@@ -59,3 +58,4 @@ a {
   padding-left: 3rem;
   padding-right: 3rem;
 }
+*/
