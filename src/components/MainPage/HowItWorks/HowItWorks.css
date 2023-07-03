@@ -1,0 +1,16 @@
+.control-arrow {
+  background-color: #c9a32c!important;
+  height: 2rem!important;
+  top: 50%!important;
+  padding-bottom: 3rem!important;
+  z-index: 10!important;
+  opacity: unset!important;
+}
+
+.dot {
+  background-color: #062841!important;
+}
+
+.carousel-slider {
+  border-radius: 20px!important;
+}

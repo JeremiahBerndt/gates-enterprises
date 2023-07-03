@@ -1,4 +1,4 @@
-button {
+.headerButton {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,7 +10,7 @@ button {
   margin-bottom: 20px
 }
 
-button > img {
+.headerButton > img {
   width: 2em;
   padding-right: 1em;
 }

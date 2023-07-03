@@ -1,6 +1,4 @@
 :root {
-  /* --color-primary: #08253d; */
-  /* matched color from logo 👇 */
   --color-primary: #062841;
   --color-secondary: #c9a32c;
   --color-tertiary: whitesmoke;
@@ -9,9 +7,8 @@
   --font-family: 'Poppins', sans-serif;
 }
 
-.gold {
-  color: var(--color-secondary);
-  background-color: var(--color-primary);
+.eapps-widget-toolbar {
+  display: none!important;
 }
 
 body {
@@ -39,25 +36,6 @@ button {
   border: none;
 }
 
-a {
-  text-decoration: none;
-  color: var(--text-secondary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .hidden {
   display: none !important;
-}
-
-.page-content {
-  margin-top: 10rem;
-  padding-bottom: 5rem;
-}
-
-.page-single {
-  display: flex;
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
+} 

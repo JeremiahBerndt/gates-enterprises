@@ -1,0 +1,63 @@
+.Commercial {
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100vw;
+}
+
+.commercial-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Commercial > div:first-child img {
+  width: 50%;
+  padding: 1em 0px 40px 0px;
+  object-fit: contain;
+  background-color: white;
+}
+
+.Commercial > div:first-child > img:first-child {
+  padding-left: 3em;
+  padding-top: 2.5em;
+}
+
+.slides {
+  width: 48%;
+}
+
+.Commercial > div {
+  padding: 2.5em;
+}
+
+@media screen and (max-width: 991px) {
+
+  .Commercial {
+    padding: 0px;
+  }
+
+  .Commercial > div:nth-child(2) {
+    padding-bottom: 8em;
+  }
+
+  .commercial-section:first-child img:first-child {
+    padding: 3em!important;
+  }
+
+  .commercial-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .Commercial > div:first-child img {
+    width: 100%;
+    padding: 0 0 3em 0;
+  }
+
+  .slides {
+    width: auto;
+  }
+}
