@@ -26,6 +26,7 @@ export default function Services({ name }) {
               will help you maximize your roof’s performance by hand selecting the best
               components for each layer.
             </p>
+            <div></div>
           </div>
         </div>
         <div className={`page-single section2`}>
