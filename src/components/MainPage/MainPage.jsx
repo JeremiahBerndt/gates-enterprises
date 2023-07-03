@@ -9,7 +9,7 @@ import AddressInput from './AddressInput/AddressInput';
 import InsuranceOrFinancing from './InsuranceOrFinancing/InsuranceOrFinancing.jsx';
 import HowItWorks from './HowItWorks/HowItWorks';
 
-export default function MainPage({ address, setAddress }) {
+export default function MainPage({ screenWidth }) {
   const theme = useTheme();
 
   useEffect(() => {
@@ -38,10 +38,7 @@ export default function MainPage({ address, setAddress }) {
             }
           }}
         >
-          <AddressInput
-            address={address}
-            setAddress={setAddress}
-          />
+          <AddressInput />
         </Grid>
         <Grid sx={{
           height: "100%",
@@ -51,7 +48,7 @@ export default function MainPage({ address, setAddress }) {
           },
           background: 'repeating-radial-gradient( circle at 75% 100%,  #fff, lightgray 32rem)'
         }}>
-          <HowItWorks/>
+          <HowItWorks screenWidth={screenWidth} />
         </Grid>
         <Grid sx={{
           height: "100%",

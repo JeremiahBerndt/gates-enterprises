@@ -46,14 +46,13 @@ const Comparison = () => {
           '& > div > p': { fontWeight: 'bold', verticalAlign: 'center', padding: '1rem', fontSize: '1rem' }
         }}
       >
-        <Grid xs={4} sx={{ borderTop: 'none', borderLeft: 'none' }}>
-        </Grid>
-        <Grid xs={4} sx={{ border: 'solid white 4px', borderTop: 'none', backgroundColor: 'rgb(6, 40, 65, 0.7)' }}>
+        <Grid xs={4} sx={{ borderTop: 'none', borderLeft: 'none', borderRight: 'solid white 4px'  }}></Grid>
+        <Grid xs={4} sx={{ border: 'solid white 4px', borderTop: 'none', borderLeft: 'none', backgroundColor: 'rgb(6, 40, 65, 0.7)' }}>
           <Typography align='center' fontWeight='bold'>
             Gates Enterprises
           </Typography>
         </Grid>
-        <Grid xs={4} sx={{ borderRight: 'transparent' }}>
+        <Grid xs={4} sx={{ borderRight: 'none' }}>
           <Typography align='center'>
             Other guys
           </Typography>

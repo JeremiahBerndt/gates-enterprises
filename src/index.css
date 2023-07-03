@@ -1,5 +1,4 @@
 :root {
-  /* matched color from logo 👇 */
   --color-primary: #062841;
   --color-secondary: #c9a32c;
   --color-tertiary: whitesmoke;
@@ -37,25 +36,6 @@ button {
   border: none;
 }
 
-a {
-  text-decoration: none;
-  color: var(--text-secondary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .hidden {
   display: none !important;
 } 
-
-/* .page-content {
-  padding-bottom: 5rem;
-}
-
-.page-single {
-  display: flex;
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-*/

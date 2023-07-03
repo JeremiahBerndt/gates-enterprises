@@ -10,11 +10,12 @@ import Financing from '../Financing/Financing';
 import Commercial from '../Commercial/Commercial';
 import GutterColors from '../Gutters/Gutters';
 import Footer from '../Footer/Footer';
-import Insurance from '../Insurance/Insurance';
+import RoofFaq from '../RoofFaq/RoofFaq';
+import RoofQuote from '../RoofQuote/RoofQuote';
+import BlogPage from '../RoofFaq/BlogPage';
 
 function App() {
   const [openContact, setOpenContact] = useState(false);
-  const [address, setAddress] = useState('')
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const handleResize = () => setScreenWidth(window.innerWidth);
@@ -34,13 +35,15 @@ function App() {
         screenWidth={screenWidth}
       />
       <Routes>
-        <Route exact path='/' element={<MainPage setAddress={setAddress} address={address}/>} />
+        <Route exact path='/' element={<MainPage screenWidth={screenWidth} />} />
         <Route exact path='/services' element={<Services name='Services' />} />
         <Route exact path='/who-we-are' element={<WhoWeAre name='Who We Are' />} />
         <Route exact path='/financing' element={<Financing name='Financing' />} />
         <Route exact path='/commercial' element={<Commercial name='Commercial'/>} />
-        <Route exact path='/hail-damage' element={<Insurance name='Hail Damage'/>} />
+        <Route exact path='/get-a-quote' element={<RoofQuote name='Get a Quote'/>} />
+        <Route exact path='/roof-faq' element={<RoofFaq name='Roof FAQ'/>} />
         <Route exact path='/guttercolors.pdf' element={<GutterColors name='Gutter Colors' />} />
+        <Route path="roof-faq/roofblog/:id" element={<BlogPage />} />
       </Routes>
       < Footer className='footer' />
       <ContactForm

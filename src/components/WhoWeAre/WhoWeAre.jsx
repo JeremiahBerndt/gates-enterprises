@@ -10,7 +10,6 @@ import house6 from '../../assets/images/house6.png';
 import { slideFromRight, fadeDown, useIsVisible } from '../../util/animations';
 import './WhoWeAre.css';
 
-
 export default function WhoWeAre({ name }) {
   const theme = useTheme();
   const refQuality = useRef(null);

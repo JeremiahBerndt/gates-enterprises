@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import ScrollToTop from "./ScrollToTop";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints'
-// require('dotenv').config();
+import 'dotenv';
 
 const breakpoints = createBreakpoints({})
 

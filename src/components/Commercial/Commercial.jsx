@@ -29,7 +29,13 @@ export default function Commercial({ name }) {
           bgColor="inherit"
           style={{ zIndex: '-1', opacity: '0.3', position: 'absolute' }}
         />
-        <Typography variant="h1" align="center" sx={{ position: 'absolute' }}>
+        <Typography variant="h1" align="center" sx={{ 
+          position: 'absolute',
+          fontSize: '3rem',
+          [theme.breakpoints.up('lg')]: {
+            fontSize: '6rem'
+          }
+          }}>
           Commercial
         </Typography>
       </div>

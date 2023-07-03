@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { slideFromLeft } from '../../../util/animations';
 
-const AddressInput = ({ address, setAddress }) => {
+const AddressInput = () => {
   const navigate = useNavigate();
   const theme = useTheme();
 

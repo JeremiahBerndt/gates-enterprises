@@ -19,8 +19,8 @@ export default function Header({ displayContactForm, screenWidth }) {
             text='Schedule Inspection'
             handleClick={displayContactForm} />
           <HeaderButton
-            text='Roof Quote'
-            handleClick={() => redirect('roof-quote')}
+            text='Get a Quote'
+            handleClick={() => redirect('get-a-quote')}
           />
           <HeaderButton
             text='Services'
@@ -39,8 +39,8 @@ export default function Header({ displayContactForm, screenWidth }) {
             handleClick={() => redirect('commercial')}
           />
           <HeaderButton
-            text='Hail Damage'
-            handleClick={() => redirect('hail-damage')}
+            text='Roof FAQ'
+            handleClick={() => redirect('roof-faq')}
           />
         </div>
       </nav>

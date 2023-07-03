@@ -15,7 +15,7 @@ export const quoteCompare = [
     others: 'No guarantee of unforeseen costs'
   },
   {
-    name: 'Workmanship',
+    name: 'Quality',
     gates: 'Manufacturer Certified / 5-Star Reviewed',
     others: 'Non-Certified'
   },

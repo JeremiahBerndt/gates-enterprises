@@ -34,7 +34,7 @@ const InsuranceOrQuote = () => {
       }}>
         <Grid xs={12} lg={6}>
           <Typography variant="h2" align="center">
-            Hail Damage
+            Insurance
           </Typography>
           <Typography
             ref={refInsurance}
