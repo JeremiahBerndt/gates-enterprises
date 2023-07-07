@@ -6,7 +6,7 @@ import { useContentful } from "../../util/hooks";
 import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { useTheme } from "@material-ui/core";
-import moment from "moment";
+import dayjs from "dayjs";
 
 const BlogPage = () => {
   const theme = useTheme();
@@ -61,7 +61,7 @@ const BlogPage = () => {
             }}>
               <Typography variant="h6">
                 Gates Enterprises &nbsp;
-                {moment(blogPost.sys.createdAt).format('MMMM DD, YYYY')}
+                {dayjs(blogPost.sys.createdAt).format('MMMM DD, YYYY')}
               </Typography>
               {blogPost.fields.blogTitle}
             </Typography>

@@ -1,13 +1,9 @@
 import './Header.css';
 import HeaderButton from './HeaderButton/HeaderButton';
 import Logo from '../Logo/Logo.jsx';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Header({ displayContactForm }) {
-  const navigate = useNavigate();
-  const redirect = (path) => {
-    navigate(`/${path}`);
-  };
 
   return (
     <header>
@@ -16,31 +12,25 @@ export default function Header({ displayContactForm }) {
         <div className='page-buttons-list'>
           <HeaderButton
             text='Schedule Inspection'
-            handleClick={displayContactForm} />
-          <HeaderButton
-            text='Get a Quote'
-            handleClick={() => redirect('get-a-quote')}
-          />
-          <HeaderButton
-            text='Services'
-            handleClick={() => redirect('services')}
-          />
-          <HeaderButton
-            text='Who We Are'
-            handleClick={() => redirect('who-we-are')}
-          />
-          <HeaderButton
-            text='Financing'
-            handleClick={() => redirect('financing')}
-          />
-          <HeaderButton
-            text='Commercial'
-            handleClick={() => redirect('commercial')}
-          />
-          <HeaderButton
-            text='Roof FAQ'
-            handleClick={() => redirect('roof-faq')}
-          />
+            displayContactForm={displayContactForm} />
+          <Link to="get-a-quote" className='contact-info'>
+            <HeaderButton text='Get a Quote' />
+          </Link>
+          <Link to="services" className='contact-info'>
+            <HeaderButton text='Services' />
+          </Link>
+          <Link to="who-we-are" className='contact-info'>
+            <HeaderButton text='Who We Are' />
+          </Link>
+          <Link to="financing" className='contact-info'>
+            <HeaderButton text='Financing' />
+          </Link>
+          <Link to="commercial" className='contact-info'>
+            <HeaderButton text='Commercial' />
+          </Link>
+          <Link to="roof-faq" className='contact-info'>
+            <HeaderButton text='Roof FAQ' />
+          </Link>
         </div>
       </nav>
     </header>

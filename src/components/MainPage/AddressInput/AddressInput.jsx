@@ -3,9 +3,14 @@ import Image from 'mui-image';
 import skyline from '../../../assets/images/skyline.jpg'
 import { Typography, Box } from '@mui/material';
 import { slideFromLeft } from '../../../util/animations';
+import { useInView } from 'react-intersection-observer';
 
 const AddressInput = () => {
   const theme = useTheme();
+  const { ref, inView } = useInView({
+    threshold: 1,
+    triggerOnce: true
+  });
 
   return (
     <>
@@ -17,7 +22,7 @@ const AddressInput = () => {
           src={skyline}
           height="100%"
           width="100%"
-          fit="cover"
+          fit="cover" 
           duration={3000}
           easing="ease-in"
           bgColor="inherit"
@@ -25,7 +30,8 @@ const AddressInput = () => {
         />
       </div>
       <Box
-        className={slideFromLeft}
+        ref={ref}
+        className={inView ? slideFromLeft : null}
         sx={{
           position: 'absolute',
           top: '10%',
@@ -38,6 +44,7 @@ const AddressInput = () => {
           },
         }}>
         <Typography
+          component="h1"
           variant="h2"
           sx={{
             pb: 2,

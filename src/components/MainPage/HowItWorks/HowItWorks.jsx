@@ -1,15 +1,15 @@
 import { CardContent, Stack, Grid, Typography, Card } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { useInView } from 'react-intersection-observer';
 import { ReactComponent as Inspect } from '../../../assets/icons/home-inspection.svg';
 import { ReactComponent as Claim } from '../../../assets/icons/video-call.svg';
 import { ReactComponent as MakeWhole } from '../../../assets/icons/construction.svg';
 import { ReactComponent as Hail } from '../../../assets/icons/hail.svg';
 import { zoomDown } from '../../../util/animations';
+import { useInView } from 'react-intersection-observer'
 import HowItWorksScroll from './HowItWorksScroll';
 
 const HowItWorks = () => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 1,
     delay: 1000
   });

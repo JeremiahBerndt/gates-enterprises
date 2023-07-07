@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 const animate = 'animate__animated';
 const fast = 'animate__faster';
 const slow = 'animate__slow';
@@ -18,7 +17,6 @@ export function useIsVisible(ref) {
     const observer = new IntersectionObserver(
       ([entry]) => setIntersecting(entry.isIntersecting)
     );
-
     observer.observe(ref.current);
     return () => {
       observer.disconnect();
