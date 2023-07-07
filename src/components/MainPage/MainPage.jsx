@@ -1,12 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
+import { CircularProgress } from '@material-ui/core';
 import './MainPage.css';
 import { useTheme } from '@mui/material/styles';
 import roofsystem from '../../assets/images/roofsystem.jpg'
-import Comparison from './Comparison/Comparison.jsx';
+const Comparison = lazy(() => import('./Comparison/Comparison.jsx'));
+const InsuranceOrFinancing = lazy(() => import('./InsuranceOrFinancing/InsuranceOrFinancing.jsx'));
+const HowItWorks = lazy(() => import('./HowItWorks/HowItWorks.jsx'));
 import AddressInput from './AddressInput/AddressInput';
-import InsuranceOrFinancing from './InsuranceOrFinancing/InsuranceOrFinancing.jsx';
-import HowItWorks from './HowItWorks/HowItWorks';
 import HeaderButton from '../Header/HeaderButton/HeaderButton';
 import { email } from '../../util/email';
 import './MainPage.css';
@@ -28,20 +29,20 @@ export default function MainPage() {
 
   return (
     <main>
-      <Grid container 
-      style={{
-        position: 'absolute',
-        top: '8rem',
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        zIndex: 2,
-      }}
-      sx={{
-        [theme.breakpoints.down(400)]: {
-          top: '10rem!important'
-        }
-      }}
+      <Grid container
+        style={{
+          position: 'absolute',
+          top: '8rem',
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          zIndex: 2,
+        }}
+        sx={{
+          [theme.breakpoints.down(400)]: {
+            top: '10rem!important'
+          }
+        }}
       >
         <Grid>
           <a href='tel:17203804763' className="contact-info">
@@ -84,7 +85,14 @@ export default function MainPage() {
           },
           background: 'repeating-radial-gradient( circle at 75% 100%,  #fff, lightgray 32rem)'
         }}>
-          <HowItWorks />
+          <Suspense
+            fallback={
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="secondary" />
+              </div>
+            }>
+            <HowItWorks />
+          </Suspense>
         </Grid>
         <Grid sx={{
           height: "100%",
@@ -95,7 +103,14 @@ export default function MainPage() {
             p: '5rem'
           }
         }}>
-          <Comparison />
+          <Suspense
+            fallback={
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="secondary" />
+              </div>
+            }>
+            <Comparison />
+          </Suspense>
         </Grid>
         <Grid sx={{
           backgroundColor: "white",
@@ -113,7 +128,14 @@ export default function MainPage() {
           [theme.breakpoints.only('sm')]: { height: '78rem' },
           [theme.breakpoints.up('md')]: { height: '100%' },
         }}>
-          <InsuranceOrFinancing />
+          <Suspense
+            fallback={
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="secondary" />
+              </div>
+            }>
+            <InsuranceOrFinancing />
+          </Suspense>
         </Grid>
         <Grid sx={{
           backgroundColor: "white",

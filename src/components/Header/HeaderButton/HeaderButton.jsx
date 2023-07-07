@@ -1,19 +1,19 @@
-import './HeaderButton.css';
 import useStyles from '../../../util/materialuistyles';
 import Email from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import './HeaderButton.css';
 
-export default function HeaderButton({ name, text, icon, handleClick }) {
+export default function HeaderButton({ name, text, icon, displayContactForm }) {
   const classes = useStyles();
 
   return (
     <button
       tabIndex={icon && -1}
       className={icon ? 'low-button' : 'high-button' + ' headerButton'}
-      onClick={handleClick}
       style={icon ? { display: 'flex', paddingLeft: '1rem' } : {}}
+      onClick={text === 'Schedule Inspection' ? displayContactForm : () =>{} }
     >
       {name === 'phone' && <PhoneIcon sx={{ color: 'white' }} />}
       {name === 'email' && <Email className={classes.icon} />}
@@ -23,7 +23,7 @@ export default function HeaderButton({ name, text, icon, handleClick }) {
           target='_blank'
           rel='noreferrer'
         >
-          <InstagramIcon className={classes.icon} style={{ fill: "#c9a32c" }}/>
+          <InstagramIcon className={classes.icon} style={{ fill: "#c9a32c" }} />
         </a>
       )}
       {name === 'facebook' && (
@@ -32,10 +32,10 @@ export default function HeaderButton({ name, text, icon, handleClick }) {
           target='_blank'
           rel='noreferrer'
         >
-          <FacebookIcon className={classes.icon} style={{ fill: "#c9a32c" }}/>
+          <FacebookIcon className={classes.icon} style={{ fill: "#c9a32c" }} />
         </a>
       )}
-      {text && <p>{text}</p>}
+        {text && <p>{text}</p>}
     </button>
   );
 }

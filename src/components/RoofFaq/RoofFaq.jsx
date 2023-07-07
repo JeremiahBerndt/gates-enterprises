@@ -4,7 +4,6 @@ import Image from 'mui-image';
 import { CircularProgress, Stack, Typography } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
 import hailroof from '../../assets/images/hailroof.png';
-// import { slideFromLeft, slideFromRight, useIsVisible } from '../../util/animations';
 import { useContentful } from '../../util/hooks';
 import BlogEntry from './BlogEntry';
 
