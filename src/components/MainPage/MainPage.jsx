@@ -1,12 +1,8 @@
-import { useEffect, lazy, Suspense } from 'react';
+import { useEffect } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
-import { CircularProgress } from '@material-ui/core';
 import './MainPage.css';
 import { useTheme } from '@mui/material/styles';
 import roofsystem from '../../assets/images/roofsystem.jpg'
-// const Comparison = lazy(() => import('./Comparison/Comparison.jsx'));
-// const InsuranceOrFinancing = lazy(() => import('./InsuranceOrFinancing/InsuranceOrFinancing.jsx'));
-// const HowItWorks = lazy(() => import('./HowItWorks/HowItWorks.jsx'));
 import Comparison from './Comparison/Comparison.jsx';
 import InsuranceOrFinancing from './InsuranceOrFinancing/InsuranceOrFinancing.jsx';
 import HowItWorks from './HowItWorks/HowItWorks.jsx';
@@ -86,7 +82,7 @@ export default function MainPage() {
           [theme.breakpoints.up('lg')]: {
             p: '5rem'
           },
-          background: 'repeating-radial-gradient( circle at 75% 100%,  #fff, lightgray 32rem)'
+          background: 'repeating-radial-gradient( circle at 75% 100%, #fff, lightgray 32rem)'
         }}>
           {/* <Suspense
             fallback={
