@@ -1,8 +1,5 @@
 
-import { CardContent } from '@material-ui/core';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
+import { CardContent, Stack, Typography, Card } from '@mui/material';
 import { ReactComponent as Inspect } from '../../../assets/icons/home-inspection.svg';
 import { ReactComponent as Claim } from '../../../assets/icons/video-call.svg';
 import { ReactComponent as MakeWhole } from '../../../assets/icons/construction.svg';
@@ -21,7 +18,7 @@ const HowItWorksScroll = () => {
           Hail Claim?
         </Typography>
       </div>
-      <Carousel maxWidth="90vw">
+      <Carousel maxWidth="90vw" showThumbs={false}>
         <Card elevation={24} sx={{
           height: "48rem",
           border: "solid 2px #062841",
@@ -36,7 +33,7 @@ const HowItWorksScroll = () => {
               We inspect your roof and home for possible storm damage
             </Typography>
             <div style={{ display: 'flex', justifyContent: 'center', padding: '4rem 2rem 2rem 2rem' }}>
-              <Inspect height="16rem" width="15rem" fill="#062841" />
+              <Inspect height="350" width="350" fill="#062841" />
             </div>
           </CardContent>
         </Card>
@@ -54,7 +51,7 @@ const HowItWorksScroll = () => {
               If it has been damaged, insurance may cover the cost of repair or replacement
             </Typography>
             <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-              <Claim height="16rem" width="16rem" fill="#062841" color="#062841" />
+              <Claim height="350" width="350" fill="#062841" color="#062841" />
             </div>
           </CardContent>
         </Card>
@@ -72,7 +69,7 @@ const HowItWorksScroll = () => {
               If your claim is approved, we do the work to make your home whole again
             </Typography>
             <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-              <MakeWhole height="14rem" width="14rem" fill="#062841" />
+              <MakeWhole height="350" width="350" fill="#062841" />
             </div>
           </CardContent>
         </Card>

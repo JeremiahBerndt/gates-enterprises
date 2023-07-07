@@ -1,14 +1,15 @@
 import 'reset-css';
 import 'animate.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render, hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './components/App/App';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 import ScrollToTop from "./ScrollToTop";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints'
+import { HelmetProvider } from 'react-helmet-async';
 import 'dotenv';
 
 const breakpoints = createBreakpoints({})
@@ -62,26 +63,35 @@ const theme = createTheme({
   },
   yellowButton: {
     fontWeight: 800,
-    borderRadius: '40px', 
-    height: 56, 
-    backgroundColor: '#c9a32c', 
+    borderRadius: '40px',
+    height: 56,
+    backgroundColor: '#c9a32c',
     ':hover': { backgroundColor: '#062841' }
   }
 });
 
-ReactDOM.render(
+const gatesApp = (
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <ScrollToTop />
-        <App />
-      </BrowserRouter>
-    </ThemeProvider>
-  </React.StrictMode>,
-  document.getElementById('topRoot')
+    <HelmetProvider>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <ScrollToTop />
+          <App />
+        </BrowserRouter>
+      </ThemeProvider>
+    </HelmetProvider>
+  </React.StrictMode>
 );
+
+const rootElement = document.getElementById("topRoot");
+render(gatesApp, rootElement);
+// if (rootElement.hasChildNodes()) {
+//   hydrate(gatesApp, rootElement);
+// } else {
+// }
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+// reportWebVitals(console.log);

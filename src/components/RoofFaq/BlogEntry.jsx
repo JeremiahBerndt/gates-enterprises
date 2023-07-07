@@ -11,13 +11,13 @@ const BlogEntry = ({ image, title, id }) => {
       <Grid container sx={{ p: "1rem" }}>
         <Grid item lg={4} sx={{
           [theme.breakpoints.up('lg')]: {
-            width: '4rem',
+            width: '8rem',
             height: '8rem',
             px: '3rem',
             py: '1rem'
           }
         }}>
-          <img src={image.file.url} alt={image.title} width="100%" height="100%" />
+          <img src={image.file.url} alt={image.title} width="100%" height="100%" style={{ objectFit: 'cover' }}/>
         </Grid>
         <Grid item lg={8} sx={{
           display: 'flex',

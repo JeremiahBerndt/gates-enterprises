@@ -1,8 +1,6 @@
 import { useRef } from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
-import Typography from '@mui/material/Typography';
-import { useTheme } from '@mui/material';
-import stockroofvid from '../../../assets/images/stockroofvid.mp4'
+import { Grid, Typography, useTheme } from '@mui/material';
+import stockroofvid from '../../../assets/images/panOverRoof.mp4'
 import { useIsVisible, slideFromLeft, slideFromRight } from '../../../util/animations';
 
 const InsuranceOrQuote = () => {
@@ -14,7 +12,7 @@ const InsuranceOrQuote = () => {
     <>
       <video autoPlay loop muted style={{
         position: "absolute",
-        filter: 'brightness(50%) opacity(0.5)',
+        filter: 'brightness(80%) opacity(0.5)',
         height: '100%',
         width: '100%',
         objectFit: 'cover',
@@ -32,7 +30,7 @@ const InsuranceOrQuote = () => {
         },
         margin: 0,
       }}>
-        <Grid xs={12} lg={6}>
+        <Grid item xs={12} lg={6}>
           <Typography variant="h2" align="center">
             Insurance
           </Typography>
@@ -49,7 +47,7 @@ const InsuranceOrQuote = () => {
             Our expertise working with insurance providers allows us to help you navigate the claims process with ease. We are there to assist along every step of the process to make sure you get the repairs your home needs.
           </Typography>
         </Grid>
-        <Grid xs={12} lg={6}>
+        <Grid item xs={12} lg={6}>
           <Typography variant="h2" align="center">
             Financing
           </Typography>

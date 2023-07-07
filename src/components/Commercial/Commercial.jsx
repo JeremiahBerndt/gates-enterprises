@@ -1,4 +1,3 @@
-import './Commercial.css';
 import { Typography } from '@mui/material';
 import Image from 'mui-image';
 import { useTheme } from '@material-ui/core';
@@ -7,12 +6,18 @@ import commercialroof from '../../assets/images/commercialroof.png';
 import clientsatisfaction from '../../assets/images/clientsatisfaction.png';
 import threeDHouse from '../../assets/images/3dhouse.jpg'
 import commercialslides from '../../assets/images/commercialslides.png';
+import { Helmet } from 'react-helmet-async';
+import './Commercial.css';
 
 export default function Commercial({ name }) {
   const theme = useTheme();
 
   return (
     <>
+      <Helmet>
+        <title>Commercial Roofing Solutions</title>
+        <meta name="description" content="Information on commercial roofing products and services" />
+      </Helmet>
       <div style={{
         position: 'relative',
         display: 'flex',
@@ -29,13 +34,13 @@ export default function Commercial({ name }) {
           bgColor="inherit"
           style={{ zIndex: '-1', opacity: '0.3', position: 'absolute' }}
         />
-        <Typography variant="h1" align="center" sx={{ 
+        <Typography variant="h1" align="center" sx={{
           position: 'absolute',
           fontSize: '3rem',
           [theme.breakpoints.up('lg')]: {
             fontSize: '6rem'
           }
-          }}>
+        }}>
           Commercial
         </Typography>
       </div>

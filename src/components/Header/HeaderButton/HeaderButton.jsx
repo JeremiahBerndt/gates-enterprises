@@ -13,8 +13,9 @@ export default function HeaderButton({ name, text, icon, handleClick }) {
       tabIndex={icon && -1}
       className={icon ? 'low-button' : 'high-button' + ' headerButton'}
       onClick={handleClick}
+      style={icon ? { display: 'flex', paddingLeft: '1rem' } : {}}
     >
-      {name === 'phone' && <PhoneIcon className={classes.icon} />}
+      {name === 'phone' && <PhoneIcon sx={{ color: 'white' }} />}
       {name === 'email' && <Email className={classes.icon} />}
       {name === 'instagram' && (
         <a
@@ -22,7 +23,7 @@ export default function HeaderButton({ name, text, icon, handleClick }) {
           target='_blank'
           rel='noreferrer'
         >
-          <InstagramIcon className={classes.icon} />
+          <InstagramIcon className={classes.icon} style={{ fill: "#c9a32c" }}/>
         </a>
       )}
       {name === 'facebook' && (
@@ -31,7 +32,7 @@ export default function HeaderButton({ name, text, icon, handleClick }) {
           target='_blank'
           rel='noreferrer'
         >
-          <FacebookIcon className={classes.icon} />
+          <FacebookIcon className={classes.icon} style={{ fill: "#c9a32c" }}/>
         </a>
       )}
       {text && <p>{text}</p>}

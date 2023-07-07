@@ -1,15 +1,10 @@
-
-import { useEffect, useState } from 'react';
 import { useTheme } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import Image from 'mui-image';
 import skyline from '../../../assets/images/skyline.jpg'
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import { Typography, Box } from '@mui/material';
 import { slideFromLeft } from '../../../util/animations';
 
 const AddressInput = () => {
-  const navigate = useNavigate();
   const theme = useTheme();
 
   return (
@@ -33,7 +28,7 @@ const AddressInput = () => {
         className={slideFromLeft}
         sx={{
           position: 'absolute',
-          top: 0,
+          top: '10%',
           [theme.breakpoints.up('sm')]: {
             top: '15%',
           },

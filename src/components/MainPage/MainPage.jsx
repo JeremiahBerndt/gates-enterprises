@@ -1,15 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import './MainPage.css';
 import { useTheme } from '@mui/material/styles';
 import roofsystem from '../../assets/images/roofsystem.jpg'
-import moreHail from '../../assets/images/moreHail.png'
 import Comparison from './Comparison/Comparison.jsx';
 import AddressInput from './AddressInput/AddressInput';
 import InsuranceOrFinancing from './InsuranceOrFinancing/InsuranceOrFinancing.jsx';
 import HowItWorks from './HowItWorks/HowItWorks';
+import HeaderButton from '../Header/HeaderButton/HeaderButton';
+import { email } from '../../util/email';
+import './MainPage.css';
 
-export default function MainPage({ screenWidth }) {
+export default function MainPage() {
   const theme = useTheme();
 
   useEffect(() => {
@@ -26,6 +28,40 @@ export default function MainPage({ screenWidth }) {
 
   return (
     <main>
+      <Grid container 
+      style={{
+        position: 'absolute',
+        top: '8rem',
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        zIndex: 2,
+      }}
+      sx={{
+        [theme.breakpoints.down(400)]: {
+          top: '10rem!important'
+        }
+      }}
+      >
+        <Grid>
+          <a href='tel:17203804763' className="contact-info">
+            <HeaderButton name='phone' text='(720) 380-4763' icon={true} />
+          </a>
+        </Grid>
+        <Grid>
+          <a href={`mailto:${email.address}?&subject=${email.subject}&body=${email.body}`} className="contact-info">
+            <HeaderButton
+              name='email'
+              text='info@gatesroof.com'
+              icon={true}
+            />
+          </a>
+        </Grid>
+        <Grid sx={{ display: 'flex' }}>
+          <HeaderButton name='instagram' icon={true} />
+          <HeaderButton name='facebook' icon={true} />
+        </Grid>
+      </Grid>
       <Grid container direction="column">
         {/*ROOFLE*/}
         <Grid id="placeForRoofle"></Grid>
@@ -48,7 +84,7 @@ export default function MainPage({ screenWidth }) {
           },
           background: 'repeating-radial-gradient( circle at 75% 100%,  #fff, lightgray 32rem)'
         }}>
-          <HowItWorks screenWidth={screenWidth} />
+          <HowItWorks />
         </Grid>
         <Grid sx={{
           height: "100%",

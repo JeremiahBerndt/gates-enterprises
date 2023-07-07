@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@material-ui/core';
 import { quoteCompare } from '../../../util/comparison';
-import rooferwork from '../../../assets/images/rooferwork.mp4'
+import rooferwork from '../../../assets/images/rooferWorking.mp4'
 
 const Comparison = () => {
   const theme = useTheme();

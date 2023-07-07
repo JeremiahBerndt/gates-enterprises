@@ -1,4 +1,4 @@
-import Grid from '@mui/material/Unstable_Grid2';
+import { Grid } from '@mui/material';
 import { useTheme } from '@mui/material';
 import Logo from '../Logo/Logo.jsx';
 
@@ -11,12 +11,10 @@ export default function Footer() {
       alignItems: 'center',
       justifyContent: 'flex-start',
       height: '8rem',
-      // [theme.breakpoints.up('lg')]: {
-      //   height: '6rem'
-      // }
     }}>
       <Logo />
       <Grid container direction="column" spacing={1} sx={{
+        pl: '2rem',
         '> div > div': {
           fontSize: '1rem'
         }

@@ -9,6 +9,7 @@ import topRoof from '../../assets/images/topRoof.jpg';
 import wholeRoof from '../../assets/images/wholeRoof.png';
 import TheBuildProcess from './TheBuildProcess';
 import { slideFromLeft, slideFromRight, useIsVisible } from '../../util/animations';
+import { Helmet } from 'react-helmet-async';
 
 export default function Services({ name }) {
   const theme = useTheme();
@@ -18,6 +19,10 @@ export default function Services({ name }) {
 
   return (
     <>
+      <Helmet>
+        <title>Build Services and Build Process</title>
+        <meta name="description" content="Outline of exterior construction services we provide and our build process." />
+      </Helmet>
       <Stack
         sx={{
           '> div > div > img': {
@@ -148,7 +153,7 @@ export default function Services({ name }) {
               padding: '8rem 8rem 8rem 4rem'
             }
           }}>
-            <div ref={refDecking} className={useIsVisible(refDecking) ? slideFromRight :  null}>
+            <div ref={refDecking} className={useIsVisible(refDecking) ? slideFromRight : null}>
               <Typography variant="h4" color="white">
                 Roof Decking
               </Typography>

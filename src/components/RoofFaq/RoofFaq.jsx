@@ -1,13 +1,14 @@
-import { useRef, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTheme } from '@material-ui/core';
 import Image from 'mui-image';
 import { CircularProgress, Stack, Typography } from '@mui/material';
+import { Helmet } from 'react-helmet-async';
 import hailroof from '../../assets/images/hailroof.png';
 // import { slideFromLeft, slideFromRight, useIsVisible } from '../../util/animations';
 import { useContentful } from '../../util/hooks';
 import BlogEntry from './BlogEntry';
 
-export default function Insurance({ name }) {
+export default function RoofFaq({ name }) {
   const theme = useTheme();
   const [blogs, setBlogs] = useState([]);
   const { getBlogPosts } = useContentful();
@@ -24,6 +25,10 @@ export default function Insurance({ name }) {
 
   return (
     <>
+      <Helmet>
+        <title>Frequently Asked Questions and Roofing Info</title>
+        <meta name="description" content="FAQs, blog, and information on roofing, hail, and insurance in Colorado." />
+      </Helmet>
       <Stack
         sx={{
           '> div > div > img': {
