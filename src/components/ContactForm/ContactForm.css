@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.363);
-  z-index: 3;
+  z-index: 99;
   display: flex;
   justify-content:center;
   align-items: center;
@@ -40,15 +40,6 @@
 
 .form-container > h1 {
   padding-bottom: 1em;
-}
-
-form {
-  height: 100%;
-  display: grid;
-  row-gap: 1em;
-  color: var(--text-secondary);
-  z-index: 4;
-  align-items: center;
 }
 
 .form-close {

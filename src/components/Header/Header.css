@@ -1,29 +1,16 @@
 header {
-  background-color: var(--color-primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1;
   box-shadow: 0px 0px 11px 1px #00000059;
-  min-width: 807px;
-  padding: 1em 0;
-  min-height: 10rem;
   max-height: 10rem;
 }
 
-.logo {
-  width: 10rem;
-  height: 10rem;
-  margin-left: 2em;
-  z-index: 2;
-}
-
 .page-buttons {
-  position: absolute;
   top: 0;
   right: 0;
   width: 100%;
@@ -35,44 +22,15 @@ header {
 }
 
 .page-buttons-list {
-  margin-left: 5em;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 75%;
 }
 
-.contact-info-container {
-  width: 100%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(
-    98deg,
-    var(--color-primary) 5em,
-    var(--color-tertiary) 19em
-  );
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
-
 .contact-info {
-  margin-left: 5em;
-  min-width: 540px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.social-media-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 4em;
-}
+  text-decoration: none;
+} 
 
 @media screen and (max-width: 991px) {
   header {
@@ -80,30 +38,16 @@ header {
     font-size: 1.2em;
   }
 
-  .logo {
-    width: 7rem;
-    margin-left: 0.1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .page-buttons-list {
     margin-top: 2em;
-    margin-left: 10em;
-    width: 66%;
+    margin-left: 1em;
+    width: 80%;
     flex-wrap: wrap;
   }
 
-  .page-buttons-list > button {
+  .page-buttons-list>button {
     padding: 0;
     margin-right: 1rem;
   }
-
-  .contact-info {
-    margin-left: 5rem;
-    flex-direction: column;
-    min-width: auto;
-    margin-top: -0.6em;
-  }
+  
 }
