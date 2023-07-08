@@ -11,7 +11,7 @@ import TheBuildProcess from './TheBuildProcess';
 import { slideFromLeft, slideFromRight, useIsVisible } from '../../util/animations';
 import { Helmet } from 'react-helmet-async';
 
-export default function Services({ name }) {
+export default function Services() {
   const theme = useTheme();
   const refOptimized = useRef();
   const refDecking = useRef();

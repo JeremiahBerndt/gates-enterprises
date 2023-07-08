@@ -13,22 +13,22 @@ export default function Header({ displayContactForm }) {
           <HeaderButton
             text='Schedule Inspection'
             displayContactForm={displayContactForm} />
-          <Link to="get-a-quote" className='contact-info'>
+          <Link to="get-a-quote" className='contact-info high-button'>
             <HeaderButton text='Get a Quote' />
           </Link>
-          <Link to="services" className='contact-info'>
+          <Link to="services" className='contact-info high-button'>
             <HeaderButton text='Services' />
           </Link>
-          <Link to="who-we-are" className='contact-info'>
+          <Link to="who-we-are" className='contact-info high-button'>
             <HeaderButton text='Who We Are' />
           </Link>
-          <Link to="financing" className='contact-info'>
+          <Link to="financing" className='contact-info high-button'>
             <HeaderButton text='Financing' />
           </Link>
-          <Link to="commercial" className='contact-info'>
+          <Link to="commercial" className='contact-info high-button'>
             <HeaderButton text='Commercial' />
           </Link>
-          <Link to="roof-faq" className='contact-info'>
+          <Link to="roof-faq" className='contact-info high-button'>
             <HeaderButton text='Roof FAQ' />
           </Link>
         </div>

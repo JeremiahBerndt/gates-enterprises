@@ -30,6 +30,7 @@ header {
 
 .contact-info {
   text-decoration: none;
+  padding-right: 8px;
 } 
 
 @media screen and (max-width: 991px) {
@@ -39,14 +40,13 @@ header {
   }
 
   .page-buttons-list {
-    margin-top: 2em;
+    margin-top: 0.5em;
     margin-left: 1em;
     width: 80%;
     flex-wrap: wrap;
   }
 
-  .page-buttons-list>button {
-    padding: 0;
+  .page-buttons-list > button {
     margin-right: 1rem;
   }
   
