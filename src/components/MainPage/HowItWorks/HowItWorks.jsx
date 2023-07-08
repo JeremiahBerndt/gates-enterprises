@@ -5,7 +5,7 @@ import { ReactComponent as Claim } from '../../../assets/icons/video-call.svg';
 import { ReactComponent as MakeWhole } from '../../../assets/icons/construction.svg';
 import { ReactComponent as Hail } from '../../../assets/icons/hail.svg';
 import { zoomDown } from '../../../util/animations';
-import { useInView } from 'react-intersection-observer'
+import { useInView } from 'react-intersection-observer';
 import HowItWorksScroll from './HowItWorksScroll';
 
 const HowItWorks = () => {
