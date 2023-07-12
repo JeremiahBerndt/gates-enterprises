@@ -4,14 +4,15 @@ import { CircularProgress } from '@material-ui/core';
 import './MainPage.css';
 import { useTheme } from '@mui/material/styles';
 import roofsystem from '../../assets/images/roofsystem.jpg'
-// const Comparison = lazy(() => import('./Comparison/Comparison.jsx'));
-// const InsuranceOrFinancing = lazy(() => import('./InsuranceOrFinancing/InsuranceOrFinancing.jsx'));
-// const HowItWorks = lazy(() => import('./HowItWorks/HowItWorks.jsx'));
-import Comparison from './Comparison/Comparison.jsx';
-import InsuranceOrFinancing from './InsuranceOrFinancing/InsuranceOrFinancing.jsx';
-import HowItWorks from './HowItWorks/HowItWorks.jsx';
+const Comparison = lazy(() => import('./Comparison/Comparison.jsx'));
+const InsuranceOrFinancing = lazy(() => import('./InsuranceOrFinancing/InsuranceOrFinancing.jsx'));
+const HowItWorks = lazy(() => import('./HowItWorks/HowItWorks.jsx'));
+// import Comparison from './Comparison/Comparison.jsx';
+// import InsuranceOrFinancing from './InsuranceOrFinancing/InsuranceOrFinancing.jsx';
+// import HowItWorks from './HowItWorks/HowItWorks.jsx';
 import AddressInput from './AddressInput/AddressInput';
 import HeaderButton from '../Header/HeaderButton/HeaderButton';
+import { Helmet } from 'react-helmet-async';
 import { email } from '../../util/email';
 import './MainPage.css';
 
@@ -32,6 +33,11 @@ export default function MainPage() {
 
   return (
     <main>
+      <Helmet>
+        <title>Gates Enterprises Homepage | Roofing with Values </title>
+        <meta name="description" content="Instant roof quote, company reviews, hail damage, and info on filing a claim." />
+        <link rel="canonical" href="https://www.gatesroof.com/" />
+      </Helmet>
       <Grid container
         style={{
           position: 'absolute',
@@ -88,14 +94,14 @@ export default function MainPage() {
           },
           background: 'repeating-radial-gradient( circle at 75% 100%, #fff, lightgray 32rem)'
         }}>
-          {/* <Suspense
+          <Suspense
             fallback={
               <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
                 <CircularProgress sx={{ p: '10rem' }} size={32} color="secondary" />
               </div>
-            }> */}
+            }>
             <HowItWorks />
-          {/* </Suspense> */}
+          </Suspense>
         </Grid>
         <Grid sx={{
           height: "100%",
@@ -106,14 +112,14 @@ export default function MainPage() {
             p: '5rem'
           }
         }}>
-          {/* <Suspense
+          <Suspense
             fallback={
               <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
                 <CircularProgress sx={{ p: '10rem' }} size={32} color="secondary" />
               </div>
-            }> */}
+            }>
             <Comparison />
-          {/* </Suspense> */}
+          </Suspense>
         </Grid>
         <Grid sx={{
           backgroundColor: "white",
@@ -131,14 +137,14 @@ export default function MainPage() {
           [theme.breakpoints.only('sm')]: { height: '78rem' },
           [theme.breakpoints.up('md')]: { height: '100%' },
         }}>
-          {/* <Suspense
+          <Suspense
             fallback={
               <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
                 <CircularProgress sx={{ p: '10rem' }} size={32} color="secondary" />
               </div>
-            }> */}
+            }>
             <InsuranceOrFinancing />
-          {/* </Suspense> */}
+          </Suspense>
         </Grid>
         <Grid sx={{
           backgroundColor: "white",

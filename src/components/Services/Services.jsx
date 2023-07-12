@@ -22,6 +22,7 @@ export default function Services() {
       <Helmet>
         <title>Build Services and Build Process</title>
         <meta name="description" content="Outline of exterior construction services we provide and our build process." />
+        <link rel="canonical" href="https://www.gatesroof.com/services" />
       </Helmet>
       <Stack
         sx={{

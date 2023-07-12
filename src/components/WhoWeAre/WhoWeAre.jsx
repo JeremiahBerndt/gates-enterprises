@@ -20,7 +20,8 @@ export default function WhoWeAre({ name }) {
     <>
       <Helmet>
         <title>Info on Gates Enterprises's Company Culture</title>
-        <meta name="description" content="Learn more about Gates Enterprises company and who we are." />
+        <meta name="description" content="Learn more about the Gates Enterprises team and who we are." />
+        <link rel="canonical" href="https://www.gatesroof.com/who-we-are" />
       </Helmet>
       <Stack>
         <div style={{

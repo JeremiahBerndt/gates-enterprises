@@ -17,6 +17,7 @@ export default function Commercial({ name }) {
       <Helmet>
         <title>Commercial Roofing Solutions</title>
         <meta name="description" content="Information on commercial roofing products and services" />
+        <link rel="canonical" href="https://www.gatesroof.com/commercial" />
       </Helmet>
       <div style={{
         position: 'relative',

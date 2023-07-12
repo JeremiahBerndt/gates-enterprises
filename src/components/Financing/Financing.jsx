@@ -14,6 +14,7 @@ export default function Financing({ name }) {
       <Helmet>
         <title>Apply for Construction Financing</title>
         <meta name="description" content="How to apply for financing for a new roof or exterior construction." />
+        <link rel="canonical" href="https://www.gatesroof.com/financing" />
       </Helmet>
 
       <Stack>

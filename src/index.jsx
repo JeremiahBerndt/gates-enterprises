@@ -42,10 +42,6 @@ const theme = createTheme({
     h5: {
       fontWeight: 'bold'
     },
-    checkoutTitle: {
-      backgroundColor: '#062841',
-      color: 'white'
-    }
   },
   palette: {
     primary: {
@@ -85,10 +81,6 @@ const gatesApp = (
 
 const rootElement = document.getElementById("topRoot");
 render(gatesApp, rootElement);
-// if (rootElement.hasChildNodes()) {
-//   hydrate(gatesApp, rootElement);
-// } else {
-// }
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

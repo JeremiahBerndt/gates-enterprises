@@ -41,28 +41,34 @@ const BlogPage = () => {
   }
 
   return (
-    <>
+    <article>
       <Helmet>
         <title>{blogPost.fields.blogTitle}</title>
         <meta name="description" content={blogPost.fields.blogTitle} />
+        <link rel="canonical" href={`https://www.gatesroof.com/roof-faq/roofblog/${id}`} />
       </Helmet>
       <Stack sx={{ backgroundColor: 'white' }}>
         <Grid container sx={{ backgroundColor: '#c9a32c;' }}>
           <Grid item lg={8} sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexDirection: 'column',
             p: '1rem',
             [theme.breakpoints.up('lg')]: {
               pl: "10rem"
             }
           }}>
-            <Typography variant="h3" component="div" fontWeight="bold" py="4rem" color="primary" sx={{
+            <Typography variant="h6">
+              Gates Enterprises &nbsp;
+              {dayjs(blogPost.sys.createdAt).format('MMMM DD, YYYY')}
+            </Typography>
+            <Typography variant="h1" fontWeight="bold" color="primary" sx={{
+              py: '4rem',
+              pt: 0,
               [theme.breakpoints.down('lg')]: {
                 fontSize: "2rem"
               }
             }}>
-              <Typography variant="h6">
-                Gates Enterprises &nbsp;
-                {dayjs(blogPost.sys.createdAt).format('MMMM DD, YYYY')}
-              </Typography>
               {blogPost.fields.blogTitle}
             </Typography>
           </Grid>
@@ -73,7 +79,13 @@ const BlogPage = () => {
               pr: "10rem"
             }
           }}>
-            <img src={blogPost.fields.blogImage.fields.file.url} width="100%" height="100%" style={{ objectFit: 'contain' }}></img>
+            <img
+              src={blogPost.fields.blogImage.fields.file.url}
+              alt={blogPost.fields.blogImage.fields.title}
+              width="100%"
+              height="100%"
+              style={{ objectFit: 'contain' }}
+            />
           </Grid>
         </Grid>
         <Grid sx={{
@@ -85,7 +97,7 @@ const BlogPage = () => {
           {blogBody}
         </Grid>
       </Stack>
-    </>
+    </article>
   );
 }
 
