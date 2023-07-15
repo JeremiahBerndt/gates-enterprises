@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Typography, Paper, Box } from '@mui/material';
 import Image from 'mui-image';
 import { useTheme } from '@material-ui/core';
 import commercial from '../../assets/images/commercial.png';
@@ -46,9 +46,34 @@ export default function Commercial({ name }) {
       </div>
       <section className={`page-content page-single ${name}`}>
         <div className='commercial-section'>
+          <div className='container'>
           <img src={commercialroof} alt="Commercial roof"></img>
-          <img src={commercial} alt="Commercial roof writeup"></img>
-        </div>
+          <Box className={"box"} square>
+          
+          <Typography variant="h4" color="primary.main">
+            Commercial Roofing Solutions
+          </Typography>
+          <Typography variant="body1" color="primary.main" display='block'>
+            From humble beginnings, Gates Enterprises has evolved into a commercial roofing leader by bringing a wealth of industry experience and knowledge to complex and unique commercial projects. Since 2014 Gates has assisted small businesses, property owners, management companies, HOA communities, muti-family dwellings, churches, schools and government agencies with roof repair and replacement.
+            <br></br>
+            <br></br>
+            Our dedicated team has earned us a strong reputation for offering premium roofing solutions that you can depend on.
+            <br></br>
+            <br></br>
+            <Typography variant='body2' >
+            - Commited project manger on every commercial project, to oversee the project from start to finish. This ensures that every stage of the process complies with Gates high quality standards.
+            <br></br>
+            <br></br>
+            - The Gates Enterprises crew is committed to providing world-class craftsmanship during roof installation which allows us to confidently guarantee long term quality.
+            <br></br>
+            <br></br>
+            - We offer customized preventative maintenance programs, which include scheduled inspections and access to our roofing experts for quick response emergency repairs.
+            </Typography>
+          </Typography>
+          
+          </Box>
+          </div>
+          </div>
         <div className='commercial-section'>
           <img className='slides' src={commercialslides} alt="Commercial roof 1"></img>
           <img className='slides' src={clientsatisfaction} alt="Commercial roof 2"></img>
