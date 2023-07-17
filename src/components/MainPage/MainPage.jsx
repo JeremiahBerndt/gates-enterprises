@@ -7,9 +7,6 @@ import roofsystem from '../../assets/images/roofsystem.jpg'
 const Comparison = lazy(() => import('./Comparison/Comparison.jsx'));
 const InsuranceOrFinancing = lazy(() => import('./InsuranceOrFinancing/InsuranceOrFinancing.jsx'));
 const HowItWorks = lazy(() => import('./HowItWorks/HowItWorks.jsx'));
-// import Comparison from './Comparison/Comparison.jsx';
-// import InsuranceOrFinancing from './InsuranceOrFinancing/InsuranceOrFinancing.jsx';
-// import HowItWorks from './HowItWorks/HowItWorks.jsx';
 import AddressInput from './AddressInput/AddressInput';
 import HeaderButton from '../Header/HeaderButton/HeaderButton';
 import { Helmet } from 'react-helmet-async';
@@ -97,7 +94,7 @@ export default function MainPage() {
           <Suspense
             fallback={
               <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
-                <CircularProgress sx={{ p: '10rem' }} size={32} color="secondary" />
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="inherit" />
               </div>
             }>
             <HowItWorks />
@@ -115,7 +112,7 @@ export default function MainPage() {
           <Suspense
             fallback={
               <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
-                <CircularProgress sx={{ p: '10rem' }} size={32} color="secondary" />
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="inherit" />
               </div>
             }>
             <Comparison />
@@ -140,7 +137,7 @@ export default function MainPage() {
           <Suspense
             fallback={
               <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
-                <CircularProgress sx={{ p: '10rem' }} size={32} color="secondary" />
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="inherit" />
               </div>
             }>
             <InsuranceOrFinancing />
