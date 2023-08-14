@@ -1,5 +1,4 @@
-import { Grid, Stack, Typography } from '@mui/material';
-import { useTheme } from '@material-ui/core';
+import { Grid, Stack, Typography, useTheme } from '@mui/material';
 import Image from 'mui-image';
 import financingHouse from '../../assets/images/financingHouse.jpg';
 import handshake from '../../assets/images/handshake.jpg'
@@ -14,6 +13,7 @@ export default function Financing({ name }) {
       <Helmet>
         <title>Apply for Construction Financing</title>
         <meta name="description" content="How to apply for financing for a new roof or exterior construction." />
+        <link rel="canonical" href="https://www.gatesroof.com/financing" />
       </Helmet>
 
       <Stack>

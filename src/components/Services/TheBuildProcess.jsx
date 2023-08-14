@@ -1,5 +1,4 @@
-import { Grid, Typography } from '@mui/material';
-import { useTheme } from '@material-ui/core';
+import { Grid, Typography, useTheme } from '@mui/material';
 import goldRoof from '../../assets/images/goldRoof.png';
 import BuildProcessStep from './BuildProcessStep';
 import { buildSteps } from '../../util/thebuildprocess';

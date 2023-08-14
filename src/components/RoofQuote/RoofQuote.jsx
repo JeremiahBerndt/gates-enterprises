@@ -24,6 +24,7 @@ const RoofQuote = () => {
       <Helmet>
         <title>Get an Instant Roof Quote in Colorado</title>
         <meta name="description" content="We use roof dimensions and your shingle selection to send you a cost estimate." />
+        <link rel="canonical" href="https://www.gatesroof.com/get-a-quote" />
       </Helmet>
       <Stack>
         <div style={{

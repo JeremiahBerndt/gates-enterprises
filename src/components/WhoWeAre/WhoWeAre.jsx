@@ -7,7 +7,7 @@ import { ReactComponent as Medal } from '../../assets/icons/medal.svg';
 import { ReactComponent as Roof } from '../../assets/icons/roof.svg';
 import { ReactComponent as Snowing } from '../../assets/icons/snowing.svg';
 import house6 from '../../assets/images/house6.png';
-import { slideFromRight } from '../../util/animations';
+import { slideFromRight, useIsVisible, slideFromLeft } from '../../util/animations';
 import './WhoWeAre.css';
 import { Helmet } from 'react-helmet-async';
 
@@ -20,7 +20,8 @@ export default function WhoWeAre({ name }) {
     <>
       <Helmet>
         <title>Info on Gates Enterprises's Company Culture</title>
-        <meta name="description" content="Learn more about Gates Enterprises company and who we are." />
+        <meta name="description" content="Learn more about the Gates Enterprises team and who we are." />
+        <link rel="canonical" href="https://www.gatesroof.com/who-we-are" />
       </Helmet>
       <Stack>
         <div style={{
@@ -48,7 +49,7 @@ export default function WhoWeAre({ name }) {
             sx={{
               padding: '2rem',
               [theme.breakpoints.up('lg')]: {
-                padding: '8rem'
+                p: '8rem 4rem 8rem 8rem',
               },
             }}>
             <img src={houseImage} alt="Services" style={{ width: '100%', objectFit: 'cover' }} />
@@ -57,13 +58,13 @@ export default function WhoWeAre({ name }) {
             sx={{
               padding: '0 2rem 2rem 2rem',
               [theme.breakpoints.up('lg')]: {
-                p: '8rem'
+                p: '8rem 8rem 8rem 4rem',
               },
             }}>
             <Typography variant="h4" color="primary.main">
               The Most Equipped Company for the Job
             </Typography>
-            <Typography variant="body1" color="primary.main" sx={{ pb: '32px' }}>
+            <Typography variant="body1" color="black" sx={{ pb: '32px' }}>
               Gates Enterprises LLC is committed to providing our customers with an
               unparalleled level of expertise and customer service in all our
               re-roofing projects. We are a small team hand picked for their
@@ -72,7 +73,7 @@ export default function WhoWeAre({ name }) {
             <Typography variant="h4" color="primary.main">
               Roofing with Values
             </Typography>
-            <Typography variant="body1" color="primary.main">
+            <Typography variant="body1" color="black">
               If you are overwhelmed or stressed about hail damage to your
               property; or simply have high expectations for anyone providing work
               or services on your largest investment; you have found the most
@@ -84,7 +85,7 @@ export default function WhoWeAre({ name }) {
         <Grid
           container
           ref={refQuality}
-          // className={useIsVisible(refQuality) ? fadeDown : ''}
+          className={useIsVisible(refQuality) ? slideFromLeft : ''}
           sx={{
             display: 'flex',
             alignItems: 'center',
@@ -112,7 +113,7 @@ export default function WhoWeAre({ name }) {
               <div>Top performing roof systems</div><br />
             </Typography>
           </Grid>
-          <Grid item xs={12} lg={4} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+          <Grid item xs={12} lg={4}>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <Medal fill={"#c9a32c"} width="64px" height="64px" />
             </div>

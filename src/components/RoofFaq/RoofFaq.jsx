@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useTheme } from '@material-ui/core';
+// import { useTheme } from '@material-ui/core';
 import Image from 'mui-image';
-import { CircularProgress, Stack, Typography } from '@mui/material';
+import { CircularProgress, Stack, Typography, useTheme } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
 import hailroof from '../../assets/images/hailroof.png';
 import { useContentful } from '../../util/hooks';
@@ -27,6 +27,7 @@ export default function RoofFaq({ name }) {
       <Helmet>
         <title>Frequently Asked Questions and Roofing Info</title>
         <meta name="description" content="FAQs, blog, and information on roofing, hail, and insurance in Colorado." />
+        <link rel="canonical" href="https://www.gatesroof.com/roof-faq" />
       </Helmet>
       <Stack
         sx={{

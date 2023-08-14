@@ -1,11 +1,10 @@
 import 'reset-css';
 import 'animate.css';
 import React from 'react';
-import { render, hydrate } from 'react-dom';
+import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './components/App/App';
-// import reportWebVitals from './reportWebVitals';
 import ScrollToTop from "./ScrollToTop";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints'
@@ -26,12 +25,15 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: "Poppins, sans-serif",
+    body1: {
+      fontSize: '1.2rem',
+    },
     h2: {
       padding: '1rem',
       fontWeight: 'bold',
       fontSize: '64px',
-      [breakpoints.down("md")]: {
-        fontSize: "40px"
+      [breakpoints.down('md')]: {
+        fontSize: '40px'
       },
     },
     h4: {
@@ -40,12 +42,8 @@ const theme = createTheme({
       paddingBottom: '16px'
     },
     h5: {
-      fontWeight: 'bold'
+      fontWeight: 600
     },
-    checkoutTitle: {
-      backgroundColor: '#062841',
-      color: 'white'
-    }
   },
   palette: {
     primary: {
@@ -58,16 +56,6 @@ const theme = createTheme({
       main: 'whitesmoke' //lightgray
     }
   },
-  pageSection: {
-    height: '52rem'
-  },
-  yellowButton: {
-    fontWeight: 800,
-    borderRadius: '40px',
-    height: 56,
-    backgroundColor: '#c9a32c',
-    ':hover': { backgroundColor: '#062841' }
-  }
 });
 
 const gatesApp = (
@@ -85,10 +73,6 @@ const gatesApp = (
 
 const rootElement = document.getElementById("topRoot");
 render(gatesApp, rootElement);
-// if (rootElement.hasChildNodes()) {
-//   hydrate(gatesApp, rootElement);
-// } else {
-// }
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

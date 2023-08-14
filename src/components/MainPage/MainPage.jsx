@@ -1,17 +1,14 @@
 import { useEffect, lazy, Suspense } from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
-import { CircularProgress } from '@material-ui/core';
+import { Grid, CircularProgress } from '@mui/material';
 import './MainPage.css';
 import { useTheme } from '@mui/material/styles';
 import roofsystem from '../../assets/images/roofsystem.jpg'
-// const Comparison = lazy(() => import('./Comparison/Comparison.jsx'));
-// const InsuranceOrFinancing = lazy(() => import('./InsuranceOrFinancing/InsuranceOrFinancing.jsx'));
-// const HowItWorks = lazy(() => import('./HowItWorks/HowItWorks.jsx'));
-import Comparison from './Comparison/Comparison.jsx';
-import InsuranceOrFinancing from './InsuranceOrFinancing/InsuranceOrFinancing.jsx';
-import HowItWorks from './HowItWorks/HowItWorks.jsx';
+const Comparison = lazy(() => import('./Comparison/Comparison.jsx'));
+const InsuranceOrFinancing = lazy(() => import('./InsuranceOrFinancing/InsuranceOrFinancing.jsx'));
+const HowItWorks = lazy(() => import('./HowItWorks/HowItWorks.jsx'));
 import AddressInput from './AddressInput/AddressInput';
 import HeaderButton from '../Header/HeaderButton/HeaderButton';
+import { Helmet } from 'react-helmet-async';
 import { email } from '../../util/email';
 import './MainPage.css';
 
@@ -32,6 +29,11 @@ export default function MainPage() {
 
   return (
     <main>
+      <Helmet>
+        <title>Gates Enterprises Homepage | Roofing with Values </title>
+        <meta name="description" content="Instant roof quote, company reviews, hail damage, and info on filing a claim." />
+        <link rel="canonical" href="https://www.gatesroof.com/" />
+      </Helmet>
       <Grid container
         style={{
           position: 'absolute',
@@ -47,12 +49,12 @@ export default function MainPage() {
           }
         }}
       >
-        <Grid>
-          <a href='tel:17203804763' className="contact-info">
-            <HeaderButton name='phone' text='(720) 380-4763' icon={true} />
+        <Grid item>
+          <a href='tel:17207663377' className="contact-info">
+            <HeaderButton name='phone' text='(720) 766-3377' icon={true} />
           </a>
         </Grid>
-        <Grid>
+        <Grid item>
           <a href={`mailto:${email.address}?&subject=${email.subject}&body=${email.body}`} className="contact-info">
             <HeaderButton
               name='email'
@@ -61,15 +63,15 @@ export default function MainPage() {
             />
           </a>
         </Grid>
-        <Grid sx={{ display: 'flex' }}>
+        <Grid item sx={{ display: 'flex' }}>
           <HeaderButton name='instagram' icon={true} />
           <HeaderButton name='facebook' icon={true} />
         </Grid>
       </Grid>
       <Grid container direction="column">
         {/*ROOFLE*/}
-        <Grid id="placeForRoofle"></Grid>
-        <Grid
+        <Grid item id="placeForRoofle"></Grid>
+        <Grid item
           sx={{
             height: "40rem",
             position: 'relative',
@@ -80,24 +82,26 @@ export default function MainPage() {
         >
           <AddressInput />
         </Grid>
-        <Grid sx={{
-          height: "100%",
+        <Grid item sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
           p: '1rem',
           [theme.breakpoints.up('lg')]: {
             p: '5rem'
           },
           background: 'repeating-radial-gradient( circle at 75% 100%, #fff, lightgray 32rem)'
         }}>
-          {/* <Suspense
+          <Suspense
             fallback={
               <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
-                <CircularProgress sx={{ p: '10rem' }} size={32} color="secondary" />
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="inherit" />
               </div>
-            }> */}
+            }>
             <HowItWorks />
-          {/* </Suspense> */}
+          </Suspense>
         </Grid>
-        <Grid sx={{
+        <Grid item sx={{
           height: "100%",
           position: 'relative',
           px: '1rem',
@@ -106,41 +110,41 @@ export default function MainPage() {
             p: '5rem'
           }
         }}>
-          {/* <Suspense
+          <Suspense
             fallback={
               <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
-                <CircularProgress sx={{ p: '10rem' }} size={32} color="secondary" />
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="inherit" />
               </div>
-            }> */}
+            }>
             <Comparison />
-          {/* </Suspense> */}
+          </Suspense>
         </Grid>
-        <Grid sx={{
-          backgroundColor: "white",
+        <Grid item sx={{
+          backgroundColor: 'white',
           p: '1rem',
           [theme.breakpoints.up('lg')]: {
             p: '5rem'
           }
         }}>
-          <div className="elfsight-app-311f80b0-1119-4605-9f97-ef9b44c14721"></div>
+          <div style={{ maxWidth: 'calc(100vw - 2rem)' }} className="elfsight-app-311f80b0-1119-4605-9f97-ef9b44c14721"></div>
         </Grid>
-        <Grid sx={{
+        <Grid item sx={{
           position: 'relative',
           height: '100%',
           [theme.breakpoints.down('xs')]: { height: '100rem' },
           [theme.breakpoints.only('sm')]: { height: '78rem' },
           [theme.breakpoints.up('md')]: { height: '100%' },
         }}>
-          {/* <Suspense
+          <Suspense
             fallback={
               <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
-                <CircularProgress sx={{ p: '10rem' }} size={32} color="secondary" />
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="inherit" />
               </div>
-            }> */}
+            }>
             <InsuranceOrFinancing />
-          {/* </Suspense> */}
+          </Suspense>
         </Grid>
-        <Grid sx={{
+        <Grid item sx={{
           backgroundColor: "white",
           p: '1rem',
           [theme.breakpoints.up('lg')]: {
@@ -149,7 +153,7 @@ export default function MainPage() {
         }}>
           <img width="100%" src={roofsystem} alt="roof system and accolades" />
         </Grid>
-        <Grid sx={{ backgroundColor: 'white', paddingY: '4rem' }}>
+        <Grid item sx={{ backgroundColor: 'white', paddingY: '4rem' }}>
           <div className="elfsight-app-7eea6c14-0475-4b7c-bf9d-d722ba87642b"></div>
         </Grid>
       </Grid>

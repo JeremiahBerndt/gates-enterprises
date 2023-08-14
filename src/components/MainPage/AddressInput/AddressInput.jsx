@@ -54,8 +54,6 @@ const AddressInput = () => {
           }}
         >
           Getting a new roof is easier than ever. <br />
-        </Typography>
-        <Typography variant="h2" paddingTop="0">
           Get an instant estimate.
         </Typography>
         <Typography
