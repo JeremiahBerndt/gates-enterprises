@@ -11,5 +11,8 @@ export default defineConfig(() => {
       outDir: 'build',
     },
     plugins: [react({ jsxImportSource: '@emotion/react' }), svgrPlugin()],
+    optimizeDeps: {
+      exclude: ['js-big-decimal']
+    }
   };
 });

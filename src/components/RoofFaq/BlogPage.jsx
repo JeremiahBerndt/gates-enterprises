@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Grid, Typography, Stack, CircularProgress } from "@mui/material";
+import { Grid, Typography, Stack, CircularProgress, useTheme } from "@mui/material";
 import { Helmet } from 'react-helmet-async';
 import { useContentful } from "../../util/hooks";
 import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { useTheme } from "@material-ui/core";
 import dayjs from "dayjs";
 
 const BlogPage = () => {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useTheme } from '@material-ui/core';
+// import { useTheme } from '@material-ui/core';
 import Image from 'mui-image';
-import { CircularProgress, Stack, Typography } from '@mui/material';
+import { CircularProgress, Stack, Typography, useTheme } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
 import hailroof from '../../assets/images/hailroof.png';
 import { useContentful } from '../../util/hooks';

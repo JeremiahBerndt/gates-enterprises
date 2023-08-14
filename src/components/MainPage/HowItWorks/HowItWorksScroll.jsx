@@ -11,7 +11,7 @@ import './HowItWorks.css';
 const HowItWorksScroll = () => {
 
   return (
-    <Stack sx={{ '.carousel-root': { maxWidth: '90vw' } }}>
+    <Stack sx={{ '.carousel-root': { maxWidth: '80vw' }, p: '2rem 0 2rem 0' }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Hail height="6rem" width="6rem" fill="#c9a32c" />
         <Typography variant="h2" color="#062841" align="center" pb={8}>

@@ -1,6 +1,5 @@
 import { useRef } from 'react';
-import { Grid, Typography } from '@mui/material';
-import { useTheme } from '@material-ui/core';
+import { Grid, Typography, useTheme } from '@mui/material';
 import { fadeDown, useIsVisible } from '../../util/animations';
 
 const BuildProcessStep = ({ step }) => {

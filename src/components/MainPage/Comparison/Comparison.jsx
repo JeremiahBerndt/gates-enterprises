@@ -1,7 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
-import Typography from '@mui/material/Typography';
-import { useTheme } from '@material-ui/core';
+import { Typography, Grid, useTheme } from '@mui/material';
 import { quoteCompare } from '../../../util/comparison';
 import rooferwork from '../../../assets/images/rooferWorking.mp4'
 
@@ -46,30 +44,30 @@ const Comparison = () => {
           '& > div > p': { fontWeight: 'bold', verticalAlign: 'center', padding: '1rem', fontSize: '1rem' }
         }}
       >
-        <Grid xs={4} sx={{ borderTop: 'none', borderLeft: 'none', borderRight: 'solid white 4px'  }}></Grid>
-        <Grid xs={4} sx={{ border: 'solid white 4px', borderTop: 'none', borderLeft: 'none', backgroundColor: 'rgb(6, 40, 65, 0.7)' }}>
+        <Grid item xs={4} sx={{ borderTop: 'none', borderLeft: 'none', borderRight: 'solid white 4px'  }}></Grid>
+        <Grid item xs={4} sx={{ border: 'solid white 4px', borderTop: 'none', borderLeft: 'none', backgroundColor: 'rgb(6, 40, 65, 0.7)' }}>
           <Typography align='center' fontWeight='bold'>
             Gates Enterprises
           </Typography>
         </Grid>
-        <Grid xs={4} sx={{ borderRight: 'none' }}>
+        <Grid item xs={4} sx={{ borderRight: 'none' }}>
           <Typography align='center'>
             Other guys
           </Typography>
         </Grid>
         {quoteCompare.map((option, i) => (
           <React.Fragment key={option.name + i}>
-            <Grid xs={4} sx={{ borderRight: 'solid white 4px' }}>
+            <Grid item xs={4} sx={{ borderRight: 'solid white 4px' }}>
               <Typography align='center'>
                 {option.name}
               </Typography>
             </Grid>
-            <Grid xs={4} sx={{ backgroundColor: 'rgb(6, 40, 65, 0.7)', borderRight: 'solid white 4px' }}>
+            <Grid item xs={4} sx={{ backgroundColor: 'rgb(6, 40, 65, 0.7)', borderRight: 'solid white 4px' }}>
               <Typography align='center' variant='body3'>
                 {option.gates}
               </Typography>
             </Grid>
-            <Grid xs={4} sx={{ borderRight: 'transparent' }}>
+            <Grid item xs={4} sx={{ borderRight: 'transparent' }}>
               <Typography align='center' variant='body3'>
                 {option.others}
               </Typography>

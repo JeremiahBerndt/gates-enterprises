@@ -1,6 +1,6 @@
 import { useState, lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { CircularProgress } from '@material-ui/core';
+import { CircularProgress } from '@mui/material';
 import Header from '../Header/Header';
 import MainPage from '../MainPage/MainPage';
 import ContactForm from '../ContactForm/ContactForm';

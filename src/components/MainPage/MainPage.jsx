@@ -1,6 +1,5 @@
 import { useEffect, lazy, Suspense } from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
-import { CircularProgress } from '@material-ui/core';
+import { Grid, CircularProgress } from '@mui/material';
 import './MainPage.css';
 import { useTheme } from '@mui/material/styles';
 import roofsystem from '../../assets/images/roofsystem.jpg'
@@ -50,12 +49,12 @@ export default function MainPage() {
           }
         }}
       >
-        <Grid>
-          <a href='tel:17203804763' className="contact-info">
-            <HeaderButton name='phone' text='(720) 380-4763' icon={true} />
+        <Grid item>
+          <a href='tel:17207663377' className="contact-info">
+            <HeaderButton name='phone' text='(720) 766-3377' icon={true} />
           </a>
         </Grid>
-        <Grid>
+        <Grid item>
           <a href={`mailto:${email.address}?&subject=${email.subject}&body=${email.body}`} className="contact-info">
             <HeaderButton
               name='email'
@@ -64,15 +63,15 @@ export default function MainPage() {
             />
           </a>
         </Grid>
-        <Grid sx={{ display: 'flex' }}>
+        <Grid item sx={{ display: 'flex' }}>
           <HeaderButton name='instagram' icon={true} />
           <HeaderButton name='facebook' icon={true} />
         </Grid>
       </Grid>
       <Grid container direction="column">
         {/*ROOFLE*/}
-        <Grid id="placeForRoofle"></Grid>
-        <Grid
+        <Grid item id="placeForRoofle"></Grid>
+        <Grid item
           sx={{
             height: "40rem",
             position: 'relative',
@@ -83,8 +82,10 @@ export default function MainPage() {
         >
           <AddressInput />
         </Grid>
-        <Grid sx={{
-          height: "100%",
+        <Grid item sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          height: '100%',
           p: '1rem',
           [theme.breakpoints.up('lg')]: {
             p: '5rem'
@@ -100,7 +101,7 @@ export default function MainPage() {
             <HowItWorks />
           </Suspense>
         </Grid>
-        <Grid sx={{
+        <Grid item sx={{
           height: "100%",
           position: 'relative',
           px: '1rem',
@@ -118,16 +119,16 @@ export default function MainPage() {
             <Comparison />
           </Suspense>
         </Grid>
-        <Grid sx={{
-          backgroundColor: "white",
+        <Grid item sx={{
+          backgroundColor: 'white',
           p: '1rem',
           [theme.breakpoints.up('lg')]: {
             p: '5rem'
           }
         }}>
-          <div className="elfsight-app-311f80b0-1119-4605-9f97-ef9b44c14721"></div>
+          <div style={{ maxWidth: 'calc(100vw - 2rem)' }} className="elfsight-app-311f80b0-1119-4605-9f97-ef9b44c14721"></div>
         </Grid>
-        <Grid sx={{
+        <Grid item sx={{
           position: 'relative',
           height: '100%',
           [theme.breakpoints.down('xs')]: { height: '100rem' },
@@ -143,7 +144,7 @@ export default function MainPage() {
             <InsuranceOrFinancing />
           </Suspense>
         </Grid>
-        <Grid sx={{
+        <Grid item sx={{
           backgroundColor: "white",
           p: '1rem',
           [theme.breakpoints.up('lg')]: {
@@ -152,7 +153,7 @@ export default function MainPage() {
         }}>
           <img width="100%" src={roofsystem} alt="roof system and accolades" />
         </Grid>
-        <Grid sx={{ backgroundColor: 'white', paddingY: '4rem' }}>
+        <Grid item sx={{ backgroundColor: 'white', paddingY: '4rem' }}>
           <div className="elfsight-app-7eea6c14-0475-4b7c-bf9d-d722ba87642b"></div>
         </Grid>
       </Grid>

@@ -77,7 +77,7 @@ export default function Services() {
             <Typography variant="h4" color="primary.main">
               A Warranty You Can Count On
             </Typography>
-            <Typography variant="body1" color="primary.main">
+            <Typography variant="body1" color="black">
               Gates Enterprises is proud to stand by our work and materials by offering our
               clients an industry leading 5-year workmanship warranty!
               As a reliable, established local company we are here for the long haul, so unlike
@@ -87,7 +87,7 @@ export default function Services() {
             <Typography variant="h4" color="primary.main">
               We Know Colorado
             </Typography>
-            <Typography variant="body1" color="primary.main">
+            <Typography variant="body1" color="black">
               Our team lives, works and knows Colorado weather and this understanding of
               our unique climate allows our roofing professionals to help you select the
               products that will provide the best protection for your home.
@@ -117,7 +117,7 @@ export default function Services() {
               <Typography variant="h4" color="primary.main">
                 Roofing systems optimized
               </Typography>
-              <Typography variant="body1" color="primary.main">
+              <Typography variant="body1" color="black">
                 The Gates Team is here to help you
                 select the best roofing components to
                 build a complete roof system which will
@@ -188,7 +188,7 @@ export default function Services() {
               <Typography variant="h4" color="primary.main">
                 Underlayment
               </Typography>
-              <Typography variant="body1" color="primary.main">
+              <Typography variant="body1" color="black">
                 High performance synthetic roof underlayments
                 work with shingles to shield your home from moisture
                 infiltration and are the last line of defense against
@@ -197,7 +197,7 @@ export default function Services() {
               <Typography variant="h4" color="primary.main">
                 Ventilation
               </Typography>
-              <Typography variant="body1" color="primary.main">
+              <Typography variant="body1" color="black">
                 Managing attic temperature with proper ventilation
                 can increase the longevity and performance of your
                 roof. Our team is here to help you select the best vents
