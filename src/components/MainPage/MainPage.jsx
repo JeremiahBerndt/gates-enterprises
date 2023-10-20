@@ -1,6 +1,5 @@
 import { useEffect, lazy, Suspense } from 'react';
 import { Grid, CircularProgress } from '@mui/material';
-import './MainPage.css';
 import { useTheme } from '@mui/material/styles';
 import roofsystem from '../../assets/images/roofsystem.jpg'
 const Comparison = lazy(() => import('./Comparison/Comparison.jsx'));

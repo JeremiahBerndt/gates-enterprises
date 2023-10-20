@@ -15,13 +15,14 @@ export default function HeaderButton({ name, text, icon, displayContactForm }) {
       style={icon ? { display: 'flex', paddingLeft: '1rem' } : {}}
       onClick={text === 'Schedule Inspection' ? displayContactForm : () =>{} }
     >
-      {name === 'phone' && <PhoneIcon sx={{ color: 'white' }} />}
-      {name === 'email' && <Email className={classes.icon} />}
+      {name === 'phone' && <PhoneIcon sx={{ color: 'white' }} aria-label='phone call link'/>}
+      {name === 'email' && <Email className={classes.icon} aria-label='email link'/>}
       {name === 'instagram' && (
         <a
           href='https://www.instagram.com/gatesroofing/?hl=en'
           target='_blank'
           rel='noreferrer'
+          aria-label='instagram link'
         >
           <InstagramIcon className={classes.icon} style={{ fill: "#c9a32c" }} />
         </a>
@@ -31,6 +32,7 @@ export default function HeaderButton({ name, text, icon, displayContactForm }) {
           href='https://www.facebook.com/profile.php?id=100087607205221'
           target='_blank'
           rel='noreferrer'
+          aria-label='facebook link'
         >
           <FacebookIcon className={classes.icon} style={{ fill: "#c9a32c" }} />
         </a>
