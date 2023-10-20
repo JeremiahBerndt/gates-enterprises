@@ -9,8 +9,9 @@ export default function Logo() {
     <Link to='/'>
       <Box
         component="img"
+        width="8rem"
+        height="8rem"
         sx={{
-          width:"8rem",
           borderRadius: '50%',
         }}
         src={GatesLogo}

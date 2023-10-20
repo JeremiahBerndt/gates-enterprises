@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { CircularProgress } from '@mui/material';
 import Header from '../Header/Header';
@@ -13,6 +13,7 @@ const Financing = lazy(() => import('../Financing/Financing.jsx'));
 const Commercial = lazy(() => import('../Commercial/Commercial.jsx'));
 const RoofFaq = lazy(() => import('../RoofFaq/RoofFaq.jsx'));
 import BlogPage from '../RoofFaq/BlogPage';
+import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy';
 import { Helmet } from 'react-helmet-async';
 import './App.css';
 
@@ -22,6 +23,15 @@ function App() {
   const displayContactForm = () => {
     setOpenContact(!openContact);
   };
+
+  useEffect(() => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.get('schedule') === 'true') {
+      // console.log(urlParams.get('schedule'))
+      displayContactForm();
+    }
+  }, [])
 
   return (
     <div className='App' styles={{}}>
@@ -97,6 +107,7 @@ function App() {
         } />
         <Route exact path='/guttercolors.pdf' element={<GutterColors name='Gutter Colors' />} />
         <Route path="roof-faq/roofblog/:id" element={<BlogPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       < Footer className='footer' />
       <ContactForm
