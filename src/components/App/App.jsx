@@ -14,7 +14,6 @@ const Commercial = lazy(() => import('../Commercial/Commercial.jsx'));
 const RoofFaq = lazy(() => import('../RoofFaq/RoofFaq.jsx'));
 import BlogPage from '../RoofFaq/BlogPage';
 import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy';
-import ThankYou from '../../assets/images/homeownerThankYou.png'
 import { Helmet } from 'react-helmet-async';
 import './App.css';
 
@@ -109,7 +108,6 @@ function App() {
         <Route exact path='/guttercolors.pdf' element={<GutterColors name='Gutter Colors' />} />
         <Route path="roof-faq/roofblog/:id" element={<BlogPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/thank-you" element={<img src={ThankYou} alt="thank you image"/>} />
       </Routes>
       < Footer className='footer' />
       <ContactForm
