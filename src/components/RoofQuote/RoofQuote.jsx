@@ -35,7 +35,8 @@ const RoofQuote = () => {
           height: theme.spacing(32)
         }}>
           <Image
-            top='0'
+            top="0"
+            alt="diagram or blueprint of a house"
             src={diagramDrawing}
             height="100%"
             width="100%"

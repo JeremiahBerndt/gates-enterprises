@@ -25,7 +25,8 @@ export default function Financing({ name }) {
           height: theme.spacing(32)
         }}>
           <Image
-            top='0'
+            top="0"
+            alt="handshake agreement"
             src={handshake}
             height="100%"
             width="100%"

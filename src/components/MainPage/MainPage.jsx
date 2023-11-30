@@ -1,18 +1,23 @@
-import { useEffect, lazy, Suspense } from 'react';
-import { Grid, CircularProgress } from '@mui/material';
+import { useEffect, useState, lazy, Suspense } from 'react';
+import { Grid, CircularProgress, Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
+import { Helmet } from 'react-helmet-async';
 import { useTheme } from '@mui/material/styles';
+import ArrowDropDown from '@material-ui/icons/KeyboardArrowDown';
 import roofsystem from '../../assets/images/roofsystem.jpg'
+import { ReactComponent as Iowa } from '../../assets/images/Iowa.svg';
+import { ReactComponent as Colorado } from '../../assets/images/Colorado.svg';
+import { ReactComponent as Nebraska } from '../../assets/images/Nebraska.svg';
+import { ReactComponent as Missouri } from '../../assets/images/Missouri.svg';
 const Comparison = lazy(() => import('./Comparison/Comparison.jsx'));
 const InsuranceOrFinancing = lazy(() => import('./InsuranceOrFinancing/InsuranceOrFinancing.jsx'));
 const HowItWorks = lazy(() => import('./HowItWorks/HowItWorks.jsx'));
 import AddressInput from './AddressInput/AddressInput';
-import HeaderButton from '../Header/HeaderButton/HeaderButton';
-import { Helmet } from 'react-helmet-async';
-import { email } from '../../util/email';
 import './MainPage.css';
 
-export default function MainPage() {
+export default function MainPage({ displayContactForm }) {
   const theme = useTheme();
+  const [expanded, setExpanded] = useState(false);
+  const [hoverState, setHoverState] = useState(false);
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -20,7 +25,6 @@ export default function MainPage() {
     script.src = "https://app.roofle.com/roof-quote-pro-widget.js?id=Y3dZuVyicM3rboTdAfQ_S";
     script.async = true;
     insertHere.appendChild(script);
-
     return () => {
       insertHere.removeChild(script);
     }
@@ -33,41 +37,73 @@ export default function MainPage() {
         <meta name="description" content="Instant roof quote, company reviews, hail damage, and info on filing a claim." />
         <link rel="canonical" href="https://www.gatesroof.com/" />
       </Helmet>
-      <Grid container
-        style={{
-          position: 'absolute',
-          top: '8rem',
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          zIndex: 2,
-        }}
-        sx={{
-          [theme.breakpoints.down(400)]: {
-            top: '10rem!important'
-          }
-        }}
-      >
-        <Grid item>
-          <a href='tel:17207663377' className="contact-info">
-            <HeaderButton name='phone' text='(720) 766-3377' icon={true} />
-          </a>
-        </Grid>
-        <Grid item>
-          <a href={`mailto:${email.address}?&subject=${email.subject}&body=${email.body}`} className="contact-info">
-            <HeaderButton
-              name='email'
-              text='info@gatesroof.com'
-              icon={true}
-            />
-          </a>
-        </Grid>
-        <Grid item sx={{ display: 'flex' }}>
-          <HeaderButton name='instagram' icon={true} />
-          <HeaderButton name='facebook' icon={true} />
-        </Grid>
-      </Grid>
       <Grid container direction="column">
+        <Accordion expanded={expanded} onChange={() => setExpanded(!expanded)} sx={{
+        }}>
+          <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" sx={{
+            '> div': {
+              margin: '8px!important',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }
+          }}>
+            <ArrowDropDown aria-label='chevron drop down' />
+            <Typography variant="h5" color="primary.main">GATES IS GROWING - SEE OUR NEW MARKETS</Typography>
+            <ArrowDropDown aria-label='chevron drop down' />
+          </AccordionSummary>
+          <AccordionDetails sx={{
+            backgroundColor: "tertiary.main",
+          }}>
+            <Typography align="center" variant="h4" fontSize="1.5rem" color="white">Get connected with a pro in your area!</Typography>
+            <Grid sx={{
+              display: 'flex',
+              '> div': {
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'column'
+              }
+            }}>
+              <Grid item xs={6} lg={3}>
+                <Colorado alt="state of Colorado" width="200px" height="200px" fill={hoverState === 'colorado' ? '#c9a32c' : 'white'}
+                  cursor="pointer"
+                  onMouseEnter={() => setHoverState('colorado')}
+                  onMouseLeave={() => setHoverState(false)}
+                  onClick={displayContactForm}
+                />
+                <Typography variant="h4" color={hoverState === 'colorado' ? "primary.main" : "white"} pt="0">COLORADO</Typography>
+              </Grid>
+              <Grid item xs={6} lg={3}>
+                <Iowa alt="state of Iowa" width="200px" height="200px" fill={hoverState === 'iowa' ? '#c9a32c' : 'white'}
+                  cursor="pointer"
+                  onMouseEnter={() => setHoverState('iowa')}
+                  onMouseLeave={() => setHoverState(false)}
+                  onClick={displayContactForm}
+                />
+                <Typography variant="h4" color={hoverState === 'iowa' ? "primary.main" : "white"} pt="0">IOWA</Typography>
+              </Grid>
+              <Grid item xs={6} lg={3}>
+                <Nebraska alt="state of Nebraska" width="200px" height="200px" fill={hoverState === 'nebraska' ? '#c9a32c' : 'white'}
+                  cursor="pointer"
+                  onMouseEnter={() => setHoverState('nebraska')}
+                  onMouseLeave={() => setHoverState(false)}
+                  onClick={displayContactForm}
+                />
+                <Typography variant="h4" color={hoverState === 'nebraska' ? "primary.main" : "white"} pt="0">NEBRASKA</Typography>
+              </Grid>
+              <Grid item xs={6} lg={3}>
+                <Missouri alt="state of Missouri" width="200px" height="200px" fill={hoverState === 'missouri' ? '#c9a32c' : 'white'}
+                  cursor="pointer"
+                  onMouseEnter={() => setHoverState('missouri')}
+                  onMouseLeave={() => setHoverState(false)}
+                  onClick={displayContactForm}
+                />
+                <Typography variant="h4" color={hoverState === 'missouri' ? "primary.main" : "white"} pt="0">MISSOURI</Typography>
+              </Grid>
+            </Grid>
+          </AccordionDetails>
+        </Accordion>
         {/*ROOFLE*/}
         <Grid item id="placeForRoofle"></Grid>
         <Grid item

@@ -40,6 +40,7 @@ export default function Services() {
         }}>
           <Image
             top='0'
+            alt="roofers on top of house"
             src={roofersonroof}
             height="100%"
             width="100%"

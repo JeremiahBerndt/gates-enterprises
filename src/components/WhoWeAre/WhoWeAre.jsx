@@ -6,7 +6,7 @@ import houseImage from '../../assets/images/WhoWeAre.png';
 import { ReactComponent as Medal } from '../../assets/icons/medal.svg';
 import { ReactComponent as Roof } from '../../assets/icons/roof.svg';
 import { ReactComponent as Snowing } from '../../assets/icons/snowing.svg';
-import house6 from '../../assets/images/house6.png';
+import gatesStaff from '../../assets/images/gatesStaff.png';
 import { slideFromRight, useIsVisible, slideFromLeft } from '../../util/animations';
 import './WhoWeAre.css';
 import { Helmet } from 'react-helmet-async';
@@ -33,7 +33,8 @@ export default function WhoWeAre({ name }) {
         }}>
           <Image
             top='0'
-            src={house6}
+            alt="Gates employees in front of building"
+            src={gatesStaff}
             height="100%"
             width="100%"
             fit="cover"

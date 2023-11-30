@@ -1,7 +1,7 @@
 import { useTheme } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
-import GatesLogo from '../../assets/images/GatesLogo.jpg';
+import GatesLogo from '../../assets/images/gatesLogoNew.png';
 
 export default function Logo() {
   const theme = useTheme();
@@ -9,8 +9,8 @@ export default function Logo() {
     <Link to='/'>
       <Box
         component="img"
-        width="8rem"
-        height="8rem"
+        width="100%"
+        height="100%"
         sx={{
           borderRadius: '50%',
         }}

@@ -1,10 +1,10 @@
 import './ContactForm.css';
 import { toaster } from '../../util/animations';
 
-export default function ContactForm({ displayContactForm, openContact }) {
+export default function ContactForm({ displayContactForm }) {
 
   return (
-    <div className='form-bg' style={ !openContact ? { display: 'none' } : {} }>
+    <div className='form-bg'>
       <div className={`connect-form-and-close ${toaster}`}>
         <button className='form-close' onClick={displayContactForm}>X</button>
         <iframe

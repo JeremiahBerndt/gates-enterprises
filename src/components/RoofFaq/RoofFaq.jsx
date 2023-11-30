@@ -45,6 +45,7 @@ export default function RoofFaq({ name }) {
         }}>
           <Image
             top='0'
+            alt="roof being hit by hail"
             src={hailroof}
             height="100%"
             width="100%"

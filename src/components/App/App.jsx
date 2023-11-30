@@ -3,9 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import { CircularProgress } from '@mui/material';
 import Header from '../Header/Header';
 import MainPage from '../MainPage/MainPage';
-import ContactForm from '../ContactForm/ContactForm';
 import GutterColors from '../Gutters/Gutters';
 import Footer from '../Footer/Footer';
+const ContactForm = lazy(() => import('../ContactForm/ContactForm.jsx'));
 const RoofQuote = lazy(() => import('../RoofQuote/RoofQuote.jsx'));
 const Services = lazy(() => import('../Services/Services.jsx'));
 const WhoWeAre = lazy(() => import('../WhoWeAre/WhoWeAre.jsx'));
@@ -44,7 +44,9 @@ function App() {
         <link rel="canonical" href="/" />
       </Helmet>
       <Routes>
-        <Route exact path='/' element={<MainPage />} />
+        <Route exact path='/' element={
+          <MainPage displayContactForm={displayContactForm} />
+        } />
         <Route exact path='/get-a-quote' element={
           <Suspense
             fallback={
@@ -110,10 +112,13 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       < Footer className='footer' />
-      <ContactForm
-        displayContactForm={displayContactForm}
-        openContact={openContact}
-      />
+      <Suspense
+        fallback={<div></div>}>
+        {openContact && <ContactForm
+          displayContactForm={displayContactForm}
+          openContact={openContact}
+        />}
+      </Suspense>
     </div>
   );
 }

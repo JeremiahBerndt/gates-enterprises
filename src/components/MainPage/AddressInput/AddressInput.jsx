@@ -9,6 +9,7 @@ const AddressInput = () => {
   const theme = useTheme();
   const { ref, inView } = useInView({
     threshold: 1,
+    delay: 2,
     triggerOnce: true
   });
 

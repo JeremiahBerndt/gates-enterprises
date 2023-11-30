@@ -31,6 +31,7 @@ export default function Commercial({ name }) {
       }}>
         <Image
           top='0'
+          alt="three dimensional house"
           src={threeDHouse}
           height="100%"
           width="100%"
