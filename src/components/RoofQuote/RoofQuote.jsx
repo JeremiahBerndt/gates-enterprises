@@ -37,6 +37,7 @@ const RoofQuote = () => {
           <Image
             top='0'
             src={diagramDrawing}
+            alt="Diagram Drawing"
             height="100%"
             width="100%"
             fit="cover"
