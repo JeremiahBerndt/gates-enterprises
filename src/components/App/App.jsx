@@ -11,6 +11,7 @@ const Services = lazy(() => import('../Services/Services.jsx'));
 const WhoWeAre = lazy(() => import('../WhoWeAre/WhoWeAre.jsx'));
 const Financing = lazy(() => import('../Financing/Financing.jsx'));
 const Commercial = lazy(() => import('../Commercial/Commercial.jsx'));
+const Careers = lazy(() => import('../Careers/Careers.jsx'));
 const RoofFaq = lazy(() => import('../RoofFaq/RoofFaq.jsx'));
 import BlogPage from '../RoofFaq/BlogPage';
 import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy';
@@ -95,6 +96,16 @@ function App() {
               </div>
             }>
             <Commercial name='Commercial' />
+          </Suspense>
+        } />
+        <Route exact path='/careers' element={
+          <Suspense
+            fallback={
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="inherit" />
+              </div>
+            }>
+            <Careers name='Careers' />
           </Suspense>
         } />
         <Route exact path='/roof-faq' element={

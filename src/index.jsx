@@ -44,6 +44,9 @@ const theme = createTheme({
     h5: {
       fontWeight: 600
     },
+    b: {
+      fontWeight: 800
+    }
   },
   palette: {
     primary: {

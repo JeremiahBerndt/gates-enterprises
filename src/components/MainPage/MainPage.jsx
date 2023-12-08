@@ -2,12 +2,12 @@ import { useEffect, useState, lazy, Suspense } from 'react';
 import { Grid, CircularProgress, Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
 import { useTheme } from '@mui/material/styles';
-import ArrowDropDown from '@material-ui/icons/KeyboardArrowDown';
+// import ArrowDropDown from '@material-ui/icons/KeyboardArrowDown';
 import roofsystem from '../../assets/images/roofsystem.jpg'
-import { ReactComponent as Iowa } from '../../assets/images/Iowa.svg';
-import { ReactComponent as Colorado } from '../../assets/images/Colorado.svg';
-import { ReactComponent as Nebraska } from '../../assets/images/Nebraska.svg';
-import { ReactComponent as Missouri } from '../../assets/images/Missouri.svg';
+// import { ReactComponent as Iowa } from '../../assets/images/Iowa.svg';
+// import { ReactComponent as Colorado } from '../../assets/images/Colorado.svg';
+// import { ReactComponent as Nebraska } from '../../assets/images/Nebraska.svg';
+// import { ReactComponent as Missouri } from '../../assets/images/Missouri.svg';
 const Comparison = lazy(() => import('./Comparison/Comparison.jsx'));
 const InsuranceOrFinancing = lazy(() => import('./InsuranceOrFinancing/InsuranceOrFinancing.jsx'));
 const HowItWorks = lazy(() => import('./HowItWorks/HowItWorks.jsx'));
@@ -16,8 +16,8 @@ import './MainPage.css';
 
 export default function MainPage({ displayContactForm }) {
   const theme = useTheme();
-  const [expanded, setExpanded] = useState(false);
-  const [hoverState, setHoverState] = useState(false);
+  // const [expanded, setExpanded] = useState(false);
+  // const [hoverState, setHoverState] = useState(false);
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -38,7 +38,7 @@ export default function MainPage({ displayContactForm }) {
         <link rel="canonical" href="https://www.gatesroof.com/" />
       </Helmet>
       <Grid container direction="column">
-        <Accordion expanded={expanded} onChange={() => setExpanded(!expanded)} sx={{
+        {/* <Accordion expanded={expanded} onChange={() => setExpanded(!expanded)} sx={{
         }}>
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" sx={{
             '> div': {
@@ -49,7 +49,7 @@ export default function MainPage({ displayContactForm }) {
             }
           }}>
             <ArrowDropDown aria-label='chevron drop down' />
-            <Typography variant="h5" color="primary.main">GATES IS GROWING - SEE OUR NEW MARKETS</Typography>
+            <Typography variant="h5" color="primary.main">GATES IS GROWING - STATES WE SERVE</Typography>
             <ArrowDropDown aria-label='chevron drop down' />
           </AccordionSummary>
           <AccordionDetails sx={{
@@ -103,7 +103,7 @@ export default function MainPage({ displayContactForm }) {
               </Grid>
             </Grid>
           </AccordionDetails>
-        </Accordion>
+        </Accordion> */}
         {/*ROOFLE*/}
         <Grid item id="placeForRoofle"></Grid>
         <Grid item

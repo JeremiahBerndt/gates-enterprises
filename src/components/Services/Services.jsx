@@ -56,7 +56,7 @@ export default function Services() {
                 fontSize: '6rem'
               }
             }}>
-            Services
+            Residential
           </Typography>
         </div>
         <Grid container backgroundColor='white'>

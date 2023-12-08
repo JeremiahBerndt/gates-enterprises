@@ -8,12 +8,13 @@ export const useContentful = () => {
 
   const getBlogPosts = async () => {
     try {
-      const entries = client.getEntries({});
+      const entries = client.getEntries({ content_type: 'blogPost'});
       return entries;
     } catch (e) {
       console.error('Problem fetching from contentful:', e)
     }
   }
+
   const getBlogPost = async (id) => {
     try {
       return client.getEntry(id);
@@ -21,5 +22,15 @@ export const useContentful = () => {
       console.error('Problem fetching from contentful:', e);
     }
   }
-  return { getBlogPosts, getBlogPost }
+
+  const getJobs = async () => {
+    try {
+      const entries = client.getEntries({ content_type: 'career'});
+      return entries;
+    } catch (e) {
+      console.error('Problem fetching from contentful:', e)
+    }
+  }
+
+  return { getBlogPosts, getBlogPost, getJobs }
 }

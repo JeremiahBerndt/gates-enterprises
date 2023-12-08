@@ -6,13 +6,20 @@ import GatesLogo from '../../assets/images/gatesLogoNew.png';
 export default function Logo() {
   const theme = useTheme();
   return (
-    <Link to='/'>
+    <Link to='/' style={{
+      width: '100%',
+      height: 'fit-content'
+    }}>
       <Box
         component="img"
         width="100%"
         height="100%"
         sx={{
           borderRadius: '50%',
+          [theme.breakpoints.up('md')]: {
+            width: 'auto',
+            maxHeight: 160
+          }
         }}
         src={GatesLogo}
         alt='Gates Enterprises logo'
