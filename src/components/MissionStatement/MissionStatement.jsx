@@ -2,16 +2,14 @@ import { useRef } from 'react';
 import { Grid, Stack, Typography } from '@mui/material';
 import Image from 'mui-image';
 import { useTheme } from '@material-ui/core';
-import houseImage from '../../assets/images/WhoWeAre.png';
 import { ReactComponent as Medal } from '../../assets/icons/medal.svg';
 import { ReactComponent as Roof } from '../../assets/icons/roof.svg';
 import { ReactComponent as Snowing } from '../../assets/icons/snowing.svg';
-import gatesStaff from '../../assets/images/gatesStaff.png';
+import skyline from '../../assets/images/skyline.jpg';
 import { slideFromRight, useIsVisible, slideFromLeft } from '../../util/animations';
-import './WhoWeAre.css';
 import { Helmet } from 'react-helmet-async';
 
-export default function WhoWeAre({ name }) {
+export default function MissionStatement({ name }) {
   const theme = useTheme();
   const refQuality = useRef(null);
   const refEquipped = useRef(null);
@@ -19,8 +17,8 @@ export default function WhoWeAre({ name }) {
   return (
     <>
       <Helmet>
-        <title>Info on Gates Enterprises's Company Culture</title>
-        <meta name="description" content="Learn more about the Gates Enterprises team and who we are." />
+        <title>The Gates Enterprises Mission Statement</title>
+        <meta name="description" content="The Gates Enterprises mission statement" />
         <link rel="canonical" href="https://www.gatesroof.com/who-we-are" />
       </Helmet>
       <Stack>
@@ -34,7 +32,7 @@ export default function WhoWeAre({ name }) {
           <Image
             top='0'
             alt="Gates employees in front of building"
-            src={gatesStaff}
+            src={skyline}
             height="100%"
             width="100%"
             fit="cover"
@@ -44,14 +42,14 @@ export default function WhoWeAre({ name }) {
           <Typography
             variant="h1"
             align="center"
-            sx={{ 
+            sx={{
               position: 'absolute',
               fontSize: '3rem',
               [theme.breakpoints.up('lg')]: {
                 fontSize: '6rem'
-              }
+              },
             }}>
-            Who We Are
+            Mission Statement
           </Typography>
         </div>
         <Grid container backgroundColor='white'>
@@ -62,33 +60,29 @@ export default function WhoWeAre({ name }) {
                 p: '8rem 4rem 8rem 8rem',
               },
             }}>
-            <img src={houseImage} alt="Services" style={{ width: '100%', objectFit: 'cover' }} />
+            <img src={skyline} alt="Services" style={{ width: '100%', objectFit: 'cover' }} />
           </Grid>
           <Grid item xs={12} lg={6} ref={refEquipped} className={slideFromRight}
             sx={{
               padding: '0 2rem 2rem 2rem',
+              fontSize: '2rem',
               [theme.breakpoints.up('lg')]: {
                 p: '8rem 8rem 8rem 4rem',
+                fontSize: '5rem'
               },
             }}>
             <Typography variant="h4" color="primary.main">
-              The Most Equipped Company for the Job
+              Our Mission:
             </Typography>
-            <Typography variant="body1" color="black" sx={{ pb: '32px' }}>
-              Gates Enterprises LLC is committed to providing our customers with an
-              unparalleled level of expertise and customer service in all our
-              re-roofing projects. We are a small team hand picked for their
-              expertise in exteriors construction and insurance claim management.
-            </Typography>
-            <Typography variant="h4" color="primary.main">
-              Roofing with Values
-            </Typography>
-            <Typography variant="body1" color="black">
-              If you are overwhelmed or stressed about hail damage to your
-              property; or simply have high expectations for anyone providing work
-              or services on your largest investment; you have found the most
-              equipped company for the job. Call or email us now for a complimentary
-              and honest inspection at your property.
+            <Typography variant="h5" color="black" fontSize="1.2rem" sx={{ pb: '32px' }}>
+              "At Gates Enterprises, our mission is to deliver exceptional roofing services with an unwavering
+              commitment to quality and customer satisfaction.
+              <br /><br />
+              We build more than just roofs – we build trust. Our teams focus on superior craftsmanship, using
+              top-quality materials, ensuring every project meets our high standards.
+              <br /><br />
+              We value relationships, tailoring our services to individual needs, and honest communication.
+              We're not just a service provider, but a reliable partner in protecting your home or business."
             </Typography>
           </Grid>
         </Grid>
@@ -150,17 +144,7 @@ export default function WhoWeAre({ name }) {
             </Typography>
           </Grid>
         </Grid>
-        <Grid sx={{
-          padding: '2rem',
-          backgroundColor: 'white',
-          [theme.breakpoints.up('lg')]: {
-            p: '8rem',
-            py: '4rem'
-          }
-        }}>
-          <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-          <div className="elfsight-app-bf7eac58-17cc-49e4-98d4-e5d64ba64e4b"></div>
-        </Grid>
+        <Grid sx={{ backgroundColor: 'white', py: 4 }}></Grid>
       </Stack>
     </>
   );

@@ -4,16 +4,9 @@ import { ReactComponent as Inspect } from '../../../assets/icons/home-inspection
 import { ReactComponent as Claim } from '../../../assets/icons/video-call.svg';
 import { ReactComponent as MakeWhole } from '../../../assets/icons/construction.svg';
 import { ReactComponent as Hail } from '../../../assets/icons/hail.svg';
-import { zoomDown } from '../../../util/animations';
-import { useInView } from 'react-intersection-observer';
 import HowItWorksScroll from './HowItWorksScroll';
 
 const HowItWorks = () => {
-  const { ref, inView } = useInView({
-    threshold: 1,
-    delay: 1000
-  });
-
   const minWidth = useMediaQuery('(min-width:900px)');
 
   if (!minWidth) {
@@ -24,9 +17,9 @@ const HowItWorks = () => {
 
   return (
     <Stack>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} ref={ref} >
-        <Hail height="100" width="100" fill="#c9a32c" className={inView ? zoomDown : null} />
-        <Typography variant="h2" color="#062841" align="center" pb={8}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Hail height="100" width="100" fill="#c9a32c" />
+        <Typography variant="h2" color="#062841" align="center" pb={2}>
           Hail Claim?
         </Typography>
       </div>

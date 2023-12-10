@@ -70,7 +70,7 @@
 @media screen and (max-width: 991px) {
 
   .form-container > h1 {
-    min-width: none;
+    /* min-width: none; */
     margin-top: 1em;
     padding-bottom: 2em;
   }

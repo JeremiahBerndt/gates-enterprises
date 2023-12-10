@@ -44,6 +44,9 @@ const theme = createTheme({
     h5: {
       fontWeight: 600
     },
+    b: {
+      fontWeight: 800
+    }
   },
   palette: {
     primary: {
@@ -53,7 +56,7 @@ const theme = createTheme({
       main: '#c9a32c' //gold
     },
     tertiary: {
-      main: 'whitesmoke' //lightgray
+      main: '#a3a3a3' //lightgray
     }
   },
 });

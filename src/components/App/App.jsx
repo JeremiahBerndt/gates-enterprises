@@ -3,14 +3,16 @@ import { Route, Routes } from 'react-router-dom';
 import { CircularProgress } from '@mui/material';
 import Header from '../Header/Header';
 import MainPage from '../MainPage/MainPage';
-import ContactForm from '../ContactForm/ContactForm';
 import GutterColors from '../Gutters/Gutters';
 import Footer from '../Footer/Footer';
+import MissionStatement from '../MissionStatement/MissionStatement';
+const ContactForm = lazy(() => import('../ContactForm/ContactForm.jsx'));
 const RoofQuote = lazy(() => import('../RoofQuote/RoofQuote.jsx'));
 const Services = lazy(() => import('../Services/Services.jsx'));
 const WhoWeAre = lazy(() => import('../WhoWeAre/WhoWeAre.jsx'));
 const Financing = lazy(() => import('../Financing/Financing.jsx'));
 const Commercial = lazy(() => import('../Commercial/Commercial.jsx'));
+const Careers = lazy(() => import('../Careers/Careers.jsx'));
 const RoofFaq = lazy(() => import('../RoofFaq/RoofFaq.jsx'));
 import BlogPage from '../RoofFaq/BlogPage';
 import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy';
@@ -44,7 +46,9 @@ function App() {
         <link rel="canonical" href="/" />
       </Helmet>
       <Routes>
-        <Route exact path='/' element={<MainPage />} />
+        <Route exact path='/' element={
+          <MainPage displayContactForm={displayContactForm} />
+        } />
         <Route exact path='/get-a-quote' element={
           <Suspense
             fallback={
@@ -75,6 +79,16 @@ function App() {
             <WhoWeAre name='Who We Are' />
           </Suspense>
         } />
+        <Route exact path='/mission-statement' element={
+          <Suspense
+            fallback={
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="inherit" />
+              </div>
+            }>
+            <MissionStatement name='Mission Statement' />
+          </Suspense>
+        } />
         <Route exact path='/financing' element={
           <Suspense
             fallback={
@@ -95,6 +109,16 @@ function App() {
             <Commercial name='Commercial' />
           </Suspense>
         } />
+        <Route exact path='/careers' element={
+          <Suspense
+            fallback={
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="inherit" />
+              </div>
+            }>
+            <Careers name='Careers' />
+          </Suspense>
+        } />
         <Route exact path='/roof-faq' element={
           <Suspense
             fallback={
@@ -110,10 +134,18 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       < Footer className='footer' />
-      <ContactForm
-        displayContactForm={displayContactForm}
-        openContact={openContact}
-      />
+      <Suspense
+        fallback={
+          <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
+            <CircularProgress sx={{ p: '10rem' }} size={32} color="inherit" />
+          </div>
+        }>
+        {openContact && <ContactForm
+          displayContactForm={displayContactForm}
+          src={'https://forms.zohopublic.com/nstovall/form/Scheduleyourinspection/formperma/hRJK0od7mzbe8KZb1b8FmxM8UTPAMxuvKbqwQ5w5Yf4'}
+          title={'Contact form'}
+        />}
+      </Suspense>
     </div>
   );
 }

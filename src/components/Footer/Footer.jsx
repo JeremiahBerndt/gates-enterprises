@@ -10,9 +10,11 @@ export default function Footer() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      height: '8rem',
+      height: '6rem',
     }}>
-      <Logo />
+      <div style={{ width: '6.4rem', height: '6rem' }}>
+        <Logo />
+      </div>
       <Grid container direction="column" spacing={1} sx={{
         pl: '2rem',
         '> div > div': {
@@ -26,7 +28,7 @@ export default function Footer() {
           <div>1445 Holland St. Lakewood CO, 80215</div>
         </Grid>
         <Grid>
-          <div>(720) 380-4763</div>
+          <div>(720) 766-3377</div>
         </Grid>
       </Grid>
     </footer>

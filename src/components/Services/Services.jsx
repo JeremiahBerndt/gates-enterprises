@@ -40,6 +40,7 @@ export default function Services() {
         }}>
           <Image
             top='0'
+            alt="roofers on top of house"
             src={roofersonroof}
             height="100%"
             width="100%"
@@ -50,12 +51,12 @@ export default function Services() {
           <Typography variant="h1" align="center"
             sx={{
               position: 'absolute',
-              fontSize: '5rem',
+              fontSize: '3rem',
               [theme.breakpoints.up('sm')]: {
                 fontSize: '6rem'
               }
             }}>
-            Services
+            Residential Services
           </Typography>
         </div>
         <Grid container backgroundColor='white'>

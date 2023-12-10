@@ -25,7 +25,8 @@ export default function Financing({ name }) {
           height: theme.spacing(32)
         }}>
           <Image
-            top='0'
+            top="0"
+            alt="handshake agreement"
             src={handshake}
             height="100%"
             width="100%"
@@ -34,7 +35,7 @@ export default function Financing({ name }) {
             style={{ zIndex: '-1', opacity: '0.3', position: 'absolute' }}
           />
           <Typography variant="h1" align="center" sx={{
-            fontSize: '4rem',
+            fontSize: '3rem',
             [theme.breakpoints.up('lg')]: {
               fontSize: '6rem'
             },

@@ -2,19 +2,20 @@ import { useState, useEffect } from 'react';
 import Image from 'mui-image';
 import { CircularProgress, Stack, Typography, useTheme } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
-import hailroof from '../../assets/images/hailroof.png';
+import roofCareer from '../../assets/images/roofCareer.png';
 import { useContentful } from '../../util/hooks';
-import BlogEntry from './BlogEntry';
+import JobEntry from './JobEntry';
 
-export default function RoofFaq({ name }) {
+export default function Careers({ name }) {
   const theme = useTheme();
-  const [blogs, setBlogs] = useState([]);
-  const { getBlogPosts } = useContentful();
+  const [jobs, setJobs] = useState([]);
+  const { getJobs } = useContentful();
 
   useEffect(() => {
-    getBlogPosts()
+    getJobs()
       .then((res) => {
-        setBlogs(res.items);
+        console.log('res', res)
+        setJobs(res.items);
       })
       .catch((e) => {
         console.error(e);
@@ -24,9 +25,9 @@ export default function RoofFaq({ name }) {
   return (
     <>
       <Helmet>
-        <title>Frequently Asked Questions and Roofing Info</title>
-        <meta name="description" content="FAQs, blog, and information on roofing, hail, and insurance in Colorado." />
-        <link rel="canonical" href="https://www.gatesroof.com/roof-faq" />
+        <title>Careers available at Gates Enterprises</title>
+        <meta name="description" content="A complete list of open jobs at Gates Enterprises across all markets" />
+        <link rel="canonical" href="https://www.gatesroof.com/careers" />
       </Helmet>
       <Stack
         sx={{
@@ -45,7 +46,7 @@ export default function RoofFaq({ name }) {
           <Image
             top='0'
             alt="roof being hit by hail"
-            src={hailroof}
+            src={roofCareer}
             height="100%"
             width="100%"
             fit="cover"
@@ -60,24 +61,18 @@ export default function RoofFaq({ name }) {
                 fontSize: '6rem'
               }
             }}>
-            Roof FAQ and Info
+            Careers
           </Typography>
         </div>
-        {blogs.length > 0
-          ? <Stack sx={{
-            backgroundColor: 'white',
-            display: 'grid',
-            fontSize: '6rem',
-            gridTemplateColumns: '1fr',
-            [theme.breakpoints.up('md')]: {
-              gridTemplateColumns: '1fr 1fr',
-            }
-          }}>
-            {blogs.map(({ fields, sys }) => {
-              const image = fields.blogImage.fields;
-              const title = fields.blogHeadline.content[0].content[0].value;
+        {jobs.length > 0
+          ? <Stack sx={{ backgroundColor: 'tertiary.main', display: 'grid' }}>
+            {jobs.map(({ fields, sys }) => {
+              const image = fields.jobImage.fields;
+              const title = fields.jobTitle;
+              const briefDescription = fields.briefJobDescription;
+              const description = fields.jobDescription;
               return (
-                <BlogEntry image={image} title={title} id={sys.id} key={sys.id} />
+                <JobEntry image={image} title={title} id={sys.id} key={sys.id} briefDescription={briefDescription} description={description}/>
               )
             })}
           </Stack>

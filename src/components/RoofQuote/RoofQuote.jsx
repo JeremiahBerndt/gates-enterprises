@@ -35,7 +35,8 @@ const RoofQuote = () => {
           height: theme.spacing(32)
         }}>
           <Image
-            top='0'
+            top="0"
+            alt="diagram or blueprint of a house"
             src={diagramDrawing}
             height="100%"
             width="100%"
@@ -46,7 +47,7 @@ const RoofQuote = () => {
           <Typography variant="h1" align="center"
             sx={{
               position: 'absolute',
-              fontSize: '5rem',
+              fontSize: '3rem',
               [theme.breakpoints.up('sm')]: {
                 fontSize: '6rem'
               }

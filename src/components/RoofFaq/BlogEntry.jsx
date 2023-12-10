@@ -26,9 +26,10 @@ const BlogEntry = ({ image, title, id }) => {
             py: '1rem'
           }
         }}>
-          <Link to={'./roofblog/' + id}>
+          <Link to={'./roofblog/' + id} style={{textDecoration:"none"}}>
             <Typography variant="h5" color="primary" className="faqLink" sx={{
               fontSize: 'initial',
+              py: '1rem',
               [theme.breakpoints.up('lg')]: {
                 fontSize: '1.5rem'
               }

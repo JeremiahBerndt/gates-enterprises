@@ -1,17 +1,15 @@
-import { useEffect, lazy, Suspense } from 'react';
+import { useEffect, useState, lazy, Suspense } from 'react';
 import { Grid, CircularProgress } from '@mui/material';
+import { Helmet } from 'react-helmet-async';
 import { useTheme } from '@mui/material/styles';
 import roofsystem from '../../assets/images/roofsystem.jpg'
 const Comparison = lazy(() => import('./Comparison/Comparison.jsx'));
 const InsuranceOrFinancing = lazy(() => import('./InsuranceOrFinancing/InsuranceOrFinancing.jsx'));
 const HowItWorks = lazy(() => import('./HowItWorks/HowItWorks.jsx'));
 import AddressInput from './AddressInput/AddressInput';
-import HeaderButton from '../Header/HeaderButton/HeaderButton';
-import { Helmet } from 'react-helmet-async';
-import { email } from '../../util/email';
 import './MainPage.css';
 
-export default function MainPage() {
+export default function MainPage({ displayContactForm }) {
   const theme = useTheme();
 
   useEffect(() => {
@@ -20,7 +18,6 @@ export default function MainPage() {
     script.src = "https://app.roofle.com/roof-quote-pro-widget.js?id=Y3dZuVyicM3rboTdAfQ_S";
     script.async = true;
     insertHere.appendChild(script);
-
     return () => {
       insertHere.removeChild(script);
     }
@@ -33,40 +30,6 @@ export default function MainPage() {
         <meta name="description" content="Instant roof quote, company reviews, hail damage, and info on filing a claim." />
         <link rel="canonical" href="https://www.gatesroof.com/" />
       </Helmet>
-      <Grid container
-        style={{
-          position: 'absolute',
-          top: '8rem',
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          zIndex: 2,
-        }}
-        sx={{
-          [theme.breakpoints.down(400)]: {
-            top: '10rem!important'
-          }
-        }}
-      >
-        <Grid item>
-          <a href='tel:17207663377' className="contact-info">
-            <HeaderButton name='phone' text='(720) 766-3377' icon={true} />
-          </a>
-        </Grid>
-        <Grid item>
-          <a href={`mailto:${email.address}?&subject=${email.subject}&body=${email.body}`} className="contact-info">
-            <HeaderButton
-              name='email'
-              text='info@gatesroof.com'
-              icon={true}
-            />
-          </a>
-        </Grid>
-        <Grid item sx={{ display: 'flex' }}>
-          <HeaderButton name='instagram' icon={true} />
-          <HeaderButton name='facebook' icon={true} />
-        </Grid>
-      </Grid>
       <Grid container direction="column">
         {/*ROOFLE*/}
         <Grid item id="placeForRoofle"></Grid>
