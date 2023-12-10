@@ -13,15 +13,15 @@ const DropDownMenu = ({ menu }) => {
         '> div': {
           p: '0.5rem',
           color: 'primary.main',
-          fontSize: '0.8em'
-        },
-        [theme.breakpoints.up('md')]: {
-          '> div': {
+          fontSize: '0.8em',
+          [theme.breakpoints.up('md')]: {
+            p: '1rem',
             fontSize: '1em'
           }
-        }
+        },
+
       }}>
-        {menu.map((item, i) => <DropDownItem name={item.name} to={item.to} key={`${i + item.to}`}/>)}
+      {menu.map((item, i) => <DropDownItem name={item.name} to={item.to} key={`${i + item.to}`} />)}
     </Grid>
   )
 }
