@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import MainPage from '../MainPage/MainPage';
 import GutterColors from '../Gutters/Gutters';
 import Footer from '../Footer/Footer';
+import MissionStatement from '../MissionStatement/MissionStatement';
 const ContactForm = lazy(() => import('../ContactForm/ContactForm.jsx'));
 const RoofQuote = lazy(() => import('../RoofQuote/RoofQuote.jsx'));
 const Services = lazy(() => import('../Services/Services.jsx'));
@@ -78,6 +79,16 @@ function App() {
             <WhoWeAre name='Who We Are' />
           </Suspense>
         } />
+        <Route exact path='/mission-statement' element={
+          <Suspense
+            fallback={
+              <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
+                <CircularProgress sx={{ p: '10rem' }} size={32} color="inherit" />
+              </div>
+            }>
+            <MissionStatement name='Mission Statement' />
+          </Suspense>
+        } />
         <Route exact path='/financing' element={
           <Suspense
             fallback={
@@ -124,10 +135,15 @@ function App() {
       </Routes>
       < Footer className='footer' />
       <Suspense
-        fallback={<div></div>}>
+        fallback={
+          <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem' }}>
+            <CircularProgress sx={{ p: '10rem' }} size={32} color="inherit" />
+          </div>
+        }>
         {openContact && <ContactForm
           displayContactForm={displayContactForm}
-          openContact={openContact}
+          src={'https://forms.zohopublic.com/nstovall/form/Scheduleyourinspection/formperma/hRJK0od7mzbe8KZb1b8FmxM8UTPAMxuvKbqwQ5w5Yf4'}
+          title={'Contact form'}
         />}
       </Suspense>
     </div>

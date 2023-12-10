@@ -1,17 +1,22 @@
 import { useState } from "react";
 import { Grid, Typography, Button, Card } from "@mui/material"
 import { useTheme } from "@material-ui/core";
-import { Link } from "react-router-dom";
 import "./JobEntry.css";
 import JobModal from "./JobModal";
+import ContactForm from "../ContactForm/ContactForm";
 
 const BlogEntry = ({ image, title, description, briefDescription, id }) => {
   const theme = useTheme();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [displayJobApp, setDisplayJobApp] = useState(false);
+
+  const toggleJobApp = () => {
+    setDisplayJobApp(!displayJobApp)
+  };
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
-  }
+  };
 
   return (
     <Card elevation={8} sx={{
@@ -56,9 +61,16 @@ const BlogEntry = ({ image, title, description, briefDescription, id }) => {
             Job Description
           </Button>
           <JobModal description={description} toggleModal={toggleModal} isModalOpen={isModalOpen} />
-          <Button style={{ padding: '1rem 4rem 1rem 4rem', backgroundColor: '#062841', borderRadius: '10px', color: 'white' }}>
+          <Button
+            onClick={toggleJobApp}
+            style={{ padding: '1rem 4rem 1rem 4rem', backgroundColor: '#062841', borderRadius: '10px', color: 'white' }}>
             Apply Now
           </Button>
+          {displayJobApp && <ContactForm
+            displayContactForm={toggleJobApp}
+            src={'https://forms.zohopublic.com/nstovall/form/PMJobApplication1/formperma/lvqPKgJVY65CvSIehWKlUNEpc0FZbkj5JTHtdF8npRs'}
+            title={'Job application form'}
+          />}
         </Grid>
       </Grid>
     </Card>

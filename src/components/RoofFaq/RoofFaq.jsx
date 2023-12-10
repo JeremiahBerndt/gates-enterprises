@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// import { useTheme } from '@material-ui/core';
 import Image from 'mui-image';
 import { CircularProgress, Stack, Typography, useTheme } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
@@ -56,7 +55,7 @@ export default function RoofFaq({ name }) {
           <Typography variant="h1" align="center"
             sx={{
               position: 'absolute',
-              fontSize: '5rem',
+              fontSize: '3rem',
               [theme.breakpoints.up('sm')]: {
                 fontSize: '6rem'
               }
@@ -65,7 +64,15 @@ export default function RoofFaq({ name }) {
           </Typography>
         </div>
         {blogs.length > 0
-          ? <Stack sx={{ backgroundColor: 'white', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+          ? <Stack sx={{
+            backgroundColor: 'white',
+            display: 'grid',
+            fontSize: '6rem',
+            gridTemplateColumns: '1fr',
+            [theme.breakpoints.up('md')]: {
+              gridTemplateColumns: '1fr 1fr',
+            }
+          }}>
             {blogs.map(({ fields, sys }) => {
               const image = fields.blogImage.fields;
               const title = fields.blogHeadline.content[0].content[0].value;

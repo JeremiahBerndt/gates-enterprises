@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
-import './Header.css';
 
 const DropDownItem = ({ name, to }) => {
   const [hovered, setHovered] = useState(false);

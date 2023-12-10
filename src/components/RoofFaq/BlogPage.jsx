@@ -61,7 +61,7 @@ const BlogPage = () => {
               Gates Enterprises &nbsp;
               {dayjs(blogPost.sys.createdAt).format('MMMM DD, YYYY')}
             </Typography>
-            <Typography variant="h1" fontWeight="bold" color="primary" sx={{
+            <Typography variant="h3" component="h1" fontWeight="bold" color="primary" sx={{
               py: '4rem',
               pt: 0,
               [theme.breakpoints.down('lg')]: {

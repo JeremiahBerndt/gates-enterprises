@@ -1,5 +1,3 @@
-// import './PrivacyPolicy.css';
-
 const PrivacyPolicy = () => {
   return (
     <div style={{ padding: '8em' }}>

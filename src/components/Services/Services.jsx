@@ -51,12 +51,12 @@ export default function Services() {
           <Typography variant="h1" align="center"
             sx={{
               position: 'absolute',
-              fontSize: '5rem',
+              fontSize: '3rem',
               [theme.breakpoints.up('sm')]: {
                 fontSize: '6rem'
               }
             }}>
-            Residential
+            Residential Services
           </Typography>
         </div>
         <Grid container backgroundColor='white'>

@@ -46,7 +46,7 @@ export default function Commercial({ name }) {
             fontSize: '6rem'
           }
         }}>
-          Commercial
+          Commercial Services
         </Typography>
       </div>
       <Grid

@@ -36,9 +36,6 @@ const BuildProcessStep = ({ step }) => {
           },
           [theme.breakpoints.up('lg')]: {
             p: 0,
-            width: '6rem',
-            height: '6rem',
-            lineHeight: '6rem',
             '> div': {
               height: '6rem',
               width: '6rem'

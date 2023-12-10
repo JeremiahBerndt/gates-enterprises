@@ -13,7 +13,7 @@ const JobModal = ({ isModalOpen, toggleModal, description }) => {
     renderNode: {
       [BLOCKS.UL_LIST]: (node, children) => <ul style={{ listStyle: 'revert'}}>{children}</ul>,
       [BLOCKS.OL_LIST]: (node, children) => <Typography component="ol" style={{ listStyle: 'revert'}}>{children}</Typography>,
-      [BLOCKS.LIST_ITEM]: (node, children) => <Typography component="li" color="primary">{children}</Typography>,
+      [BLOCKS.LIST_ITEM]: (node, children) => <Typography component="li" color="primary" fontSize="1rem">{children}</Typography>,
       [BLOCKS.PARAGRAPH]: (node, children) => <Typography component="div" variant="body1" fontSize="1rem" color="primary">{children}<br /><br /></Typography>,
       [BLOCKS.HEADING_6]: (node, children) => <Typography variant="h5" color="primary" fontSize="1rem">{children}<br /><br /></Typography>,
     },
@@ -34,9 +34,6 @@ const JobModal = ({ isModalOpen, toggleModal, description }) => {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         p: 4,
-        // ' *': {
-        //   fontSize: '0.8rem'
-        // },
         [theme.breakpoints.up('lg')]: {
           height: 800,
           width: 800,

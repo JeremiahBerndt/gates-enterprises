@@ -35,7 +35,7 @@ export default function Financing({ name }) {
             style={{ zIndex: '-1', opacity: '0.3', position: 'absolute' }}
           />
           <Typography variant="h1" align="center" sx={{
-            fontSize: '4rem',
+            fontSize: '3rem',
             [theme.breakpoints.up('lg')]: {
               fontSize: '6rem'
             },

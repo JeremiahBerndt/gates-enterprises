@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Grid, Button, Tooltip, ClickAwayListener } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import HeaderButton from './HeaderButton/HeaderButton';
-import DropDownMenu from './DropDownMenu';
+import DropDownButton from './DropDownButton';
 import Logo from '../Logo/Logo.jsx';
 import { Link } from 'react-router-dom';
 import { email } from '../../util/email';
@@ -10,14 +10,6 @@ import './Header.css';
 
 export default function Header({ displayContactForm }) {
   const theme = useTheme();
-  const [isOpen, setIsOpen] = useState(false);
-
-  const onCloseDropdown = (e) => {
-    if (e.target.nodeName === "A") {
-      return setTimeout(() => setIsOpen(false), 300)
-    }
-    setIsOpen(false);
-  }
 
   return (
     <header>
@@ -36,39 +28,15 @@ export default function Header({ displayContactForm }) {
               color='#c9a32c'
               text='Schedule Inspection'
               displayContactForm={displayContactForm} />
-            <div onMouseLeave={() => setIsOpen(false)}>
-              <ClickAwayListener onClickAway={onCloseDropdown} >
-                <Tooltip
-                  id="basic-menu"
-                  open={isOpen}
-                  title={<DropDownMenu />}
-                  componentsProps={{
-                    tooltip: {
-                      sx: {
-                        marginTop: '0px!important',
-                        bgcolor: 'white',
-                        '& .MuiTooltip-arrow': {
-                          color: 'primary.main',
-                        },
-                        fontSize: '1rem'
-                      },
-                    },
-                  }}
-                  onMouseEnter={() => setIsOpen(true)}
-                  onClick={() => setIsOpen(true)}
-                >
-                  <Button
-                    variant='text'
-                    sx={{ color: 'white', textTransform: 'none', fontSize: '1em' }}
-                  >
-                    Services
-                  </Button>
-                </Tooltip>
-              </ClickAwayListener>
-            </div>
-            <Link to="who-we-are" className='contact-info high-button'>
-              <HeaderButton text='Who We Are' />
-            </Link>
+            <DropDownButton name={'Services'} menu={[
+              {name: 'Get A Quote', to: 'get-a-quote'},
+              {name: 'Residential Services', to: 'services'},
+              {name: 'Commercial Services', to: 'commercial'}
+            ]}/>
+            <DropDownButton name={'About Us'} menu={[
+              {name: 'Who We Are', to: 'who-we-are'},
+              {name: 'Mission Statement', to: 'mission-statement'},
+            ]}/>
             <Link to="financing" className='contact-info high-button'>
               <HeaderButton text='Financing' />
             </Link>

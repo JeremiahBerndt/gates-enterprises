@@ -1,15 +1,17 @@
+import { useState } from 'react';
 import { useTheme } from '@mui/material';
 import Image from 'mui-image';
-import skyline from '../../../assets/images/skyline.jpg'
+import neighborhood from '../../../assets/images/neighborhood.jpg'
 import { Typography, Box } from '@mui/material';
 import { slideFromLeft } from '../../../util/animations';
 import { useInView } from 'react-intersection-observer';
 
 const AddressInput = () => {
   const theme = useTheme();
+  const [slide, setSlide] = useState(false);
   const { ref, inView } = useInView({
     threshold: 1,
-    delay: 2,
+    onChange: (inView) => setTimeout(() => { setSlide(true) }, 1500),
     triggerOnce: true
   });
 
@@ -20,19 +22,16 @@ const AddressInput = () => {
         height: 'inherit'
       }}>
         <Image
-          src={skyline}
+          src={neighborhood}
           height="100%"
           width="100%"
-          fit="cover" 
-          duration={3000}
-          easing="ease-in"
+          fit="cover"
+          duration={1000}
           bgColor="inherit"
-          style={{ zIndex: '-1', opacity: '0.3' }}
+          style={{ zIndex: '-1', opacity: '0.8' }}
         />
       </div>
       <Box
-        ref={ref}
-        className={inView ? slideFromLeft : null}
         sx={{
           position: 'absolute',
           top: '10%',
@@ -45,6 +44,8 @@ const AddressInput = () => {
           },
         }}>
         <Typography
+          ref={ref}
+          className={inView ? slideFromLeft : null}
           component="h1"
           variant="h2"
           sx={{
@@ -58,6 +59,7 @@ const AddressInput = () => {
           Get an instant estimate.
         </Typography>
         <Typography
+          className={slide ? slideFromLeft : ' hidden'}
           variant="h4"
           sx={{
             p: '1rem',

@@ -47,7 +47,7 @@ const RoofQuote = () => {
           <Typography variant="h1" align="center"
             sx={{
               position: 'absolute',
-              fontSize: '5rem',
+              fontSize: '3rem',
               [theme.breakpoints.up('sm')]: {
                 fontSize: '6rem'
               }

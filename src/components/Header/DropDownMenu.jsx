@@ -1,22 +1,27 @@
 import { Grid } from '@mui/material';
 import DropDownItem from './DropDownItem';
-import './Header.css';
+import { useTheme } from '@mui/material/styles';
 
-const DropDownMenu = () => {
+const DropDownMenu = ({ menu }) => {
+  const theme = useTheme();
+
   return (
     <Grid
       onClick={(e) => e.stopPropagation()}
       sx={{
         backgroundColor: 'white',
         '> div': {
-          p: '1rem',
+          p: '0.5rem',
           color: 'primary.main',
-          fontSize: '1em'
+          fontSize: '0.8em'
+        },
+        [theme.breakpoints.up('md')]: {
+          '> div': {
+            fontSize: '1em'
+          }
         }
       }}>
-        <DropDownItem name={'Get A Quote'} to={'get-a-quote'}/>
-        <DropDownItem name={'Residential Services'} to={'services'}/>
-        <DropDownItem name={'Commercial Services'} to={'commercial'}/>
+        {menu.map((item, i) => <DropDownItem name={item.name} to={item.to} key={`${i + item.to}`}/>)}
     </Grid>
   )
 }

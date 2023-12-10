@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// import { useTheme } from '@material-ui/core';
 import Image from 'mui-image';
 import { CircularProgress, Stack, Typography, useTheme } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
@@ -57,7 +56,7 @@ export default function Careers({ name }) {
           <Typography variant="h1" align="center"
             sx={{
               position: 'absolute',
-              fontSize: '5rem',
+              fontSize: '3rem',
               [theme.breakpoints.up('sm')]: {
                 fontSize: '6rem'
               }
