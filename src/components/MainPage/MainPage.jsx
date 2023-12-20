@@ -26,8 +26,8 @@ export default function MainPage({ displayContactForm }) {
   return (
     <main>
       <Helmet>
-        <title>Gates Enterprises Homepage | Roofing with Values </title>
-        <meta name="description" content="Instant roof quote, company reviews, hail damage, and info on filing a claim." />
+        <title>Gates Enterprises #1 Choice for Best Roofer | Repair and Replacement</title>
+        <meta name="description" content="Get a free roof inspection and quote from the best roofers. Top-quality materials, expert installation, and guaranteed satisfaction!" />
         <link rel="canonical" href="https://www.gatesroof.com/" />
       </Helmet>
       <Grid container direction="column">
