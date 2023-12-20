@@ -18,8 +18,8 @@ export default function Commercial({ name }) {
   return (
     <>
       <Helmet>
-        <title>Commercial Roofing Solutions</title>
-        <meta name="description" content="Information on commercial roofing products and services" />
+        <title>Stop Leaks & Extend Your Roof's Life | Denver's Trusted Repair Specialists</title>
+        <meta name="description" content="Leaky roof? No problem! Gates Enterprises LLC provides expert repairs for all types of roofs. Get a free quote and stop leaks fast!" />
         <link rel="canonical" href="https://www.gatesroof.com/commercial" />
       </Helmet>
       <div style={{
