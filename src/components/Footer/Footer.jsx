@@ -10,13 +10,14 @@ export default function Footer() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      height: '6rem',
+      height: '8rem',
     }}>
-      <div style={{ width: '6.4rem', height: '6rem' }}>
+      <Grid sx={{ width: '8rem', height: '8rem' }}>
         <Logo />
-      </div>
-      <Grid container direction="column" spacing={1} sx={{
-        pl: '2rem',
+      </Grid>
+      <Grid container direction="column" sx={{
+        width: '70%',
+        px: '1.5rem',
         '> div > div': {
           fontSize: '1rem'
         }

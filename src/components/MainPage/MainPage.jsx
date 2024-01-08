@@ -26,7 +26,7 @@ export default function MainPage({ displayContactForm }) {
   return (
     <main>
       <Helmet>
-        <title>Gates Enterprises #1 Choice for Best Roofer | Repair and Replacement</title>
+        <title>Gates Enterprises The #1 Choice for Roofing | Repair and Replacement</title>
         <meta name="description" content="Get a free roof inspection and quote from the best roofers. Top-quality materials, expert installation, and guaranteed satisfaction!" />
         <link rel="canonical" href="https://www.gatesroof.com/" />
       </Helmet>

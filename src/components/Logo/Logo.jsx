@@ -15,7 +15,6 @@ export default function Logo() {
         width="100%"
         height="100%"
         sx={{
-          borderRadius: '50%',
           [theme.breakpoints.up('md')]: {
             width: 'auto',
             maxHeight: 160

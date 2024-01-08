@@ -10,7 +10,7 @@ const InsuranceOrQuote = () => {
 
   return (
     <>
-      <video autoPlay loop muted style={{
+      <video autoPlay loop muted playsinline style={{
         position: "absolute",
         filter: 'brightness(80%) opacity(0.5)',
         height: '100%',
