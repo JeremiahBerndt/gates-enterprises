@@ -8,7 +8,7 @@ const Comparison = () => {
 
   return (
     <>
-      <video autoplay loop muted playsinline style={{
+      <video autoPlay loop muted playsInline style={{
         position: "absolute",
         top: 0,
         left: 0,
