@@ -30,6 +30,9 @@ export default function Footer() {
         <Grid>
           <div>(720) 766-3377</div>
         </Grid>
+        <Grid>
+          <div>© 2024 Gates Roof | All Rights Reserved.</div>
+        </Grid>
       </Grid>
     </footer>
   )
