@@ -10,6 +10,10 @@ import wholeRoof from '../../assets/images/wholeRoof.png';
 import TheBuildProcess from './TheBuildProcess';
 import { slideFromLeft, slideFromRight, useIsVisible } from '../../util/animations';
 
+<title>Colorado Roofing Experts: Repairs for Leaks and Storm Damage</title>
+<meta name="Gates Enterprises" content="Explore top-notch residential roofing services in Colorado. Our expert
+roofer handles roof storm damage and roof leaks. Visit us for reliable solutions." />
+
 export default function Services({ name }) {
   const theme = useTheme();
   const refOptimized = useRef();
