@@ -20,8 +20,8 @@ export default function Services() {
   return (
     <>
       <Helmet>
-        <title>Stop the Leak! 24/7 Emergency Roof Repair in Denver | Gates Enterprises</title>
-        <meta name="description" content="Don't panic! Gates Enterprise LLC offers 24/7 emergency repair for roof leaks. Get fast, reliable service, and stop water damage." />
+        <title>Colorado Roofing Experts: Repairs for Leaks and Storm Damage</title>
+        <meta name="description" content="Explore top-notch residential roofing services in Colorado. Our expert roofer handles roof storm damage and roof leaks. Visit us for reliable solutions." />
         <link rel="canonical" href="https://www.gatesroof.com/services" />
       </Helmet>
       <Stack
