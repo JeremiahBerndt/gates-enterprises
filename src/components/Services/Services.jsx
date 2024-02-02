@@ -73,7 +73,7 @@ export default function Services({ name }) {
             [theme.breakpoints.up('lg')]: { p: '8rem 8rem 8rem 4rem' }
           }}>
             <Typography variant="h4" color="primary.main">
-              A Warranty You Can Count On
+              A Warranty You Can Count On Lipsa
             </Typography>
             <Typography variant="body1" color="primary.main">
               Gates Enterprises is proud to stand by our work and materials by offering our
