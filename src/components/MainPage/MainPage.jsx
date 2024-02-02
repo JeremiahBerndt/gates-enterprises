@@ -26,8 +26,8 @@ export default function MainPage({ displayContactForm }) {
   return (
     <main>
       <Helmet>
-        <title>Gates Enterprises The #1 Choice for Roofing | Repair and Replacement</title>
-        <meta name="description" content="Get a free roof inspection and quote from the best roofers. Top-quality materials, expert installation, and guaranteed satisfaction!" />
+        <title>Gates Roofing: Denver's Top Roofer for Estimates & Replacements </title>
+        <meta name="description" content="Gates Roofing–your trusted choice for the best roofer in Denver. Get a free estimate to replace a roof, hail damage, and metal roof solutions. Visit now!" />
         <link rel="canonical" href="https://www.gatesroof.com/" />
       </Helmet>
       <Grid container direction="column">
