@@ -1,8 +1,11 @@
 import { useEffect, useState, lazy, Suspense } from 'react';
-import { Grid, CircularProgress } from '@mui/material';
+import { Grid, CircularProgress, Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
+import ArrowDropDown from '@material-ui/icons/KeyboardArrowDown';
 import { Helmet } from 'react-helmet-async';
 import { useTheme } from '@mui/material/styles';
 import roofsystem from '../../assets/images/roofsystem.jpg'
+import solarpro from '../../assets/images/solar-pro.png'
+import solarlearn from '../../assets/images/solar-learn.png'
 const Comparison = lazy(() => import('./Comparison/Comparison.jsx'));
 const InsuranceOrFinancing = lazy(() => import('./InsuranceOrFinancing/InsuranceOrFinancing.jsx'));
 const HowItWorks = lazy(() => import('./HowItWorks/HowItWorks.jsx'));
@@ -11,6 +14,10 @@ import './MainPage.css';
 
 export default function MainPage({ displayContactForm }) {
   const theme = useTheme();
+  const [expanded, setExpanded] = useState(false);
+  const [hoverState, setHoverState] = useState(false);
+
+  // console.log('hover', hoverState)
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -27,10 +34,79 @@ export default function MainPage({ displayContactForm }) {
     <main>
       <Helmet>
         <title>Gates Enterprises The #1 Choice for Roofing | Repair and Replacement</title>
-        <meta name="description" content="Get a free roof inspection and quote from the best roofers. Top-quality materials, expert installation, and guaranteed satisfaction!" />
+        <meta name="description" content="Get a free roof inspection or quote from the most trusted, relaible, and best roofer in Colorado. Top-quality materials, expert installation, and guaranteed satisfaction!" />
         <link rel="canonical" href="https://www.gatesroof.com/" />
       </Helmet>
       <Grid container direction="column">
+        <Accordion expanded={expanded} onChange={() => setExpanded(!expanded)} sx={{ bgcolor: 'secondary.main' }}>
+          <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" sx={{
+            '> div': {
+              margin: '8px!important',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }
+          }}>
+            <ArrowDropDown aria-label='chevron drop down' />
+            <Typography variant="h5" color="primary.main">GO SOLAR! - GET THE FACTS FROM A PRO</Typography>
+            <ArrowDropDown aria-label='chevron drop down' />
+          </AccordionSummary>
+          <AccordionDetails sx={{ backgroundColor: "white" }}>
+            {/* <Typography align="center" variant="h4" fontSize="1.5rem" color="white">DITCH THE ELECTRIC BILL - GO GREEN</Typography> */}
+            <Grid container
+              sx={{
+                display: 'flex',
+                justifyContent: 'space-around',
+                '> div': {
+                  overflow: 'hidden',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  border: 'solid 12px',
+                  borderRadius: '32px',
+                  height: '32em',
+                  my: '1em'
+                }
+              }}>
+              <Grid item sm={12} lg={5}
+                color={hoverState === 'pro' ? 'secondary.main' : 'primary.main'}
+                onMouseEnter={() => setHoverState('pro')}
+                onMouseLeave={() => setHoverState(false)}
+                onClick={displayContactForm}
+              >
+                <Typography variant="h2" fontSize="48px" color="primary.main" p="0" >Talk to a Pro</Typography>
+                <Typography variant="h5" align="center" color="primary.main" >Find out how solar can work for you</Typography>
+
+                <img
+                  width="100%"
+                  height="100%"
+                  objectFit="cover"
+                  src={solarpro}
+                />
+              </Grid>
+              <Grid item sm={12} lg={5}
+                color={hoverState === 'learn' ? 'secondary.main' : 'primary.main'}
+                cursor="pointer"
+                onMouseEnter={() => setHoverState('learn')}
+                onMouseLeave={() => setHoverState(false)}
+                onClick={displayContactForm}
+              >
+                <Typography variant="h2" fontSize="48px" color="primary.main" p="0" >Learn More</Typography>
+                <Typography variant="h5" align="center" color="primary.main" >Get more info and see what you could save</Typography>
+
+                <img
+                  width="100%"
+                  height="100%"
+                  objectFit="cover"
+                  src={solarlearn}
+                />
+              </Grid>
+
+            </Grid>
+          </AccordionDetails>
+        </Accordion>
         {/*ROOFLE*/}
         <Grid item id="placeForRoofle"></Grid>
         <Grid item

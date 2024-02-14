@@ -17,6 +17,7 @@ export default function Header({ displayContactForm }) {
         <Logo />
       </div>
       <div style={{
+        paddingRight: '10%',
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
@@ -37,6 +38,7 @@ export default function Header({ displayContactForm }) {
               {name: 'Who We Are', to: 'who-we-are'},
               {name: 'Mission Statement', to: 'mission-statement'},
             ]}/>
+
             <Link to="financing" className='contact-info high-button'>
               <HeaderButton text='Financing' />
             </Link>
