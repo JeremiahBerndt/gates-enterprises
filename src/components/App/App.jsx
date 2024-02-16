@@ -23,7 +23,11 @@ function App() {
   const [contactFormInfo, setContactFormInfo] = useState({})
   const [openContact, setOpenContact] = useState(false);
 
-  const displayContactForm = (src, title) => {
+  const displayContactForm = (
+    e,
+    src='https://forms.zohopublic.com/nstovall/form/Scheduleyourinspection/formperma/hRJK0od7mzbe8KZb1b8FmxM8UTPAMxuvKbqwQ5w5Yf4',
+    title='Contact Form'
+  ) => {
     setContactFormInfo({ src, title })
     setOpenContact(!openContact);
   };
@@ -33,10 +37,7 @@ function App() {
     const urlParams = new URLSearchParams(queryString);
     if (urlParams.get('schedule') === 'true') {
       // console.log(urlParams.get('schedule'))
-      displayContactForm({
-        src: 'https://forms.zohopublic.com/nstovall/form/Scheduleyourinspection/formperma/hRJK0od7mzbe8KZb1b8FmxM8UTPAMxuvKbqwQ5w5Yf4',
-        title: 'Contact form'
-      });
+      displayContactForm();
     }
   }, [])
 

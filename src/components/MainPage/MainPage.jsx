@@ -75,6 +75,7 @@ export default function MainPage({ displayContactForm }) {
                 onMouseEnter={() => setHoverState('pro')}
                 onMouseLeave={() => setHoverState(false)}
                 onClick={() => displayContactForm(
+                  null,
                   'https://forms.zohopublic.com/nstovall/form/TalktoaSolarProjectManagerSpecialist/formperma/hPKzGYKGLuRnq_hF4KlSWwVfoI60GnvtZBqUV_qDKNk',
                   'Solar Contact Form'
                 )}
@@ -85,7 +86,7 @@ export default function MainPage({ displayContactForm }) {
                 <img
                   width="100%"
                   height="100%"
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
                   src={solarpro}
                 />
               </Grid>
@@ -95,6 +96,7 @@ export default function MainPage({ displayContactForm }) {
                 onMouseEnter={() => setHoverState('learn')}
                 onMouseLeave={() => setHoverState(false)}
                 onClick={() => displayContactForm(
+                  null,
                   'https://forms.zohopublic.com/nstovall/form/SolarQuiz/formperma/MRyWEzgeNLulccTxQlToMCXjg7Pykmfp8itFaMxtZlk',
                   'Solar Quiz'
                 )}
