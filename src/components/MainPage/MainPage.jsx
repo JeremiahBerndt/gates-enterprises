@@ -80,8 +80,21 @@ export default function MainPage({ displayContactForm }) {
                   'Solar Contact Form'
                 )}
               >
-                <Typography variant="h2" fontSize="48px" color="primary.main" p="0" >Talk to a Pro</Typography>
-                <Typography variant="h5" align="center" color="primary.main" >Get the facts and see what you could save</Typography>
+                <Typography variant="h5" color="primary.main" p="0" sx={{
+                  [theme.breakpoints.up('md')]: {
+                    fontSize:"48px",
+                    variant: "h2"
+                  }
+                }}>
+                  Talk to a Pro
+                </Typography>
+                <Typography variant="body1" align="center" color="primary.main" sx={{
+                  [theme.breakpoints.up('md')]: {
+                    variant: "h5"
+                  }
+                }}>
+                  Get the facts and see what you could save
+                </Typography>
 
                 <img
                   width="100%"
@@ -101,8 +114,21 @@ export default function MainPage({ displayContactForm }) {
                   'Solar Quiz'
                 )}
               >
-                <Typography variant="h2" fontSize="48px" color="primary.main" p="0" >Solar Quiz - 5 Questions</Typography>
-                <Typography variant="h5" align="center" color="primary.main" >Find out if solar is right for you</Typography>
+                <Typography variant="h5" color="primary.main" p="0" sx={{
+                  [theme.breakpoints.up('md')]: {
+                    fontSize:"48px",
+                    variant: "h2"
+                  }
+                }}>
+                  Solar Quiz - 5 Questions
+                </Typography>
+                <Typography variant="body1" align="center" color="primary.main" sx={{
+                  [theme.breakpoints.up('md')]: {
+                    variant: "h5"
+                  }
+                }}>
+                  Find out if solar is right for you
+                </Typography>
 
                 <img
                   width="100%"
@@ -111,7 +137,6 @@ export default function MainPage({ displayContactForm }) {
                   src={solarlearn}
                 />
               </Grid>
-
             </Grid>
           </AccordionDetails>
         </Accordion>
