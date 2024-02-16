@@ -6,7 +6,7 @@ export default function ContactForm({ displayContactForm, src, title }) {
   return (
     <div className='form-bg'>
       <div className={`connect-form-and-close ${toaster}`}>
-        <button className='form-close' onClick={displayContactForm}>X</button>
+        <button className='form-close' onClick={() => displayContactForm(src, title)}>X</button>
         <iframe
           style={{ height: '100vh', width: '99%' }} 
           title={title}

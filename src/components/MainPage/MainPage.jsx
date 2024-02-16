@@ -51,7 +51,7 @@ export default function MainPage({ displayContactForm }) {
             <Typography variant="h5" color="primary.main">GO SOLAR! - GET THE FACTS FROM A PRO</Typography>
             <ArrowDropDown aria-label='chevron drop down' />
           </AccordionSummary>
-          <AccordionDetails sx={{ backgroundColor: "white" }}>
+          <AccordionDetails sx={{ backgroundColor: 'white', p: '4em' }}>
             {/* <Typography align="center" variant="h4" fontSize="1.5rem" color="white">DITCH THE ELECTRIC BILL - GO GREEN</Typography> */}
             <Grid container
               sx={{
@@ -74,10 +74,13 @@ export default function MainPage({ displayContactForm }) {
                 color={hoverState === 'pro' ? 'secondary.main' : 'primary.main'}
                 onMouseEnter={() => setHoverState('pro')}
                 onMouseLeave={() => setHoverState(false)}
-                onClick={displayContactForm}
+                onClick={() => displayContactForm(
+                  'https://forms.zohopublic.com/nstovall/form/TalktoaSolarProjectManagerSpecialist/formperma/hPKzGYKGLuRnq_hF4KlSWwVfoI60GnvtZBqUV_qDKNk',
+                  'Solar Contact Form'
+                )}
               >
                 <Typography variant="h2" fontSize="48px" color="primary.main" p="0" >Talk to a Pro</Typography>
-                <Typography variant="h5" align="center" color="primary.main" >Find out how solar can work for you</Typography>
+                <Typography variant="h5" align="center" color="primary.main" >Get the facts and see what you could save</Typography>
 
                 <img
                   width="100%"
@@ -91,10 +94,13 @@ export default function MainPage({ displayContactForm }) {
                 cursor="pointer"
                 onMouseEnter={() => setHoverState('learn')}
                 onMouseLeave={() => setHoverState(false)}
-                onClick={displayContactForm}
+                onClick={() => displayContactForm(
+                  'https://forms.zohopublic.com/nstovall/form/SolarQuiz/formperma/MRyWEzgeNLulccTxQlToMCXjg7Pykmfp8itFaMxtZlk',
+                  'Solar Quiz'
+                )}
               >
-                <Typography variant="h2" fontSize="48px" color="primary.main" p="0" >Learn More</Typography>
-                <Typography variant="h5" align="center" color="primary.main" >Get more info and see what you could save</Typography>
+                <Typography variant="h2" fontSize="48px" color="primary.main" p="0" >Solar Quiz - 5 Questions</Typography>
+                <Typography variant="h5" align="center" color="primary.main" >Find out if solar is right for you</Typography>
 
                 <img
                   width="100%"
