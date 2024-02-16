@@ -1,5 +1,5 @@
 import useStyles from '../../../util/materialuistyles';
-import Email from '@material-ui/icons/Email';
+import Email from '@mui/icons-material/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';

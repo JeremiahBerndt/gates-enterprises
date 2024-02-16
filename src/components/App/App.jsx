@@ -20,9 +20,15 @@ import { Helmet } from 'react-helmet-async';
 import './App.css';
 
 function App() {
+  const [contactFormInfo, setContactFormInfo] = useState({})
   const [openContact, setOpenContact] = useState(false);
 
-  const displayContactForm = () => {
+  const displayContactForm = (
+    e,
+    src='https://forms.zohopublic.com/nstovall/form/Scheduleyourinspection/formperma/hRJK0od7mzbe8KZb1b8FmxM8UTPAMxuvKbqwQ5w5Yf4',
+    title='Contact Form'
+  ) => {
+    setContactFormInfo({ src, title })
     setOpenContact(!openContact);
   };
 
@@ -142,8 +148,8 @@ function App() {
         }>
         {openContact && <ContactForm
           displayContactForm={displayContactForm}
-          src={'https://forms.zohopublic.com/nstovall/form/Scheduleyourinspection/formperma/hRJK0od7mzbe8KZb1b8FmxM8UTPAMxuvKbqwQ5w5Yf4'}
-          title={'Contact form'}
+          src={contactFormInfo.src}
+          title={contactFormInfo.title}
         />}
       </Suspense>
     </div>
