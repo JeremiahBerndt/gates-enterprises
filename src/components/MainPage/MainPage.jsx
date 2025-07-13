@@ -38,7 +38,8 @@ export default function MainPage({ displayContactForm }) {
         <link rel="canonical" href="https://www.gatesroof.com/" />
       </Helmet>
       <Grid container direction="column">
-        <Accordion expanded={expanded} onChange={() => setExpanded(!expanded)} sx={{ bgcolor: 'secondary.main' }}>
+        
+        {/* <Accordion expanded={expanded} onChange={() => setExpanded(!expanded)} sx={{ bgcolor: 'secondary.main' }}>
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" sx={{
             '> div': {
               margin: '8px!important',
@@ -52,7 +53,6 @@ export default function MainPage({ displayContactForm }) {
             <ArrowDropDown aria-label='chevron drop down' />
           </AccordionSummary>
           <AccordionDetails sx={{ backgroundColor: 'white', p: '4em' }}>
-            {/* <Typography align="center" variant="h4" fontSize="1.5rem" color="white">DITCH THE ELECTRIC BILL - GO GREEN</Typography> */}
             <Grid container
               sx={{
                 display: 'flex',
@@ -139,7 +139,8 @@ export default function MainPage({ displayContactForm }) {
               </Grid>
             </Grid>
           </AccordionDetails>
-        </Accordion>
+        </Accordion> 
+        */}
         {/*ROOFLE*/}
         <Grid item id="placeForRoofle"></Grid>
         <Grid item
@@ -159,7 +160,7 @@ export default function MainPage({ displayContactForm }) {
           height: '100%',
           p: '1rem',
           [theme.breakpoints.up('lg')]: {
-            p: '5rem'
+            p: '10rem'
           },
           background: 'repeating-radial-gradient( circle at 75% 100%, #fff, lightgray 32rem)'
         }}>
@@ -178,7 +179,7 @@ export default function MainPage({ displayContactForm }) {
           px: '1rem',
           py: '4rem',
           [theme.breakpoints.up('lg')]: {
-            p: '5rem'
+            p: '10rem'
           }
         }}>
           <Suspense
@@ -194,7 +195,7 @@ export default function MainPage({ displayContactForm }) {
           backgroundColor: 'white',
           p: '1rem',
           [theme.breakpoints.up('lg')]: {
-            p: '5rem'
+            p: '10rem'
           }
         }}>
           <div style={{ maxWidth: 'calc(100vw - 2rem)' }} className="elfsight-app-311f80b0-1119-4605-9f97-ef9b44c14721"></div>
@@ -219,7 +220,7 @@ export default function MainPage({ displayContactForm }) {
           backgroundColor: "white",
           p: '1rem',
           [theme.breakpoints.up('lg')]: {
-            px: '5rem'
+            px: '10rem'
           }
         }}>
           <img width="100%" src={roofsystem} alt="roof system and accolades" />
